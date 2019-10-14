@@ -12,3 +12,9 @@ $(document).ready(function() {
         nextArrow: '<button type="button" class="hotel-slider__btn hotel-slider__btn--next"><span class="vh">next</span></button>'
     })
 })
+
+//cards
+$(document).ready(function() {
+
+})
+
