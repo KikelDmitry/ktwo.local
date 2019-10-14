@@ -1,0 +1,157 @@
+@font-face { font-family: 'Poppins'; src: local("Poppins Medium"), local("Poppins-Medium"), url("../fonts/Poppins-Medium.woff2") format("woff2"), url("../fonts/Poppins-Medium.woff") format("woff"); font-weight: 500; font-style: normal; font-display: swap; }
+
+@font-face { font-family: 'Poppins'; src: local("Poppins SemiBold"), local("Poppins-SemiBold"), url("../fonts/Poppins-SemiBold.woff2") format("woff2"), url("../fonts/Poppins-SemiBold.woff") format("woff"); font-weight: 600; font-style: normal; font-display: swap; }
+
+@font-face { font-family: 'Poppins'; src: local("Poppins ExtraBold Italic"), local("Poppins-ExtraBoldItalic"), url("../fonts/Poppins-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/Poppins-ExtraBoldItalic.woff") format("woff"); font-weight: 800; font-style: italic; font-display: swap; }
+
+@font-face { font-family: 'Poppins'; src: local("Poppins Thin Italic"), local("Poppins-ThinItalic"), url("../fonts/Poppins-ThinItalic.woff2") format("woff2"), url("../fonts/Poppins-ThinItalic.woff") format("woff"); font-weight: 100; font-style: italic; font-display: swap; }
+
+@font-face { font-family: 'Poppins'; src: local("Poppins SemiBold Italic"), local("Poppins-SemiBoldItalic"), url("../fonts/Poppins-SemiBoldItalic.woff2") format("woff2"), url("../fonts/Poppins-SemiBoldItalic.woff") format("woff"); font-weight: 600; font-style: italic; font-display: swap; }
+
+@font-face { font-family: 'Poppins'; src: local("Poppins Regular"), local("Poppins-Regular"), url("../fonts/Poppins-Regular.woff2") format("woff2"), url("../fonts/Poppins-Regular.woff") format("woff"); font-weight: normal; font-style: normal; font-display: swap; }
+
+@font-face { font-family: 'Poppins'; src: local("Poppins Bold"), local("Poppins-Bold"), url("../fonts/Poppins-Bold.woff2") format("woff2"), url("../fonts/Poppins-Bold.woff") format("woff"); font-weight: bold; font-style: normal; font-display: swap; }
+
+@font-face { font-family: 'Poppins'; src: local("Poppins Black Italic"), local("Poppins-BlackItalic"), url("../fonts/Poppins-BlackItalic.woff2") format("woff2"), url("../fonts/Poppins-BlackItalic.woff") format("woff"); font-weight: 900; font-style: italic; font-display: swap; }
+
+@font-face { font-family: 'Poppins'; src: local("Poppins ExtraLight"), local("Poppins-ExtraLight"), url("../fonts/Poppins-ExtraLight.woff2") format("woff2"), url("../fonts/Poppins-ExtraLight.woff") format("woff"); font-weight: 200; font-style: normal; font-display: swap; }
+
+@font-face { font-family: 'Poppins'; src: local("Poppins Bold Italic"), local("Poppins-BoldItalic"), url("../fonts/Poppins-BoldItalic.woff2") format("woff2"), url("../fonts/Poppins-BoldItalic.woff") format("woff"); font-weight: bold; font-style: italic; font-display: swap; }
+
+@font-face { font-family: 'Poppins'; src: local("Poppins Thin"), local("Poppins-Thin"), url("../fonts/Poppins-Thin.woff2") format("woff2"), url("../fonts/Poppins-Thin.woff") format("woff"); font-weight: 100; font-style: normal; font-display: swap; }
+
+@font-face { font-family: 'Poppins'; src: local("Poppins Light Italic"), local("Poppins-LightItalic"), url("../fonts/Poppins-LightItalic.woff2") format("woff2"), url("../fonts/Poppins-LightItalic.woff") format("woff"); font-weight: 300; font-style: italic; font-display: swap; }
+
+@font-face { font-family: 'Poppins'; src: local("Poppins Medium Italic"), local("Poppins-MediumItalic"), url("../fonts/Poppins-MediumItalic.woff2") format("woff2"), url("../fonts/Poppins-MediumItalic.woff") format("woff"); font-weight: 500; font-style: italic; font-display: swap; }
+
+@font-face { font-family: 'Poppins'; src: local("Poppins ExtraLight Italic"), local("Poppins-ExtraLightItalic"), url("../fonts/Poppins-ExtraLightItalic.woff2") format("woff2"), url("../fonts/Poppins-ExtraLightItalic.woff") format("woff"); font-weight: 200; font-style: italic; font-display: swap; }
+
+@font-face { font-family: 'Poppins'; src: local("Poppins ExtraBold"), local("Poppins-ExtraBold"), url("../fonts/Poppins-ExtraBold.woff2") format("woff2"), url("../fonts/Poppins-ExtraBold.woff") format("woff"); font-weight: 800; font-style: normal; font-display: swap; }
+
+@font-face { font-family: 'Poppins'; src: local("Poppins Italic"), local("Poppins-Italic"), url("../fonts/Poppins-Italic.woff2") format("woff2"), url("../fonts/Poppins-Italic.woff") format("woff"); font-weight: normal; font-style: italic; font-display: swap; }
+
+@font-face { font-family: 'Poppins'; src: local("Poppins Light"), local("Poppins-Light"), url("../fonts/Poppins-Light.woff2") format("woff2"), url("../fonts/Poppins-Light.woff") format("woff"); font-weight: 300; font-style: normal; font-display: swap; }
+
+@font-face { font-family: 'Poppins'; src: local("Poppins Black"), local("Poppins-Black"), url("../fonts/Poppins-Black.woff2") format("woff2"), url("../fonts/Poppins-Black.woff") format("woff"); font-weight: 900; font-style: normal; font-display: swap; }
+
+html { -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+*, *::before, *::after { -webkit-box-sizing: inherit; box-sizing: inherit; }
+
+body { margin: 0; }
+
+main { display: block; /* ie11 fix */ }
+
+h1, h2, h3, h4, h5, h6, ol, ul, button { margin: 0; padding: 0; }
+
+ul, ol { list-style: none; }
+
+address { font-style: normal; }
+
+button { display: block; background: none; font-family: inherit; border: none; }
+
+button:hover { cursor: pointer; }
+
+button:focus { outline: none; -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1); box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1); }
+
+hr { border: none; }
+
+input, textarea { font-family: inherit; }
+
+img, svg { display: block; max-width: 100%; height: auto; }
+
+svg { max-height: 100%; }
+
+a { text-decoration: none; color: inherit; }
+
+.vh { position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden; }
+
+body { background: #fff; color: #000; font-family: "Poppins", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal; line-height: 1; min-height: 200vh; }
+
+.inner { max-width: 1216px; padding-left: 65px; margin: auto; }
+
+.flex { display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.flex.jcc { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+.flex.jcsb { -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+
+.flex.aic { -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.section__title { font-weight: 600; font-size: 36px; text-align: center; letter-spacing: 0.09em; }
+
+.section__title--light { font-weight: 500; letter-spacing: 0; }
+
+.card-item { max-width: 20%; outline: 1px solid #000; padding: 0 14px 12px; }
+
+.header { min-height: 75px; }
+
+.header .inner { min-height: inherit; }
+
+.header .header__menu { padding: 0 10px; }
+
+.header .top-menu__item { margin: 0 15px; text-align: center; font-size: 12px; line-height: 18px; letter-spacing: .04em; }
+
+.header .top-menu__item:first-child { margin-left: 0; }
+
+.header .top-menu__item:last-child { margin-right: 0; }
+
+.header .header__phone { padding: 0 5px; }
+
+.header .top-phone__text { font-size: 16px; font-weight: 500; white-space: nowrap; }
+
+.header .top-phone::after { content: ''; width: 7px; height: 4px; margin-left: 7px; background: url("data:image/svg+xml,%3Csvg width='7' height='4' viewBox='0 0 7 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.42421 3.93831L6.24535 0.366179C6.31177 0.282073 6.31177 0.147186 6.24535 0.0630796C6.17892 -0.0210265 6.0724 -0.0210265 6.00597 0.0630796L3.30515 3.48286L0.604327 0.0630793C0.537903 -0.0210268 0.431374 -0.0210268 0.36495 0.0630793C0.332365 0.104339 0.314819 0.159881 0.314819 0.213836C0.314819 0.26779 0.331112 0.323332 0.36495 0.364592L3.18609 3.93672C3.25126 4.02083 3.35904 4.02083 3.42421 3.93831Z' fill='black'/%3E%3C/svg%3E%0A") no-repeat center; }
+
+.header .top-icons__item { margin: 0 10px; }
+
+.top-slider { padding-left: 65px; margin-bottom: 100px; }
+
+.top-slider .top-slider__inner { text-align: center; position: relative; }
+
+.top-slider .top-slider__inner .top-slider__item { height: 685px; position: relative; }
+
+.top-slider .top-slider__inner .top-slider__item .top-slider__title-wrapper { position: absolute; width: 100%; margin-top: 106px; }
+
+.top-slider .top-slider__inner .top-slider__item .top-slider__title-wrapper .top-slider__title { margin-bottom: 15px; }
+
+.top-slider .top-slider__inner .top-slider__item .top-slider__title-wrapper .top-slider__subtitle { font-size: 22px; font-weight: 600; }
+
+.top-slider .top-slider__inner .top-slider__item .top-slider__img { display: block; width: 100%; height: 100%; -o-object-fit: cover; object-fit: cover; }
+
+.top-slider .top-slider__inner .top-slider__btn { position: absolute; top: 0; bottom: 0; width: 44px; z-index: 1; background: center no-repeat; }
+
+.top-slider .top-slider__inner .top-slider__btn--prev { background-image: url("data:image/svg+xml,%3Csvg width='36' height='62' viewBox='0 0 36 62' xmlns='http://www.w3.org/2000/svg' fill='none'%3E%3Cpath d='M4.539 30.998l29.937-28c.736-.689.736-1.793 0-2.482-.736-.689-1.917-.689-2.653 0l-31.27 29.248c-.736.689-.736 1.793 0 2.482l31.27 29.235c.361.338.847.52 1.32.52.472 0 .959-.169 1.32-.52.736-.689.736-1.793 0-2.482l-29.923-28z' opacity='.4' fill='%23000'/%3E%3C/svg%3E"); left: 123px; }
+
+.top-slider .top-slider__inner .top-slider__btn--next { background-image: url("data:image/svg+xml,%3Csvg width='36' height='62' viewBox='0 0 36 62' xmlns='http://www.w3.org/2000/svg' fill='none'%3E%3Cpath d='M34.476 29.764l-31.27-29.248c-.736-.689-1.917-.689-2.653 0s-.736 1.793 0 2.482l29.937 28-29.937 28c-.736.689-.736 1.793 0 2.482.361.338.847.52 1.32.52.472 0 .959-.169 1.32-.52l31.27-29.248c.736-.676.736-1.793.014-2.469z' opacity='.4' fill='%23000'/%3E%3C/svg%3E"); right: 123px; }
+
+.hotel-slider__block { margin-bottom: 100px; }
+
+.hotel-slider__block .hotel-slider__head { margin-bottom: 50px; }
+
+.hotel-slider__block .hotel-slider { position: relative; max-width: 1144px; padding: 0 36px; margin: auto; }
+
+.hotel-slider__block .hotel-slider .hotel-slider__col .hotel-slider__item { max-width: inherit; padding-top: 7px; margin: 0 40px 40px; text-align: center; }
+
+.hotel-slider__block .hotel-slider .hotel-slider__col .hotel-slider__item .hotel-slider__icon { padding-bottom: 33px; margin-bottom: 20px; border-bottom: 1px solid #c4c4c4; }
+
+.hotel-slider__block .hotel-slider .hotel-slider__col .hotel-slider__item .hotel-slider__icon img { margin: 0 auto; }
+
+.hotel-slider__block .hotel-slider .hotel-slider__col .hotel-slider__item .hotel-slider__title { font-size: 16px; font-weight: normal; letter-spacing: .09em; }
+
+.hotel-slider__block .hotel-slider .hotel-slider__btn { position: absolute; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 31px; height: 31px; border: 1px solid #000; border-radius: 50%; background: center no-repeat; }
+
+.hotel-slider__block .hotel-slider .hotel-slider__btn--prev { background-image: url("data:image/svg+xml,%3Csvg width='8' height='12' viewBox='0 0 8 12' xmlns='http://www.w3.org/2000/svg' fill='%23000'%3E%3Cpath d='M1.037 6.23l6.837-5.037c.168-.124.168-.323 0-.446-.168-.124-.438-.124-.606 0l-7.142 5.261c-.168.124-.168.323 0 .446l7.142 5.259c.082.061.194.093.301.093.108 0 .219-.03.301-.093.168-.124.168-.323 0-.447l-6.834-5.037z'/%3E%3C/svg%3E"); left: 0; }
+
+.hotel-slider__block .hotel-slider .hotel-slider__btn--next { background-image: url("data:image/svg+xml,%3Csvg width='8' height='12' viewBox='0 0 8 12' xmlns='http://www.w3.org/2000/svg' fill='%23000'%3E%3Cpath d='M6.963 6.23l-6.837-5.037c-.168-.124-.168-.323 0-.446.168-.124.438-.124.606 0l7.142 5.261c.168.124.168.323 0 .446l-7.142 5.259c-.082.061-.194.093-.301.093-.108 0-.219-.03-.301-.093-.168-.124-.168-.323 0-.447l6.834-5.037z'/%3E%3C/svg%3E"); right: 0; }
+
+.left-bar { position: fixed; top: 0; bottom: 0; left: 0; width: 65px; -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); }
+
+.left-bar .left-bar__list { padding: 10px 0 0; }
+
+.left-bar .left-bar__list .left-bar__item { width: 100%; height: 48px; }
+
+.left-bar .left-bar__list .left-bar__item .left-bar__link { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 100%; height: 100%; }
+
+.left-bar .left-bar__list .left-bar__item .left-bar__link .left-bar__icon { -webkit-box-flex: 0; -ms-flex: 0 0 auto; flex: 0 0 auto; }
+
+.left-bar .left-bar__list .left-bar__item .left-bar__link .left-bar__text { display: none; }

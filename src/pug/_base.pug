@@ -1,0 +1,18 @@
+include _meta.pug
+doctype html
+html(lang="ru")
+    head
+        include chunks/_head.pug
+    body
+        //header        
+        block header
+            include chunks/_header.pug
+        //left menu
+        include chunks/_left-menu.pug
+
+        //content
+        block content
+
+        //footer
+        block footer
+            include chunks/_footer.pug

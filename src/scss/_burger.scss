@@ -1,0 +1,41 @@
+    .top-bar__burger {
+        display: none;
+    }
+    @media (max-width: 1024px) {
+        .top-bar__burger,
+        .top-bar__burger.is-active {
+            transition: all .4s cubic-bezier(.62,-0.29,.5,1.26);
+        }
+        .top-bar__burger {
+            order: 1;
+            display: block;
+            flex: 0 0 auto;
+            border-radius: 50%;
+        }
+        .top-bar__burger:focus {
+            box-shadow: 0 0 0 1px rgba(100,0,0,.2);
+        }
+        .top-bar__burger.is-active {
+            transform-origin: center;
+            transform: rotateZ(90deg);
+        }
+        .top-bar__burger-icon {
+            display: block;
+            transition: inherit;
+            fill: #fff;
+        }
+        .top-bar__burger__line,
+        .top-bar__burger.is-active  .top-bar__burger__line {
+            transition: inherit;
+            transform-origin: center;
+        }
+        .top-bar__burger.is-active  .top-bar__burger__line:nth-child(1) {
+            transform: rotateZ(45deg) translateY(6px);
+        }
+        .top-bar__burger.is-active  .top-bar__burger__line:nth-child(2) {
+            opacity: 0;
+        }
+        .top-bar__burger.is-active  .top-bar__burger__line:nth-child(3) {
+            transform: rotateZ(-45deg) translateY(-6px);
+        }
+        }

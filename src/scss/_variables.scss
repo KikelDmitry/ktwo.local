@@ -1,0 +1,57 @@
+// variables
+$ff: 'Poppins', Helvetica, Arial, sans-serif;
+$trans03: all .3s ease-in-out;
+
+//mixins
+@mixin bigDesk {
+    @media (min-width: 1920px) { @content; }
+}
+@mixin desk1580 {
+    @media (max-width: 1580px) { @content; }
+}
+@mixin desk1366 {
+    @media (max-width: 1366px) { @content; }
+}
+@mixin desk1280 {
+    @media (max-width: 1280px) { @content; }
+}
+@mixin layout {
+    @media (max-width: 1216px) { @content; }
+}
+@mixin tab1024 {
+    @media (max-width: 1024px) { @content; }
+}
+@mixin tab768 {
+    @media (max-width: 768px) { @content; }
+}
+@mixin mid640 {
+    @media (max-width: 640px) { @content; }
+}
+@mixin mob540 {
+    @media (max-width: 540px) { @content; }
+}
+@mixin mob512 {
+    @media (max-width: 512px) { @content; }
+}
+@mixin mob414 {
+    @media (max-width: 414px) { @content; }
+}
+@mixin mob320 {
+    @media (max-width: 320px) { @content; }
+}
+
+
+//main-colors
+$fcolor: #000;
+$scolor: #fff;
+$red: #E72B2B;
+$face: #FACE77;
+
+//social-colors
+$vk-color: #4a76a8;
+$fb-color: #3b5998;
+$insta-color: #c32aa3;
+$youtube-color: #ff0000;
+$twitter-color: #1da1f2;
+$viber-color: #665CAC;
+$whatsapp-color: #25D366;

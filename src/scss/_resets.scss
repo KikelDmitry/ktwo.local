@@ -1,0 +1,64 @@
+// RENORMAL
+
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body {
+    margin: 0;
+}
+main {
+    display: block; /* ie11 fix */
+}
+h1, h2, h3, h4, h5, h6, ol, ul, button {
+    margin: 0;
+    padding: 0;
+}
+ul, ol {
+    list-style: none;
+}
+address {
+    font-style: normal;
+}
+button {
+    display: block;
+    background: none;
+    font-family: inherit;
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+    }
+}
+hr {
+    border: none;
+}
+input, textarea {
+    font-family: inherit;
+}
+img, svg {
+    display: block; 
+    max-width: 100%;
+    height: auto;
+}
+svg {
+    max-height: 100%;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.vh {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
