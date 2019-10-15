@@ -1,0 +1,34 @@
+article.popular__item.card-item
+    .card-item__native
+        .card-item__img
+            img(src="/template/img/armchair.png", alt="pagetitle")
+        .card-item__category Кресло
+        h4.card-item__title Textile Grafit
+        .card-item__price-word Цена
+        .card-item__price 4 567 р
+
+    .card-item__hover
+        .card-item__top-icons.flex
+            button.card-item__like.face-btn(type="button", name="add-to-favorite")
+                include ../../../template/img/svg/heart.svg
+            button.card-item__compare.face-btn(type="button", name="add-to-compare")
+                include ../../../template/img/svg/eye.svg
+
+        .card-item__append
+
+        .card-item__add
+            .card-item__size-word Размеры
+            .card-item__size-row.flex
+                .card-item__size-length
+                    .card-item__size-f Длина
+                    .card-item__size-s 84 см
+                .card-item__size-width
+                    .card-item__size-f Ширина
+                    .card-item__size-s 60 см
+                .card-item__size-height
+                    .card-item__size-f Высота
+                    .card-item__size-s 124 см
+            .card-item__btns.flex.jcsb
+                button.card-item__btn-buy.face-btn(type="button", name="buy-button") Купить
+                button.card-item__btn-cart.face-btn(type="button", name="buy-button")
+                    include ../../../template/img/svg/cart.svg
