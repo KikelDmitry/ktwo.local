@@ -4,6 +4,9 @@
 
 //BASE
 
+:root::-webkit-scrollbar {
+    display: none;
+}
 body {
     background: $scolor;
     color: $fcolor;
@@ -16,6 +19,16 @@ body {
     max-width: 1216px;
     padding-left: 65px;
     margin: auto;
+
+    @include layout {
+        padding: 0 10px 0 75px;
+    }
+    @include tab768 {
+        padding-left: 10px;
+    }
+    @include mob414 {
+        padding: 0;
+    }
 }
 .flex {
     display: flex;
@@ -44,6 +57,9 @@ section {
         font-weight: 500;
         letter-spacing: 0;
     }
+    @include mob414 {
+        padding: 0 .2em;
+    }
 }
 //ui
 .face-btn {
@@ -51,6 +67,7 @@ section {
     color: $scolor;
     border-radius: 3px;
     box-shadow: 0px 1px 4px rgba(30, 39, 82, 0.25);
+    text-align: center;
 }
 .slider__round-btn {
     position: absolute;
@@ -71,16 +88,55 @@ section {
         right: 0;
     }
 }
+.face-dots {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+
+    li {
+        flex: 0 0 auto;
+        width: 11px;
+        height: 11px;
+        margin: 0 8px;
+        background: #fff;
+        border-radius: 50%;
+        
+        &.slick-active {
+            background: $face;
+        }
+        button {
+            color: transparent;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
 
 //catalog cards
 .card-item {
     position: relative;
     z-index: 1;
     max-width: 20%;
-    // outline: 1px solid #000;
     padding: 0 14px 12px;
     background: $scolor;
+    flex: 1 1 230px;
 
+    @include tab1024 {
+        max-width: 25%;
+    }
+    @include mid640 {
+        max-width: 33.33%;
+    }
+    @include mob512 {
+        max-width: 50%;
+        flex-basis: auto;
+    }
+    @include mob414 {
+        max-width: 260px;
+        flex-basis: auto;
+        margin: 0 15px;
+    }
     &__img {
         img {
             margin: auto;
@@ -187,6 +243,13 @@ section {
                 }
             }
         }
+        @include mob414 {
+            top: 0;
+            right: 0;
+            left: 0;
+            opacity: 1;
+            visibility: visible;
+        }
     }
     &:hover {
         z-index: 2;
@@ -205,19 +268,58 @@ section {
     .inner {
         min-height: inherit;
     }
-    .header__logo {
+    .top-icons--mob {
+        display: none;
 
+        @include tab1024 {
+            display: flex;
+        }
+        .top-burger {
+            display: none;
+    
+            @include tab768 {
+                width: 44px;
+                height: 44px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                .burger-icon {
+                    
+                }
+            }
+        }
+        .header__phone--mob {
+            flex: 0 0 auto;
+        }
+    }
+    .header__logo {
+        flex: 0 0 auto;
+
+        @include tab768 {
+            padding: 0 5px;
+            flex: 0 1 auto
+        }   
     }
     .header__menu {
         padding: 0 10px;
+
+        @include tab768 {
+            display: none;
+        }
     }
     .top-menu {
+
         &__item {
             margin: 0 15px;
             text-align: center;
             font-size: 12px;
             line-height: 18px;
             letter-spacing: .04em;
+            
+            @include layout {
+                margin: 0 5px;
+            }
 
             &:first-child {
                 margin-left: 0;
@@ -229,6 +331,10 @@ section {
     }
     .header__phone {
         padding: 0 5px;
+
+        @include tab1024 {
+            display: none;
+        }
     }
     .top-phone {
         &__text {
@@ -242,14 +348,40 @@ section {
             height: 4px;
             margin-left: 7px;
             background: url("data:image/svg+xml,%3Csvg width='7' height='4' viewBox='0 0 7 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.42421 3.93831L6.24535 0.366179C6.31177 0.282073 6.31177 0.147186 6.24535 0.0630796C6.17892 -0.0210265 6.0724 -0.0210265 6.00597 0.0630796L3.30515 3.48286L0.604327 0.0630793C0.537903 -0.0210268 0.431374 -0.0210268 0.36495 0.0630793C0.332365 0.104339 0.314819 0.159881 0.314819 0.213836C0.314819 0.26779 0.331112 0.323332 0.36495 0.364592L3.18609 3.93672C3.25126 4.02083 3.35904 4.02083 3.42421 3.93831Z' fill='black'/%3E%3C/svg%3E%0A") no-repeat center;
+
+            @include tab768 {
+                display: none;
+            }
+        }
+    }
+    .top-phone--mob {
+        @include tab1024 {
+            display: flex;
+            width: 44px;
+            height: 44px;
+            justify-content: center;
+            align-items: center;
         }
     }
     .header__icons {
+        flex: 0 0 auto;
 
+        @include tab768 {
+            order: 3;
+        }
     }
     .top-icons {
         &__item {
             margin: 0 10px;
+
+            @include tab768 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 44px;
+                height: 44px;
+                margin: 0;
+            }
 
             svg {
                 fill: #000;
@@ -261,14 +393,18 @@ section {
 
 //home slider
 .top-slider {
-    padding-left: 65px;
-
     .top-slider__inner {
         text-align: center;
         position: relative;
+        margin-left: 65px;
+        
+        @include tab768 {
+            margin-left: 0;
+        }
         
         .top-slider__item {
             height: 685px;
+            max-height: calc(100vh - 75px);
             position: relative;
 
             .top-slider__title-wrapper {
@@ -300,13 +436,22 @@ section {
             z-index: 1;
             background: center no-repeat;
 
+            
             &--prev {
                 background-image: url("data:image/svg+xml,%3Csvg width='36' height='62' viewBox='0 0 36 62' xmlns='http://www.w3.org/2000/svg' fill='none'%3E%3Cpath d='M4.539 30.998l29.937-28c.736-.689.736-1.793 0-2.482-.736-.689-1.917-.689-2.653 0l-31.27 29.248c-.736.689-.736 1.793 0 2.482l31.27 29.235c.361.338.847.52 1.32.52.472 0 .959-.169 1.32-.52.736-.689.736-1.793 0-2.482l-29.923-28z' opacity='.4' fill='%23000'/%3E%3C/svg%3E");
                 left: 123px;
+
+                @include layout {
+                    left: 10px;
+                }
             }
             &--next {
                 background-image: url("data:image/svg+xml,%3Csvg width='36' height='62' viewBox='0 0 36 62' xmlns='http://www.w3.org/2000/svg' fill='none'%3E%3Cpath d='M34.476 29.764l-31.27-29.248c-.736-.689-1.917-.689-2.653 0s-.736 1.793 0 2.482l29.937 28-29.937 28c-.736.689-.736 1.793 0 2.482.361.338.847.52 1.32.52.472 0 .959-.169 1.32-.52l31.27-29.248c.736-.676.736-1.793.014-2.469z' opacity='.4' fill='%23000'/%3E%3C/svg%3E");
                 right: 123px;
+
+                @include layout {
+                    right: 10px;
+                }
             }
         }
     }
@@ -320,20 +465,63 @@ section {
         padding: 0 36px;
         margin: auto;
 
-        .hotel-slider__col {
-            // max-width: 186px;
+        @include mob540 {
+            display: flex;
+            flex-flow: row wrap;
+            padding: 0;
+        }
 
+        .hotel-slider__col {
+            @include mob540 {
+                max-width: 50%;
+                flex: 1 0 50%;
+
+                &:nth-child(odd) {
+                    border-right: 1px solid #C4C4C4;
+                }
+                &:nth-last-child(-n+2),
+                &:last-child {
+                    .hotel-slider__item:last-child {
+                        border: none;
+                    }
+                }
+            }
             .hotel-slider__item {
+                display: block;
                 max-width: inherit;
                 padding-top: 7px;
                 margin: 0 40px 40px;
                 text-align: center;
+
+                @include tab768 {
+                    padding: 20px;
+                    margin: 0 10px 10px;
+                }
+                @include mob540 {
+                    display: flex;
+                    flex-flow: column;
+                    justify-content: center;
+                    align-items: center;
+                    max-width: 100%;
+                    min-height: 220px;
+                    padding: 10px;
+                    margin: 0 auto;
+                    border-bottom: 1px solid #C4C4C4;
+                }
     
                 .hotel-slider__icon {
                     padding-bottom: 33px;
                     margin-bottom: 20px;
                     border-bottom: 1px solid #c4c4c4;
-    
+
+                    @include tab768 {
+                        padding-bottom: 0;
+                    }
+                    @include mob540 {
+                        width: 100%;
+                        border: none;
+                    }
+
                     img {
                         margin: 0 auto;
                     }
@@ -345,6 +533,16 @@ section {
                 }
             }
         }
+    }
+    .more-btn {
+        display: block;
+        max-width: 360px;
+        padding: 23px;
+        margin: auto;
+        font-weight: 600;
+        font-size: 12px;
+        letter-spacing: 0.09em;
+        border-radius: 0;
     }
 }
 
@@ -387,6 +585,10 @@ section {
         &__body-item {
             display: flex;
             flex-flow: row wrap;
+
+            @include mob414 {
+                justify-content: center;
+            }
         }
     }
 }
@@ -477,28 +679,6 @@ section {
         color: #D0CFCF;
         font-size: 14px;
     }
-    .feedback-slide__dots {
-        position: relative;
-        z-index: 1;
-        display: flex;
-        justify-content: center;
-
-        li {
-            flex: 0 0 auto;
-            width: 11px;
-            height: 11px;
-            margin: 0 8px;
-            background: #fff;
-            border-radius: 50%;
-            
-            &.slick-active {
-                background: $face;
-            }
-            button {
-                color: transparent;
-            }
-        }
-    }
     .feedback-slide__mask {
         position: absolute;
         top: 0;
@@ -512,9 +692,22 @@ section {
 }
 .clients__com-slider {
     padding: 0 32px;
+
+    @include mob512 {
+        padding: 0;
+    }
+    .slick-list {
+        padding: 5px 0;
+    }
+
     .com-slider__item {
         .com-slider__img {
             margin: auto;
+
+            @include mob512 {
+                padding: 10px;
+                box-shadow: 0px 1px 4px rgba(30, 39, 82, 0.25);
+            }
         }
     }
 }
@@ -531,6 +724,12 @@ section {
         max-width: 392px;
         margin: 0 10px;
 
+        @include tab768 {
+            margin: 0 0 14px;
+        }
+        @include mob414 {
+            max-width: none;
+        }
         .article__link {
             display: block;
         }
@@ -557,19 +756,33 @@ section {
             font-size: 14px;
         }
     }
+    .face-dots {
+        li {
+            background: #DEDCDC;
+
+            &.slick-active {
+                background: $face;
+            }
+        }
+    }
 }
 
 //SEO
 
 .seo__block {
-    .seo__title {
-        
-    }
     .seo__cont {
         letter-spacing: .09em;
 
+        @include mid640 {
+            flex-flow: column;
+        }
+
         .seo__col {
             margin: 0 40px;
+
+            @include mid640 {
+                margin: 0 20px;
+            }
 
             .seo__subtitle {
                 font-weight: 600;
@@ -578,6 +791,10 @@ section {
             p {
                 line-height: 115%;
                 font-size: 14px;
+
+                @include mid640 {
+                    font-size: 12px;
+                }
             }
         }
     }
@@ -589,8 +806,35 @@ section {
     top: 0;
     bottom: 0;
     left: 0;
+    z-index: 9990;
     width: 65px; 
+    background: $scolor;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+
+    @include tab768 {
+        transform: translateX(-100%);
+    }
+
+    .left-bar__burger {
+        display: none;
+
+        @include tab768 {
+            position: absolute;
+            top: 15px;
+            right: 0;
+            transform: translateX(100%);
+            width: 44px;
+            height: 44px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .burger-icon {
+
+            }
+        }
+
+    }
 
     .left-bar__list {
         padding: 10px 0 0;
@@ -620,23 +864,73 @@ section {
 //FOOTER
 .footer__block {
     letter-spacing: .09em;
+    
+    .go-top-btn {
+        display: none;
+
+        @include mob414 {
+            display: block;
+            width: 100%;
+            max-width: 360px;
+            margin: 0 auto;
+            font-weight: 600;
+            font-size: 12px;
+            padding: 23px;
+            letter-spacing: .09em;
+            border-radius: 0;
+            box-shadow: none;
+
+            span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                &::after {
+                    content: '';
+                    width: 11px;
+                    height: 11px;
+                    margin-left: 10px;
+                    background-image: url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' xmlns='http://www.w3.org/2000/svg' fill='none'%3E%3Crect x='5' y='2' width='1' height='9' rx='.5' fill='%23fff'/%3E%3Cpath d='M5.281.093l-5.189 5.358c-.122.126-.122.328 0 .455.122.126.318.126.44 0l4.968-5.13 4.968 5.13c.122.126.318.126.44 0 .06-.062.092-.145.092-.226 0-.081-.03-.164-.092-.226l-5.189-5.358c-.12-.126-.318-.126-.438-.002z' fill='%23fff'/%3E%3C/svg%3E");
+                }
+            }
+        }
+
+    }
 
     .footer__top {
     
     }
     .footer__center {
+        @include tab768 {
+            flex-direction: column;
+        }
         .footer-col {
             display: flex;
             flex-direction: column;
             flex: 1 1 auto;
+
+            @include tab768 {
+                margin: 0 0 30px;
+                flex-flow: row wrap;
+            }
     
             &__title {
                 margin: 0 0 28px;
                 font-weight: 600;
                 font-size: 16px;
+                
+                @include tab768 {
+                    flex: 1 0 100%;
+                    max-width: 100%;
+                    margin: 0 0 10px;
+                }
             }
             &__link {
                 margin: 0 0 20px;
+
+                @include tab768 {
+                    margin: 0 10px 0 0;
+                }
 
                 &.icon-before {
                     display: flex;
@@ -683,5 +977,9 @@ section {
 }
 
 //DEBUG
+
+// section:not(.seo__block) {
+//     display: none;
+// }
 
 // @import "_debug.scss";

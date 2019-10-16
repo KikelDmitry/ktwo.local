@@ -1,6 +1,15 @@
 block header
     header.header
         .inner.flex.jcsb.aic
+            .top-icons--mob
+                button.header__burger.top-burger(type="button", name="mobile-menu-open")
+                    svg.burger-icon(width="15", height="12", viewBox="0 0 15 12")
+                        rect.burger-btn__line(width="15", height="2", x="0", y="0")
+                        rect.burger-btn__line(width="15", height="2", x="0", y="5")
+                        rect.burger-btn__line(width="15", height="2", x="0", y="10")
+                a.header__phone--mob.top-phone--mob(href="tel:+79999999999")
+                    include ../../../template/img/svg/phone.svg
+
             .header__logo
                 a(href="/")
                     img(src="/template/img/svg/logo.svg", alt="K2 мебель лого")
