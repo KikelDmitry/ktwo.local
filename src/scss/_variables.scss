@@ -1,6 +1,6 @@
 // variables
 $ff: 'Poppins', Helvetica, Arial, sans-serif;
-$trans03: all .3s ease-in-out;
+$trans02: all .2s ease-in-out;
 
 //mixins
 @mixin bigDesk {
@@ -35,6 +35,9 @@ $trans03: all .3s ease-in-out;
 }
 @mixin mob414 {
     @media (max-width: 414px) { @content; }
+}
+@mixin mob375 {
+    @media (max-width: 375px) { @content; }
 }
 @mixin mob320 {
     @media (max-width: 320px) { @content; }

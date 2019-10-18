@@ -1,42 +1,72 @@
 aside.left-bar
-    ul.left-bar__list
-        li.left-bar__item
-            a.left-bar__link(href="#")
-                img.left-bar__icon(src="/template/img/svg/left-menu/search.svg", alt="left-menu-icon")
-                span.left-bar__text Найти мебель
-        li.left-bar__item
-            a.left-bar__link(href="#")
-                img.left-bar__icon(src="/template/img/svg/left-menu/promo.svg", alt="left-menu-icon")
-                span.left-bar__text Акции
-        li.left-bar__item
-            a.left-bar__link(href="#")
-                img.left-bar__icon(src="/template/img/svg/left-menu/cab-fur.svg", alt="left-menu-icon")
-                span.left-bar__text Корпусная мебель
-        li.left-bar__item
-            a.left-bar__link(href="#")
-                img.left-bar__icon(src="/template/img/svg/left-menu/up-furni.svg", alt="left-menu-icon")
-                span.left-bar__text Мягкая мебель
-        li.left-bar__item
-            a.left-bar__link(href="#")
-                img.left-bar__icon(src="/template/img/svg/left-menu/tables.svg", alt="left-menu-icon")
-                span.left-bar__text Столы и стулья
-        li.left-bar__item
-            a.left-bar__link(href="#")
-                img.left-bar__icon(src="/template/img/svg/left-menu/outside-furni.svg", alt="left-menu-icon")
-                span.left-bar__text Уличная мебель
-        li.left-bar__item
-            a.left-bar__link(href="#")
-                img.left-bar__icon(src="/template/img/svg/left-menu/tea-pots.svg", alt="left-menu-icon")
-                span.left-bar__text Чайные наборы
-        li.left-bar__item
-            a.left-bar__link(href="#")
-                img.left-bar__icon(src="/template/img/svg/left-menu/plumbing.svg", alt="left-menu-icon")
-                span.left-bar__text Сантехника
-        li.left-bar__item
-            a.left-bar__link(href="#")
-                img.left-bar__icon(src="/template/img/svg/left-menu/textile.svg", alt="left-menu-icon")
-                span.left-bar__text Текстиль
-        li.left-bar__item
-            a.left-bar__link(href="#")
-                img.left-bar__icon(src="/template/img/svg/left-menu/all-cat.svg", alt="left-menu-icon")
-                span.left-bar__text Весь каталог
+    //- ul.left-bar__list
+    nav.left-bar__inner
+        //- first way
+        //- li.left-bar__item
+        //-     a.left-bar__link(href="/cat/")
+        //-         img.left-bar__icon(src="/template/img/svg/left-menu/search.svg", alt="left-menu-icon")
+        //-         span.left-bar__text Найти мебель
+
+        //- second way
+        //- li.left-bar__item
+        //-     a.left-bar__link(href="#")
+        //-         span.left-bar__icon
+        //-             img(src="/template/img/svg/left-menu/promo.svg", alt="left-menu-icon")
+        //-         span.left-bar__text Раздел
+
+        //- third way
+        //- li.left-bar__item
+        //-     a.left-bar__link(href="/cat/")
+        //-         span.left-bar__cat-icon
+        //-             img(src="/template/img/svg/left-menu/cab-fur.svg", alt="")
+        //-         span.left-bar__cat-title Корпусная мебель
+        //-     ul.left-bar__prod-list
+        //-         li.item
+        //-             span
+        //-                 img(src="/template/img/svg/left-menu/product.svg", alt="product-icon")
+        //-             span Шкаф
+        //-         li.item
+        //-             span
+        //-                 img(src="/template/img/svg/left-menu/product.svg", alt="product-icon")
+        //-             span Комод
+        //-         li.item
+        //-             span
+        //-                 img(src="/template/img/svg/left-menu/product.svg", alt="product-icon")
+        //-             span Тумба
+
+        //-fourth way
+        .left-bar__icons
+            a.left-bar__link(href="/cat/")
+                img.left-bar__icon(src="/template/img/svg/left-menu/search.svg", alt="")
+            a.left-bar__link(href="/cat/")
+                img.left-bar__icon(src="/template/img/svg/left-menu/promo.svg", alt="")
+            a.left-bar__link(href="/cat/")
+                img.left-bar__icon(src="/template/img/svg/left-menu/cab-fur.svg", alt="")
+            a.left-bar__link(href="/cat/")
+                img.left-bar__icon(src="/template/img/svg/left-menu/bed.svg", alt="")
+            a.left-bar__link(href="/cat/")
+                img.left-bar__icon(src="/template/img/svg/left-menu/up-furni.svg", alt="")
+            a.left-bar__link(href="/cat/")
+                img.left-bar__icon(src="/template/img/svg/left-menu/tables.svg", alt="")
+            a.left-bar__link(href="/cat/")
+                img.left-bar__icon(src="/template/img/svg/left-menu/outside-furni.svg", alt="")
+            a.left-bar__link(href="/cat/")
+                img.left-bar__icon(src="/template/img/svg/left-menu/tea-pots.svg", alt="")
+            a.left-bar__link(href="/cat/")
+                img.left-bar__icon(src="/template/img/svg/left-menu/plumbing.svg", alt="")
+            a.left-bar__link(href="/cat/")
+                img.left-bar__icon(src="/template/img/svg/left-menu/textile.svg", alt="")
+            a.left-bar__link(href="/cat/")
+                img.left-bar__icon(src="/template/img/svg/left-menu/all-cat.svg", alt="")
+
+            
+            .left-bar__titles
+                a.left-bar__link(href="/cat/") Корпусная мебель
+                .left-bar__products
+                    a.left-bar__link(href="/cat/")
+                        img(src="/template/img/svg/left-menu/product.svg", alt="")
+
+
+
+    //-button.left-bar__close.js-modal-close(type="button", name="close-left-menu-button")
+        span.vh закрыть

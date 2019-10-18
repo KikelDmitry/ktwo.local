@@ -2,7 +2,22 @@ footer.footer__block
     button.face-btn.go-top-btn
         span Наверх
     .footer__top
-
+        .inner
+            .subs__block.flex.jcsb.aic
+                .subs__title.flex.jcc
+                    .subs__ftitle Подпишись на рассылку
+                    .subs__stitle Получайте информацию о лучших предложениях
+                form.subs__form
+                    .subs__form-row.flex
+                        label
+                            input.subs__input(type="email", name="subs-email")
+                        button.subs__submit(type="submit")
+                            span.vh Отправить 
+                    .subs__form-row.flex
+                        label.flex
+                            input.check__input.vh(type="checkbox", required)
+                            span.check__view
+                            span.check__text Настоящим даю свое согласие на рассылку 
     .inner
         .footer__center.flex
             nav.footer-col
