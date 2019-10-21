@@ -190,15 +190,29 @@ function mClose() {
 closeBtn.click(mClose);
 
 //left-menu 
-$('a').click(function (e) {
-    e.preventDefault();
-});
-// $('.left-bar__icons').click(function(){
-//     $(this).children('.left-bar__titles').addClass('is-active');
-// });
-// $('.left-bar__titles').click(function(){
-//     $(this).children('.left-bar__products').addClass('is-active');
-// });
+const $leftBarList = $('.left-bar__list'),
+    $leftBarLink = $('.left-bar__link'),
+    $closeBtn = $('.js-left-bar-close');
+
+$leftBarLink.click(function(e) {
+    if(!$leftBarList.hasClass('is-active')) {
+        e.preventDefault();
+    }
+    $leftBarList.addClass('is-active');    
+    $(this).next('.left-bar__subcont').addClass('is-active');
+    $(this).parent().siblings().children('.left-bar__subcont').removeClass('is-active');
+})
+//copying and create nodes
+$(document).ready(function() {
+    $leftBarLink.each(function() {
+        //copying left-bar__title and addClass &--hover
+    });
+
+})
+//close menu
+$closeBtn.click(function() {
+    $('.left-bar__list, .left-bar__subcont').removeClass('is-active');    
+}) 
 
 //mobmenu
 const burgerBtn = $('.top-burger');
