@@ -109,25 +109,19 @@ block content
                         include chunks/_card-item.pug
                         include chunks/_card-item.pug
     section.promo__block
-        .inner
-            .promo__item
-                .promo__title Lorem ipsum
-                .promo__desc 99% dolor sit amet
-                .promo__btn Lorem
-                img.promo__img(src="/template/img/promo/promo0.jpg", alt="promo title")
-            .promo__item
-                .promo__title Lorem ipsum dolor sit
-                .promo__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor  incididunt ut labore
-                .promo__btn LOREM IPSUM
-                img.promo__img(src="/template/img/promo/promo1.jpg", alt="promo title")
-            .promo__item
-                .promo__title Lorem ipsum
-                .promo__desc 99% dolor sit amet
-                img.promo__img(src="/template/img/promo/promo2.jpg", alt="promo title")
-            .promo__item
-                .promo__title Lorem ipsum
-                .promo__desc 99% dolor sit amet
-                img.promo__img(src="/template/img/promo/promo3.jpg", alt="promo title")
+        .inner.flex
+            a.promo__item(href="#")
+                //Achtung! В этот h3 выводится скрытый заголовок
+                h3.promo__title.vh Lorem ipsum
+                img.promo__img(src="/template/img/promo/banner0.png", alt="promo title")
+            a.promo__item(href="#")
+                //Achtung! В этот h3 выводится скрытый заголовок
+                h3.promo__title.vh Lorem ipsum
+                img.promo__img(src="/template/img/promo/banner1.png", alt="promo title")
+            a.promo__item(href="#")
+                //Achtung! В этот h3 выводится скрытый заголовок
+                h3.promo__title.vh Lorem ipsum
+                img.promo__img(src="/template/img/promo/banner0.png", alt="promo title")
     section.clients__block
         .inner
             h2.section__title Наши клиенты

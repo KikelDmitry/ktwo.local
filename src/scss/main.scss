@@ -122,7 +122,7 @@ section {
     max-width: 20%;
     padding: 0 14px 12px;
     background: $scolor;
-    flex: 1 1 230px;
+    flex: 1 1 auto;
 
     @include tab1024 {
         max-width: 25%;
@@ -137,7 +137,9 @@ section {
     @include mob414 {
         max-width: 260px;
         flex-basis: auto;
-        margin: 0 15px;
+        margin: 15px;
+        box-shadow: 0px 1px 4px rgba(30, 39, 82, 0.25);
+
     }
     &__img {
         img {
@@ -554,6 +556,7 @@ section {
 
 //popular
 .popular__block {
+
     .section__title {
         margin-bottom: 30px;
     }
@@ -601,49 +604,10 @@ section {
 
 //promo block
 .promo__block {
-    display: none;
-    overflow: hidden;
-
     .inner {
-        min-height: 480px;
-
         .promo__item {
-            position: relative;
-            min-height: inherit;
-            width: 392px;
-    
-            &:nth-child(1) {
-                float: left;
-                margin-right: 20px;
-            }
-            &:nth-child(2) {
-                float: left;
-                margin-right: 20px;
-            }
-            &:nth-child(3) {
-                float: right;
-            }
-            &:nth-child(4) {
-                float: right;
-            }
-            .promo__title {
-                
-            }
-            .promo__desc {
-    
-            }
-            .promo__btn {
-    
-            }
-            .promo__img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: 0;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
+            max-width: 32%;
+            margin: 0 .5%;
         }
     }
 }
@@ -729,11 +693,12 @@ section {
         position: relative;
         max-width: 392px;
         margin: 0 10px;
-
+        
         @include tab768 {
             margin: 0 0 14px;
         }
         @include mob414 {
+            padding: 0 10px;
             max-width: none;
         }
         .article__link {
@@ -749,6 +714,10 @@ section {
             background: #E1AB6E;
             color: #fff;
             box-shadow: 0px 1px 4px rgba(30, 39, 82, 0.25);
+
+            @include mob414 {
+                left: 5px;
+            }
         }
         .article__img {
             margin-bottom: 20px;
@@ -823,6 +792,11 @@ section {
             transform: none;
         }
     }
+    @include mid640 {
+        &.is-mob {
+            transform: translateX(-100%);
+        }
+    }
 
     .left-bar__burger {
         display: none;
@@ -845,18 +819,27 @@ section {
 
     }
     .left-bar__list {
-        width: 65px;
+        max-width: 65px;
         height: 100%;
         padding-top: 10px;
         background: #fff;
         box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
         transition: all .3s ease; //t
+
+        @include mid640 {
+            max-width: 350px;
+
+        }
         
         .left-bar__item {
             height: 48px;
             background: #fff;
             transition: inherit;
             
+            @include mid640 {
+                position: relative;
+            }
+
             .left-bar__link {
                 position: relative;
                 z-index: 0;
@@ -865,6 +848,10 @@ section {
                 width: 100%;
                 height: 100%;
                 transition: inherit;
+
+                &.pointer {
+                    cursor: pointer;
+                }
 
                 .left-bar__icon {
                     display: flex;
@@ -886,6 +873,25 @@ section {
                     letter-spacing: 0.09em;
                     white-space: nowrap;
                     transition: inherit;
+                    
+                    @include mid640 {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+
+                    .left-bar__search {
+                        border: none;
+                        font-size: inherit;
+                        letter-spacing: 0.09em;
+
+                        &::placeholder {
+                            color: inherit;
+                        }
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
                 }
                 .left-bar__title--hover {
                     display: flex;
@@ -901,6 +907,10 @@ section {
                     background-color: pink;
                     transform: translateX(100%) scaleX(0);
                     transform-origin: left center;
+
+                    @include tab1024 {
+                        display: none;
+                    }
 
                     &::after {
                         content: '';
@@ -918,6 +928,8 @@ section {
                 }
             }
             .left-bar__subcont {
+                opacity: 0;
+                visibility: hidden;
                 position: absolute;
                 top: 0;
                 right: 0;
@@ -928,6 +940,16 @@ section {
                 overflow: auto;
                 transition: inherit;
                 transition-delay: .1s;
+
+                @include mid640 {
+                    position: fixed;
+
+                    &.is-mob {
+                        opacity: 1;
+                        visibility: visible;
+                        transform: translateX(100%);
+                    }
+                }
 
                 .left-bar__subtitle {
                     margin: 0 0 40px;
@@ -942,6 +964,11 @@ section {
                     align-content: flex-start;
                     width: 485px;
                     padding: 0 17px;
+
+                    @include tab1024 {
+                        width: auto;
+                        max-width: 100%;
+                    }
                     
                     .left-bar__item {
                         width: 110px;
@@ -965,8 +992,14 @@ section {
                     }
                 }
                 &.is-active {
+                    opacity: 1;
+                    visibility: visible;
                     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
                     transform: translateX(100%);
+
+                    @include mid640 {
+                        transform: none;
+                    }
                 }
                 .left-bar__close-btn {
                     position: absolute;
@@ -974,13 +1007,20 @@ section {
                     right: 10px;
                     width: 44px;
                     height: 44px;
-                    border: 1px solid #000;
                     border-radius: 50%;
+                    background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='2.41421' y1='2' x2='15.1421' y2='14.7279' stroke='black' stroke-width='2' stroke-linecap='round'/%3E%3Cline x1='1' y1='-1' x2='19' y2='-1' transform='matrix(-0.707107 0.707107 0.707107 0.707107 16.1421 2)' stroke='black' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    transition: transform .6s;
+
+                    &:hover {
+                        transform: rotateZ(360deg);
+                    }
                 }
             }
         }
         &.is-active {
-            width: 350px;
+            max-width: 350px;
 
             .left-bar__item {
                 .left-bar__link {
@@ -1008,6 +1048,17 @@ section {
         .left-bar__close {
             opacity: 1;
             visibility: visible;
+        }
+    }
+    @include mid640 {
+        .shadow-div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 65px;
+            box-shadow: 0px 1px 4px rgba(30, 39, 82, 0.25);
+            pointer-events: none;
         }
     }
 }
@@ -1187,7 +1238,7 @@ section {
                 margin: 0 0 20px;
 
                 @include tab768 {
-                    margin: 0 10px 0 0;
+                    margin: 0 10px 10px 0;
                 }
 
                 &.icon-before {
@@ -1271,5 +1322,7 @@ body.is-modal {
 // section:not(.seo__block) {
 //     display: none;
 // }
-
-// @import "_debug.scss";
+html {
+    background: #000 !important;
+}
+@import "_debug.scss";
