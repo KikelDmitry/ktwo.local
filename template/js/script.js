@@ -85,21 +85,25 @@ $(document).ready(function() {
             arrows: false
         })
     }
+    if(window.innerWidth <= 480) {
+        $('.cat-thumbs').slick({
+            arrows: false
+        })
+    }
 })
 
 
 //hovercard
 $(document).ready(function() {
-    if(window.innerWidth >= 414) {
-        let card = $('.card-item');
-        card.each(function() {
-            const $target = $(this).find('.card-item__native'),
-                html = $target.html();
-            $target.parent().find('.card-item__append').html(html);
-        })
-    } else {
-        $('.card-item__hover').remove();
-    }
+    let card = $('.card-item');
+    card.each(function() {
+        const $target = $(this).find('.card-item__native'),
+            html = $target.html();
+        $target.parent().find('.card-item__append').html(html);
+        if(window.innerWidth <= 1280) {
+            $target.remove();
+        }
+    })
 })
 
 //sktabs
@@ -208,7 +212,9 @@ const $leftBar = $('.left-bar'),
         if (!$leftBarList.hasClass('is-active') || !$(this).next('.left-bar__subcont').hasClass('is-active')) {
             e.preventDefault();
         }
-        $leftBarList.addClass('is-active');    
+        $leftBarList.addClass('is-active'); 
+        $(this).addClass('is-active');
+        $(this).parent().siblings().children($leftBarLink).removeClass('is-active');   
         $(this).next('.left-bar__subcont').addClass('is-active');
         $(this).parent().siblings().children('.left-bar__subcont').removeClass('is-active');
     } else {
@@ -238,7 +244,7 @@ $leftBarList.click(function (e) {
 });
 $closeBtn.click(closeMenu);
 function closeMenu() {
-    $('.left-bar__list, .left-bar__subcont').removeClass('is-active is-mob');
+    $('.left-bar__list, .left-bar__subcont, .left-bar__link').removeClass('is-active is-mob');
     $leftBar.removeClass('is-mob');
 }
 

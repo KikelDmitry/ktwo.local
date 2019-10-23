@@ -11,10 +11,12 @@ html(lang="ru")
         include chunks/_left-menu.pug
 
         //content
-        block content
+        main.main-content
+            block content
 
         //seo
-        include chunks/_seo.pug
+        block seo
+            include chunks/_seo.pug
 
         //footer
         block footer

@@ -1,0 +1,56 @@
+extends _base.pug
+block title
+    title Каталог - #{siteName}
+block content
+    .inner
+        h1.main-title Шкафы для отелей
+        section.cat-thumbs.flex
+            a.cat-thumbs__item(href="#", style="background-image:url(/template/img/cat-thumb.jpg)")
+                h3.cat-thumbs__title.flex.jcc.aic Двухдверные шкафы
+            a.cat-thumbs__item(href="#", style="background-image:url(/template/img/cat-thumb.jpg)")
+                h3.cat-thumbs__title.flex.jcc.aic Двухдверные шкафы
+            a.cat-thumbs__item(href="#", style="background-image:url(/template/img/cat-thumb.jpg)")
+                h3.cat-thumbs__title.flex.jcc.aic Двухдверные шкафы
+            a.cat-thumbs__item(href="#", style="background-image:url(/template/img/cat-thumb.jpg)")
+                h3.cat-thumbs__title.flex.jcc.aic Двухдверные шкафы
+            a.cat-thumbs__item(href="#", style="background-image:url(/template/img/cat-thumb.jpg)")
+                h3.cat-thumbs__title.flex.jcc.aic Двухдверные шкафы
+            a.cat-thumbs__item(href="#", style="background-image:url(/template/img/cat-thumb.jpg)")
+                h3.cat-thumbs__title.flex.jcc.aic Двухдверные шкафы
+            a.cat-thumbs__item(href="#", style="background-image:url(/template/img/cat-thumb.jpg)")
+                h3.cat-thumbs__title.flex.jcc.aic Двухдверные шкафы
+
+        
+        section.prod-section
+            .cards-block
+                header.cards-block__header
+                    .cards-sort__title Сортировать по: Цене
+
+                    .cards-sort__icons
+                        button.cards-sort__btn(type="button", name="change-view")
+                            include ../../template/img/svg/list.svg
+                        button.cards-sort__btn(type="button", name="change-view")
+                            include ../../template/img/svg/masonry.svg
+                .cards-block__body.flex
+                    include chunks/_card-item.pug
+                    include chunks/_card-item.pug
+                    include chunks/_card-item.pug
+                    include chunks/_card-item.pug
+                    include chunks/_card-item.pug
+                    include chunks/_card-item.pug
+                    include chunks/_card-item.pug
+                    include chunks/_card-item.pug
+                    include chunks/_card-item.pug
+                    include chunks/_card-item.pug
+                    include chunks/_card-item.pug
+                    include chunks/_card-item.pug
+
+            .filter-block
+                .filter-block__title Фильтрация
+                    section.filter-block__section
+                    section.filter-block__section
+                    section.filter-block__section
+                    section.filter-block__section
+                    section.filter-block__section
+
+block seo
