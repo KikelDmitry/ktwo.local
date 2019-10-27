@@ -1,37 +1,36 @@
 extends _base.pug
 block title
     title Каталог - #{siteName}
+block breadcrumbs
+    .inner
+        ul.breadcrumbs__list.flex
+            li.breadcrumbs__item
+                a(href="#") Главная
+            li.breadcrumbs__item.breadcrumbs__separ >
+            li.breadcrumbs__item
+                a(href="#") Каталог мебели
+            li.breadcrumbs__item.breadcrumbs__separ >
+            li.breadcrumbs__item
+                a(href="#") Корпусная мебель
 block content
     .inner
-        h1.main-title Шкафы для отелей
-        section.cat-thumbs.flex
-            a.cat-thumbs__item(href="#", style="background-image:url(/template/img/cat-thumb.jpg)")
-                h3.cat-thumbs__title.flex.jcc.aic Двухдверные шкафы
-            a.cat-thumbs__item(href="#", style="background-image:url(/template/img/cat-thumb.jpg)")
-                h3.cat-thumbs__title.flex.jcc.aic Двухдверные шкафы
-            a.cat-thumbs__item(href="#", style="background-image:url(/template/img/cat-thumb.jpg)")
-                h3.cat-thumbs__title.flex.jcc.aic Двухдверные шкафы
-            a.cat-thumbs__item(href="#", style="background-image:url(/template/img/cat-thumb.jpg)")
-                h3.cat-thumbs__title.flex.jcc.aic Двухдверные шкафы
-            a.cat-thumbs__item(href="#", style="background-image:url(/template/img/cat-thumb.jpg)")
-                h3.cat-thumbs__title.flex.jcc.aic Двухдверные шкафы
-            a.cat-thumbs__item(href="#", style="background-image:url(/template/img/cat-thumb.jpg)")
-                h3.cat-thumbs__title.flex.jcc.aic Двухдверные шкафы
-            a.cat-thumbs__item(href="#", style="background-image:url(/template/img/cat-thumb.jpg)")
-                h3.cat-thumbs__title.flex.jcc.aic Двухдверные шкафы
+
+        h1.main-title Корпусная мебель для комнат премиум класса
+        include chunks/_cat-masonry-thumbs.pug
+        include chunks/_cat-icons.pug
 
         
-        section.prod-section
+        section.prod-section.flex
             .cards-block
-                header.cards-block__header
+                header.cards-block__header.flex.jcsb.aic
                     .cards-sort__title Сортировать по: Цене
 
-                    .cards-sort__icons
-                        button.cards-sort__btn(type="button", name="change-view")
-                            include ../../template/img/svg/list.svg
-                        button.cards-sort__btn(type="button", name="change-view")
+                    .cards-sort__icons.flex
+                        button.cards-sort__btn.is-active(type="button", name="change-view", data-style="is-masonry")
                             include ../../template/img/svg/masonry.svg
-                .cards-block__body.flex
+                        button.cards-sort__btn(type="button", name="change-view", data-style="is-list")
+                            include ../../template/img/svg/list.svg
+                .cards-block__body.is-masonry.flex
                     include chunks/_card-item.pug
                     include chunks/_card-item.pug
                     include chunks/_card-item.pug
@@ -45,12 +44,6 @@ block content
                     include chunks/_card-item.pug
                     include chunks/_card-item.pug
 
-            .filter-block
-                .filter-block__title Фильтрация
-                    section.filter-block__section
-                    section.filter-block__section
-                    section.filter-block__section
-                    section.filter-block__section
-                    section.filter-block__section
+            include chunks/_filter-right.pug
 
 block seo
