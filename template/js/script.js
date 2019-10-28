@@ -90,6 +90,17 @@ $(document).ready(function() {
             arrows: false
         })
     }
+    let $chessSlider = $('.chess__slider-inner'),
+        $chessNav = $('.chess__slider-nav');
+    if($chessSlider.length) {
+        $chessSlider.each(function() {
+            $(this).slick({
+                appendArrows: $(this).next($chessNav),
+                prevArrow: '<button type="button" class="slider__round-btn slider__round-btn--prev"><span class="vh">prev</span></button>',
+                nextArrow: '<button type="button" class="slider__round-btn slider__round-btn--next"><span class="vh">next</span></button>'
+            })
+        })
+    }
 })
 
 
@@ -104,6 +115,18 @@ $(document).ready(function() {
             $target.remove();
         }
     })
+})
+
+//change view
+let $styleBtn = $('.cards-sort__btn'),
+    $cardsContainer = $('.cards-block__body');
+$styleBtn.click(function() {
+    if(!$(this).hasClass('is-active')) {
+        $(this).addClass('is-active').siblings().removeClass('is-active');
+    };
+    let btnData = $(this).data('style')
+        oldClass = ['is-masonry', 'is-list'];
+    $cardsContainer.removeClass(oldClass).addClass(btnData);
 })
 
 //sktabs
@@ -168,6 +191,30 @@ if(skTabs.length) {
     });
     
 }
+
+//rangeslider
+
+let $rSlider = $('.js-range-slider'),
+    $rSliderMin = $('.js-range-min'),
+    $rSliderMax = $('.js-range-max');
+
+$rSlider.ionRangeSlider({
+    type: 'double',
+    min: 0,
+    max: 10000,
+    hide_min_max: true,
+    hide_from_to: true,
+
+    onStart: function (data) {
+        $rSliderMin.prop('value', data.from);
+        $rSliderMax.prop('value', data.to);
+    },
+
+    onChange: function (data) {
+        $rSliderMin.prop('value', data.from);
+        $rSliderMax.prop('value', data.to);
+    }
+});
 
 //modal
 function mLayer() {
