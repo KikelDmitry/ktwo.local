@@ -1,0 +1,92 @@
+extends _base.pug
+block title
+    title Сотрудничество - #{siteName}
+block breadcrumbs
+    .inner
+        ul.breadcrumbs__list.flex
+            li.breadcrumbs__item
+                a(href="#") Главная
+            li.breadcrumbs__item.breadcrumbs__separ >
+            li.breadcrumbs__item
+                a(href="#") Сотрудничество
+block content
+    .inner
+        h1.main-title Lorem ipsum dolor sit amet
+        section.advan
+            h2.advan__title Lorem ipsum dolor sit amet
+            .advan__cont.flex.jcsb
+                .advan__item
+                    .advan__item-icon
+                        img(src="/template/img/svg/case.svg", alt="advantage icon")
+                    .advan__item-title Lorem ipsum
+                    .advan__item-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                .advan__item
+                    .advan__item-icon
+                        img(src="/template/img/svg/case.svg", alt="advantage icon")
+                    .advan__item-title Lorem ipsum
+                    .advan__item-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                .advan__item
+                    .advan__item-icon
+                        img(src="/template/img/svg/case.svg", alt="advantage icon")
+                    .advan__item-title Lorem ipsum
+                    .advan__item-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                .advan__item
+                    .advan__item-icon
+                        img(src="/template/img/svg/case.svg", alt="advantage icon")
+                    .advan__item-title Lorem ipsum
+                    .advan__item-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                .advan__item
+                    .advan__item-icon
+                        img(src="/template/img/svg/case.svg", alt="advantage icon")
+                    .advan__item-title Lorem ipsum
+                    .advan__item-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                .advan__item
+                    .advan__item-icon
+                        img(src="/template/img/svg/case.svg", alt="advantage icon")
+                    .advan__item-title Lorem ipsum
+                    .advan__item-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        section.flex
+            .callback-block.w50
+                form.callback-form.dropzone
+                    .call__row.flex
+                        label.call__label
+                            span.call__title Ваше имя
+                            input.call__input(type="text", placeholder="Имя", name="name")
+                        label.call__label
+                            span.call__title Тема сообщения
+                            select.call__select(name="msg-subject")
+                                option(value="") Замечания по работе сайта
+                                option(value="") Замечания и пожелания
+                                option(value="") Ассортимент магазина
+                                option(value="") Покупка и доставка
+                                option(value="") Статус заказа
+                                option(value="") Сотрудничество
+                    .call__row.flex
+                        label.call__label
+                            span.call__title Введите номер заказа
+                            input.call__input(type="text", placeholder="Номер заказа", name="ordern")
+                        label.call__label
+                            span.call__title Телефон
+                            input.call__input.phone-input(type="text", placeholder="+7 (___) ___-__-__", name="phone")
+                    .call__row
+                        label.call__label
+                            span.call__title Введите E-mail
+                            input.call__input(type="email", placeholder="E-mail", name="email")
+                    .call__row
+                        label.call__label
+                            textarea.call__input.text-area(placeholder="Комментарий", name="message")
+                    .call__row
+                        label.call__label
+                            .drop-zone.drag-drop__cont
+                                span.flex.jcc.aic Перетащите сюда или загрузите файлы
+                    .call__row
+                        label.call__label.call-check.flex.aic
+                            input.call-check__input.vh(type="checkbox")
+                            span.call-check__view
+                            span.call-check__text Согласен(-на) на обработку персональных данных
+                    .call__row
+                        button.call-btn(type="submit", name="send-msg") Отправить сообщение
+            .callback-img
+                img(src="/template/img/about/contacts.jpg", alt="contacts image")
+
+block seo

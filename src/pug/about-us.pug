@@ -1,0 +1,79 @@
+extends _base.pug
+block title
+    title О компании - #{siteName}
+block breadcrumbs
+    .inner
+        ul.breadcrumbs__list.flex
+            li.breadcrumbs__item
+                a(href="#") Главная
+            li.breadcrumbs__item.breadcrumbs__separ >
+            li.breadcrumbs__item
+                a(href="#") О компании
+block content
+    .inner
+        h1.main-title Lorem ipsum dolor sit amet
+        section.f-about.flex
+            .flex
+                div
+                    img(src="/template/img/about/1-1.jpg", alt="img")
+                div
+                    h3 Lorem ipsum dolor sit amet
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            .flex
+                .flex
+                    div
+                        img(src="/template/img/about/1-1.jpg", alt="img")
+                    div
+                        img(src="/template/img/about/1-1.jpg", alt="img")
+                div
+                    img(src="/template/img/about/1-1.jpg", alt="img")
+
+        section.contel__sec.s-about.flex
+            div.contel__img
+                img(src="/template/img/about/2-1.jpg", alt="img")
+            div.contel__desc.flex
+                h3 Lorem ipsum dolor sit amet
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+        section.advan
+            h2.advan__title Lorem ipsum dolor sit amet
+            .advan__cont.flex.jcsb
+                .advan__item
+                    .advan__item-icon
+                        img(src="/template/img/svg/case.svg", alt="advantage icon")
+                    .advan__item-title Lorem ipsum
+                    .advan__item-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                .advan__item
+                    .advan__item-icon
+                        img(src="/template/img/svg/case.svg", alt="advantage icon")
+                    .advan__item-title Lorem ipsum
+                    .advan__item-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                .advan__item
+                    .advan__item-icon
+                        img(src="/template/img/svg/case.svg", alt="advantage icon")
+                    .advan__item-title Lorem ipsum
+                    .advan__item-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+        section.contel__sec.fth-about.flex
+            div.contel__desc.flex
+                h3 Lorem ipsum dolor sit amet
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            div.contel__img
+                img(src="/template/img/about/2-1.jpg", alt="img")
+        section.twins__sec.flex
+            .twins__item
+                .twins__img.flex
+                    img(src="/template/img/about/1-1.jpg")
+                a.twins__link.flex(href="#")
+                    span.twins__title Lorem ipsum dolor sit amet
+                    span.twins__subtitle Смотреть отзывы
+            .twins__item
+                .twins__img.flex
+                    img(src="/template/img/about/1-2.jpg")
+                a.twins__link.flex(href="#")
+                    span.twins__title Lorem ipsum dolor sit amet
+                    span.twins__subtitle Смотреть наши работы
+
+
+
+

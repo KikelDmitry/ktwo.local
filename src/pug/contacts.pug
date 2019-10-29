@@ -1,0 +1,47 @@
+extends _base.pug
+block title
+    title Контакты - #{siteName}
+block breadcrumbs
+    .inner
+        ul.breadcrumbs__list.flex
+            li.breadcrumbs__item
+                a(href="#") Главная
+            li.breadcrumbs__item.breadcrumbs__separ >
+            li.breadcrumbs__item
+                a(href="#") Контакты
+block content
+    .inner
+        h1.main-title Контактные данные
+    section.contacts__block
+        .inner.flex
+            .contacts__img.contacts__item.flex.jcc.aic
+                img(src="/template/img/armchair.jpg", alt="contacts image")
+            .contacts__mason
+                .contacts__row.f-row.flex
+                    .contacts__cont-us.contacts__item.flex.jcc.aic
+                        img.contacts__icon(src="/template/img/svg/call.svg", alt="call icon")
+                        h3.contacts__item-title Позвоните нам
+                        .contacts__item-desc Появились вопросы? Мы готовы помочь! Телефон нашей информационной службы:
+                        a.contacts__item-phone(href="tel:+79999999999") +7 (999) 999-99-99
+                    .contacts__callback.contacts__item.flex.jcc.aic
+                        img.contacts__icon(src="/template/img/svg/callback.svg", alt="callback icon")
+                        h3.contacts__item-title Обратная связь
+                        .contacts__item-desc Мы рады вашим отзывам и предложениям, они помогают нам стать лучше!
+                        a.contacts__item-btn(href="/contact-us.html") Написать
+                .contacts__row.s-row.flex
+                    .contacts__our-requisites.contacts__item
+                            h3.contacts__item-title Наши реквизиты
+                            .contacts__item-subtitle Наименование организации:
+                            .contacts__item-text ООО “К2 Мебель”
+                            .contacts__item-subtitle Юридический адрес:
+                            address.contacts__item-text 999999, г. Краснодар,ул. Пушкинская, д. 3, 1 этаж, комната 52
+                            .contacts__item-subtitle ИНН / КПП:
+                            .contacts__item-text 999999, 9999999999 / 999999999
+                            .contacts__item-subtitle ОГРН:
+                            .contacts__item-text 12345678901234
+                    .contacts__map.contacts__item
+                        <iframe src="https://yandex.ru/map-widget/v1/-/CGScRBNc" width="100%" height="350" frameborder="0" allowfullscreen="true"></iframe>
+
+            
+
+block seo

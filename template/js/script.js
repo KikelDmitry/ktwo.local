@@ -79,18 +79,24 @@ $(document).ready(function() {
     if(window.innerWidth <= 414) {
         $('.popular-tabs__body-item').slick({
             slidesToShow: 1,
-            arrow: false,
+            arrows: false,
             variableWidth: true,
             centerMode: true,
             arrows: false
-        })
-    }
+        });
+        if ($('.advan__cont').length) {
+            $('.advan__cont').slick({
+                arrows: false,
+                autoplay: true
+            })
+        }
+    };
     if(window.innerWidth <= 480) {
         $('.cat-thumbs').slick({
             arrows: false
         })
-    }
-    let $chessSlider = $('.chess__slider-inner'),
+    };
+    const $chessSlider = $('.chess__slider-inner'),
         $chessNav = $('.chess__slider-nav');
     if($chessSlider.length) {
         $chessSlider.each(function() {
@@ -100,7 +106,7 @@ $(document).ready(function() {
                 nextArrow: '<button type="button" class="slider__round-btn slider__round-btn--next"><span class="vh">next</span></button>'
             })
         })
-    }
+    };
 })
 
 
@@ -303,8 +309,15 @@ burgerBtn.click(function() {
     leftMenu.addClass('is-active');
 })
 
-//scroll top
+//masked
+$(function($) {
+    $('.phone-input').mask('+7 (999) 999-99-99'); 
+});
 
+//dropzone
+
+
+//scroll top
 function toTop() { //smooth scroll
     const scrollStep = document.body.scrollHeight / 100;
     if (window.pageYOffset > 0) {
