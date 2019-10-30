@@ -257,8 +257,7 @@ function mClose() {
 //left-menu
 const $leftBar = $('.left-bar'),
     $leftBarList = $('.left-bar__list'),
-    $leftBarLink = $('.left-bar__link'),
-    $closeBtn = $('.js-left-bar-close');
+    $leftBarLink = $('.left-bar__link');
 
     $leftBarLink.click(function(e) {
     if(window.innerWidth >= 641) {
@@ -279,15 +278,23 @@ const $leftBar = $('.left-bar'),
         }
     }
 })
-//copying and create nodes
-$(document).ready(function() {
-    $leftBar.append('<div class="shadow-div"></div>');
-    $leftBarLink.each(function() {
-        
-        //copying left-bar__title and addClass &--hover
-    });
 
+
+//copying titles and create close-buttons
+$(document).ready(function() {
+    let $titles = $('span.left-bar__title');
+    $titles.each(function() {
+        let $cloned = $(this).clone();
+        $cloned = $(this).before($cloned);
+        $cloned.addClass('left-bar__title--hover');
+    });
+    let $subCont = $('.left-bar__subcont');
+        
+        $subCont.each(function() {
+            $(this).append('<button class="left-bar__close-btn js-left-bar-close" type="button" name="close-left-button"><span class="vh">close</span></button>');
+        })
 })
+
 //close menu
 $(window).click(function() {
     closeMenu();
@@ -295,11 +302,13 @@ $(window).click(function() {
 $leftBarList.click(function (e) {
     e.stopPropagation();
 });
-$closeBtn.click(closeMenu);
-function closeMenu() {
-    $('.left-bar__list, .left-bar__subcont, .left-bar__link').removeClass('is-active is-mob');
-    $leftBar.removeClass('is-mob');
-}
+$(document).ready(function() {
+    $('.js-left-bar-close').click(closeMenu);
+    function closeMenu() {
+        $('.left-bar__list, .left-bar__subcont, .left-bar__link').removeClass('is-active is-mob');
+        $leftBar.removeClass('is-mob');
+    }
+})
 
 //mobmenu
 const burgerBtn = $('.top-burger');

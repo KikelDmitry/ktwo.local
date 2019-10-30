@@ -12,6 +12,14 @@ block breadcrumbs
 block content
     .inner
         h1.main-title Lorem ipsum dolor sit amet
+        section.f-partner.flex
+            div
+                div
+                    img(src="/template/img/about/1-1.jpg", alt="partner image")
+                h3 Lorem ipsum dolor sit amet
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            div
+                img(src="/template/img/promo/promo0.jpg", alt="partner image")
         section.advan
             h2.advan__title Lorem ipsum dolor sit amet
             .advan__cont.flex.jcsb
@@ -45,29 +53,17 @@ block content
                         img(src="/template/img/svg/case.svg", alt="advantage icon")
                     .advan__item-title Lorem ipsum
                     .advan__item-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        section.flex
+        section.partner-form.flex
             .callback-block.w50
+                h3.callback__title Напишите нам
                 form.callback-form.dropzone
                     .call__row.flex
                         label.call__label
                             span.call__title Ваше имя
                             input.call__input(type="text", placeholder="Имя", name="name")
                         label.call__label
-                            span.call__title Тема сообщения
-                            select.call__select(name="msg-subject")
-                                option(value="") Замечания по работе сайта
-                                option(value="") Замечания и пожелания
-                                option(value="") Ассортимент магазина
-                                option(value="") Покупка и доставка
-                                option(value="") Статус заказа
-                                option(value="") Сотрудничество
-                    .call__row.flex
-                        label.call__label
-                            span.call__title Введите номер заказа
-                            input.call__input(type="text", placeholder="Номер заказа", name="ordern")
-                        label.call__label
                             span.call__title Телефон
-                            input.call__input.phone-input(type="text", placeholder="+7 (___) ___-__-__", name="phone")
+                            input.call__input.phone-input(type="text", placeholder="+7 (___) ___-__-__", name="phone")    
                     .call__row
                         label.call__label
                             span.call__title Введите E-mail
