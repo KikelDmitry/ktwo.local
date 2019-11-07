@@ -215,7 +215,7 @@ $rSlider.ionRangeSlider({
         $rSliderMin.prop('value', data.from);
         $rSliderMax.prop('value', data.to);
     },
-
+    
     onChange: function (data) {
         $rSliderMin.prop('value', data.from);
         $rSliderMax.prop('value', data.to);
