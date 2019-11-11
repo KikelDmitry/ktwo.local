@@ -117,9 +117,9 @@ $(document).ready(function() {
         const $target = $(this).find('.card-item__native'),
             html = $target.html();
         $target.parent().find('.card-item__append').html(html);
-        if(window.innerWidth <= 1280) {
-            $target.remove();
-        }
+        // if(window.innerWidth <= 1280) {
+        //     $target.remove();
+        // }
     })
 })
 
@@ -133,6 +133,19 @@ $styleBtn.click(function() {
     let btnData = $(this).data('style')
         oldClass = ['is-masonry', 'is-list'];
     $cardsContainer.removeClass(oldClass).addClass(btnData);
+})
+
+//filter btn
+const filterBtn = $('.mob-filter'),
+filterBlock = $('.filter-block');
+filterBtn.click(function() {
+    if(!$(this).hasClass('is-active')) {
+        $(this).addClass('is-active');
+        filterBlock.addClass('is-active');
+    } else {
+        $(this).removeClass('is-active');
+        filterBlock.removeClass('is-active');
+    }
 })
 
 //sktabs
@@ -296,12 +309,6 @@ $(document).ready(function() {
 })
 
 //close menu
-$(window).click(function() {
-    closeMenu();
-});
-$leftBarList.click(function (e) {
-    e.stopPropagation();
-});
 $(document).ready(function() {
     $('.js-left-bar-close').click(closeMenu);
     function closeMenu() {
@@ -309,6 +316,12 @@ $(document).ready(function() {
         $leftBar.removeClass('is-mob');
     }
 })
+$(window).click(function() {
+    closeMenu();
+});
+$leftBarList.click(function (e) {
+    e.stopPropagation();
+});
 
 //mobmenu
 const burgerBtn = $('.top-burger');
