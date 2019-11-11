@@ -18,9 +18,10 @@ $(document).ready(function() {
     if(window.innerWidth >= 540) {
         
         $('.hotel-slider').slick({
-            slidesToShow: 4,
             prevArrow: '<button type="button" class="slider__round-btn slider__round-btn--prev"><span class="vh">prev</span></button>',
-            nextArrow: '<button type="button" class="slider__round-btn slider__round-btn--next"><span class="vh">next</span></button>'
+            nextArrow: '<button type="button" class="slider__round-btn slider__round-btn--next"><span class="vh">next</span></button>',
+            rows: 2,
+            slidesPerRow: 4
         });
     };
 
@@ -117,10 +118,16 @@ $(document).ready(function() {
         const $target = $(this).find('.card-item__native'),
             html = $target.html();
         $target.parent().find('.card-item__append').html(html);
-        // if(window.innerWidth <= 1280) {
-        //     $target.remove();
-        // }
+        if(window.innerWidth <= 1280) {
+            // $target.remove();
+
+        }
     })
+    if (window.innerWidth <= 1280) {
+        $('.popular-tabs__body-item .card-item').each(function() {
+            $(this).find('.card-item__native').remove();
+        });
+    }
 })
 
 //change view
