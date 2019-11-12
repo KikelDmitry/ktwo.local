@@ -204,9 +204,9 @@ main > .inner > section  {
             @include desk1280 {
                 left: 10px;
             }
-            .face-btn {
+            .card-item__like {
                 flex: 0 0 auto;
-                margin: 0 7px;
+                // margin: 0 7px;
                 padding: 5px;
                 width: 25px;
                 height: 25px;
@@ -1099,7 +1099,10 @@ main > .inner > section  {
                     justify-content: space-between;
 
                     .card-item__img {
-                        flex: 0 0 auto;
+                        flex: 1 1 auto;
+                        min-width: 80px;
+                        max-width: 200px;
+                        align-self: center;
                     }
                     .card-item__name {
                         display: flex;

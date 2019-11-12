@@ -142,7 +142,7 @@ main > section, main > .inner > section { margin-bottom: 100px; }
 
 @media (max-width: 1280px) { .card-item__hover .card-item__top-icons { left: 10px; } }
 
-.card-item__hover .card-item__top-icons .face-btn { -webkit-box-flex: 0; -ms-flex: 0 0 auto; flex: 0 0 auto; margin: 0 7px; padding: 5px; width: 25px; height: 25px; border-radius: 50%; }
+.card-item__hover .card-item__top-icons .card-item__like { -webkit-box-flex: 0; -ms-flex: 0 0 auto; flex: 0 0 auto; padding: 5px; width: 25px; height: 25px; border-radius: 50%; }
 
 .card-item__hover .card-item__append { padding: 41px 39px 25px; }
 
@@ -489,7 +489,7 @@ main > section, main > .inner > section { margin-bottom: 100px; }
 
 .cards-block .cards-block__body.is-list .card-item .card-item__native { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
 
-.cards-block .cards-block__body.is-list .card-item .card-item__native .card-item__img { -webkit-box-flex: 0; -ms-flex: 0 0 auto; flex: 0 0 auto; }
+.cards-block .cards-block__body.is-list .card-item .card-item__native .card-item__img { -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; min-width: 80px; max-width: 200px; -ms-flex-item-align: center; align-self: center; }
 
 .cards-block .cards-block__body.is-list .card-item .card-item__native .card-item__name { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-flow: column; flex-flow: column; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; padding: 40px 10px 40px 0; margin-right: auto; }
 

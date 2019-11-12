@@ -31,19 +31,11 @@ block content
                             include ../../template/img/svg/list.svg
                 button.mob-filter.face-btn Фильтр
                 .cards-block__body.is-masonry.flex
-                    include chunks/_card-item.pug
-                    include chunks/_card-item.pug
-                    include chunks/_card-item.pug
-                    include chunks/_card-item.pug
-                    include chunks/_card-item.pug
-                    include chunks/_card-item.pug
-                    include chunks/_card-item.pug
-                    include chunks/_card-item.pug
-                    include chunks/_card-item.pug
-                    include chunks/_card-item.pug
-                    include chunks/_card-item.pug
-                    include chunks/_card-item.pug
-
+                    - var n = 0;
+                    while n < 12
+                        - n++
+                        - var cardPrice = Math.floor(Math.random() * (1000 - 9999) + 9999);
+                        include chunks/_card-item.pug
             include chunks/_filter-right.pug
 
 block seo
