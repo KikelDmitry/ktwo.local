@@ -70,7 +70,7 @@ $(document).ready(function() {
         $('.cat-icons__cont').slick({
             arrows: false
         })
-    };
+    }
     if(window.innerWidth <= 768) {
         $('.articles__cont').slick({
             slidesToShow: 2,
@@ -87,7 +87,7 @@ $(document).ready(function() {
                 }
             ]
         })
-    };
+    }
     if(window.innerWidth <= 414) {
         $('.popular-tabs__body-item').slick({
             slidesToShow: 1,
@@ -124,20 +124,27 @@ $(document).ready(function() {
 
 //hovercard
 $(document).ready(function() {
-    let card = $('.card-item');
-    card.each(function() {
-        const $target = $(this).find('.card-item__native'),
-            html = $target.html();
-        $target.parent().find('.card-item__append').html(html);
-        if(window.innerWidth <= 1280) {
+    //Функция инициализации ховеров
+    function init_hovers() {
+        let card = $('.card-item');
+        card.each(function() {
+            const $target = $(this).find('.card-item__native'),
+                html = $target.html();
+            $target.parent().find('.card-item__append').html(html);
+            if(window.innerWidth <= 1280) {
 
-        }
-    });
-    if (window.innerWidth <= 1280) {
-        $('.popular-tabs__body-item .card-item').each(function() {
-            $(this).find('.card-item__native').remove();
+            }
         });
+        if (window.innerWidth <= 1280) {
+            $('.popular-tabs__body-item .card-item').each(function() {
+                $(this).find('.card-item__native').remove();
+            });
+        }
     }
+    //Обновляем ховеры при измении фильтров
+    $(document).on('mse2_load', function() {
+        init_hovers();
+    });
 });
 $('.add-to-fav-btn').click(function() {
     $(this).toggleClass('is-active');
@@ -174,17 +181,16 @@ filterBtn.click(function() {
 //sktabs
 const skTabs = $('.sk-tabs');
 if(skTabs.length) {
-    ; (function (window, document, $, undefined) {
+    (function (window, document, $, undefined) {
         if (!$) {
             return undefined;
         }
         $.fn.extend({
             SKtab: function (options) {
-                let $th = this;
-                let tabActiveClass = 'active';
-                let containerActiveClass = 'active';
-                let tabContainerClass = 'tab-container';
-                let activeTab = 0;
+                let tabActiveClass = 'active',
+                    containerActiveClass = 'active',
+                    tabContainerClass = 'tab-container',
+                    activeTab = 0;
                 
                 if (options.active) {
                     activeTab = options.active;
