@@ -66,6 +66,9 @@ $(document).ready(function() {
         $('.promo__block > .inner').slick({
             arrows: false,
             autoplay: true
+        });
+        $('.cat-icons__cont').slick({
+            arrows: false
         })
     };
     if(window.innerWidth <= 768) {
@@ -101,7 +104,7 @@ $(document).ready(function() {
         }
     };
     if(window.innerWidth <= 480) {
-        $('.cat-thumbs').slick({
+        $('.cat-thumbs__inner').slick({
             arrows: false
         })
     };
@@ -154,19 +157,19 @@ $styleBtn.click(function() {
 
 //filter btn
 const filterBtn = $('.mob-filter'),
-filterBlock = $('.filter-block'),
-filterBtnHtml = filterBlock.html();
+filterBlock = $('.filter-block');
+
 filterBtn.click(function() {
     if(!$(this).hasClass('is-active')) {
         $(this).addClass('is-active');
         filterBlock.addClass('is-active');
-        
+        filterBtn.html('Закрыть');
     } else {
         $(this).removeClass('is-active');
         filterBlock.removeClass('is-active');
-        
+        filterBtn.html('Фильтр');
     }
-})
+});
 
 //sktabs
 const skTabs = $('.sk-tabs');
@@ -228,7 +231,6 @@ if(skTabs.length) {
         containerActiveClass: 'active', //Класс который назначается выбранному контейнеру
         tabContainerClass: 'tab-container', //Класс табконтейнеров табов
     });
-    
 }
 
 //rangeslider
