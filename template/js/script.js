@@ -18,9 +18,11 @@ $(document).ready(function() {
     if(window.innerWidth >= 540) {
         
         $('.hotel-slider').slick({
-            slidesToShow: 4,
+            // slidesToShow: 8,
             prevArrow: '<button type="button" class="slider__round-btn slider__round-btn--prev"><span class="vh">prev</span></button>',
-            nextArrow: '<button type="button" class="slider__round-btn slider__round-btn--next"><span class="vh">next</span></button>'
+            nextArrow: '<button type="button" class="slider__round-btn slider__round-btn--next"><span class="vh">next</span></button>',
+            rows: 2,
+            slidesPerRow: 4
         });
     };
 

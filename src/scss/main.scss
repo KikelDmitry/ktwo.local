@@ -521,67 +521,49 @@ main > .inner > section  {
             flex-flow: row wrap;
             padding: 0;
         }
+        .hotel-slider__item {
+            display: block;
+            max-width: inherit;
+            padding: 7px 40px 40px;
+            text-align: center;
 
-        .hotel-slider__col {
-            @include mob540 {
-                max-width: 50%;
-                flex: 1 0 50%;
-
-                &:nth-child(odd) {
-                    border-right: 1px solid #C4C4C4;
-                }
-                &:nth-last-child(-n+2),
-                &:last-child {
-                    .hotel-slider__item:last-child {
-                        border: none;
-                    }
-                }
+            @include tab768 {
+                padding: 20px;
+                margin: 0 10px 10px;
             }
-            .hotel-slider__item {
-                display: block;
-                max-width: inherit;
-                padding-top: 7px;
-                margin: 0 40px 40px;
-                text-align: center;
+            @include mob540 {
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+                max-width: 100%;
+                min-height: 220px;
+                padding: 10px;
+                margin: 0 auto;
+                border-bottom: 1px solid #C4C4C4;
+            }
+
+            .hotel-slider__icon {
+                padding-bottom: 33px;
+                margin-bottom: 20px;
+                border-bottom: 1px solid #c4c4c4;
 
                 @include tab768 {
-                    padding: 20px;
-                    margin: 0 10px 10px;
+                    padding-bottom: 0;
                 }
                 @include mob540 {
-                    display: flex;
-                    flex-flow: column;
-                    justify-content: center;
-                    align-items: center;
-                    max-width: 100%;
-                    min-height: 220px;
-                    padding: 10px;
+                    width: 100%;
+                    border: none;
+                }
+
+                img {
                     margin: 0 auto;
-                    border-bottom: 1px solid #C4C4C4;
                 }
-    
-                .hotel-slider__icon {
-                    padding-bottom: 33px;
-                    margin-bottom: 20px;
-                    border-bottom: 1px solid #c4c4c4;
-
-                    @include tab768 {
-                        padding-bottom: 0;
-                    }
-                    @include mob540 {
-                        width: 100%;
-                        border: none;
-                    }
-
-                    img {
-                        margin: 0 auto;
-                    }
-                }
-                .hotel-slider__title {
-                    font-size: 16px;
-                    font-weight: normal;
-                    letter-spacing: .09em;
-                }
+            }
+            .hotel-slider__title {
+                font-size: 16px;
+                font-weight: normal;
+                letter-spacing: .09em;
             }
         }
     }
