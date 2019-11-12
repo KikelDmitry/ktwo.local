@@ -15,15 +15,23 @@ $(document).ready(function() {
         ]
     });
 
-    if(window.innerWidth >= 540) {
         
-        $('.hotel-slider').slick({
-            prevArrow: '<button type="button" class="slider__round-btn slider__round-btn--prev"><span class="vh">prev</span></button>',
-            nextArrow: '<button type="button" class="slider__round-btn slider__round-btn--next"><span class="vh">next</span></button>',
-            rows: 2,
-            slidesPerRow: 4
-        });
-    };
+    $('.hotel-slider').slick({
+        prevArrow: '<button type="button" class="slider__round-btn slider__round-btn--prev"><span class="vh">prev</span></button>',
+        nextArrow: '<button type="button" class="slider__round-btn slider__round-btn--next"><span class="vh">next</span></button>',
+        rows: 2,
+        slidesPerRow: 4,
+        responsive: [
+            {
+                breakpoint: 540,
+                settings: {
+                    rows: 2,
+                    slidesPerRow: 2,
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
 
     $('.clients__feedback-slider').slick({
         dots: true,
@@ -119,7 +127,6 @@ $(document).ready(function() {
             html = $target.html();
         $target.parent().find('.card-item__append').html(html);
         if(window.innerWidth <= 1280) {
-            // $target.remove();
 
         }
     })
@@ -128,7 +135,10 @@ $(document).ready(function() {
             $(this).find('.card-item__native').remove();
         });
     }
-})
+});
+$('.add-to-fav-btn').click(function() {
+    $(this).toggleClass('is-active');
+});
 
 //change view
 let $styleBtn = $('.cards-sort__btn'),
@@ -277,7 +287,7 @@ function mClose() {
 //left-menu
 const $leftBar = $('.left-bar'),
     $leftBarList = $('.left-bar__list'),
-    $leftBarLink = $('.left-bar__link');
+    $leftBarLink = $('.left-bar__list > .left-bar__item > .left-bar__link');
 
     $leftBarLink.click(function(e) {
     if(window.innerWidth >= 641) {
@@ -322,10 +332,10 @@ $(document).ready(function() {
         $('.left-bar__list, .left-bar__subcont, .left-bar__link').removeClass('is-active is-mob');
         $leftBar.removeClass('is-mob');
     }
+    $(window).click(function() {
+        closeMenu();
+    });
 })
-$(window).click(function() {
-    closeMenu();
-});
 $leftBarList.click(function (e) {
     e.stopPropagation();
 });

@@ -37,7 +37,7 @@ gulp.task('pug', function () {
 gulp.task('browser-sync', function () {
     browserSync.init({
         server: {
-            basedir: './',
+            baseDir: './'
         }
     });
 });
