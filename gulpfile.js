@@ -35,9 +35,10 @@ gulp.task('pug', function () {
 });
 
 gulp.task('browser-sync', function () {
-    browserSync({
-        proxy: 'ktwo.local',
-        notify: false
+    browserSync.init({
+        server: {
+            basedir: './',
+        }
     });
 });
 
@@ -54,15 +55,15 @@ gulp.task('svgSprite', function () {
                 $('[stroke]').removeAttr('stroke');
                 $('[style]').removeAttr('style');
             },
-            parserOptions: { xmlMode: true }
+            parserOptions: {xmlMode: true}
         }))
         .pipe(svgSprite({
-            mode: {
-                symbol: {
-                    sprite: "../sprite.svg"  //sprite file name
-                }
-            },
-        }
+                mode: {
+                    symbol: {
+                        sprite: "../sprite.svg"  //sprite file name
+                    }
+                },
+            }
         ))
         .pipe(gulp.dest(destDir + 'img/svg/'));
 });
