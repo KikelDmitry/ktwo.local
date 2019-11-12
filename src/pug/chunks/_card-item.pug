@@ -11,8 +11,11 @@ article.card-item
             button(type="button").add-to-fav-btn.islist-only В избранное
         .card-item__right-col    
             .card-item__price-word Цена
-            .card-item__price #{cardPrice} р
-            .card-item__btns.flex.jcsb.islist-only
+            .card-item__price 4 567 р
+            form.ms2_form.card-item__btns.flex.jcsb.islist-only(method="post")
+                input(type="hidden", name="id", value="1")
+                input(type="hidden", name="count", value="1")
+                input(type="hidden", name="options", value="[]")
                 button.card-item__btn-buy.face-btn(type="button", name="buy-button") Купить
                 button.card-item__btn-cart.face-btn(type="button", name="buy-button")
                     img(src="/template/img/svg/cart.svg", alt="cart icon")
@@ -37,7 +40,10 @@ article.card-item
                 .card-item__size-height
                     .card-item__size-f Высота
                     .card-item__size-s 124 см
-            .card-item__btns.flex.jcsb
+            form.ms2_form.card-item__btns.flex.jcsb(method="post")
+                input(type="hidden", name="id", value="1")
+                input(type="hidden", name="count", value="1")
+                input(type="hidden", name="options", value="[]")
                 button.card-item__btn-buy.face-btn(type="button", name="buy-button") Купить
                 button.card-item__compare.face-btn(type="button", name="add-to-compare")
                     img(src="/template/img/svg/eye.svg", alt="heart icon")
