@@ -145,6 +145,7 @@ $(document).ready(function() {
     $(document).on('mse2_load', function() {
         init_hovers();
     });
+    init_hovers();
 });
 $('.add-to-fav-btn').click(function() {
     $(this).toggleClass('is-active');
