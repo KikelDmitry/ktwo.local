@@ -362,6 +362,8 @@ main > section, main > .inner > section { margin-bottom: 100px; }
 
 .main-title { margin: 0 0 42px; font-weight: 600; font-size: 36px; line-height: 44px; text-align: center; letter-spacing: 0.09em; }
 
+@media (max-width: 414px) { .main-title { padding: 0 .2em; } }
+
 .breadcrumbs__list { margin: 0 0 70px; }
 
 @media (max-width: 414px) { .breadcrumbs__list { padding: 0 5px; margin: 0 0 30px; } }
@@ -489,7 +491,7 @@ main > section, main > .inner > section { margin-bottom: 100px; }
 
 .cards-block .cards-block__body.is-list .card-item .card-item__native { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
 
-.cards-block .cards-block__body.is-list .card-item .card-item__native .card-item__img { -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; min-width: 80px; max-width: 200px; -ms-flex-item-align: center; align-self: center; }
+.cards-block .cards-block__body.is-list .card-item .card-item__native .card-item__img { -webkit-box-flex: 0; -ms-flex: 0 1 auto; flex: 0 1 auto; min-width: 80px; max-width: 200px; -ms-flex-item-align: center; align-self: center; }
 
 .cards-block .cards-block__body.is-list .card-item .card-item__native .card-item__name { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-flow: column; flex-flow: column; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; padding: 40px 10px 40px 0; margin-right: auto; }
 

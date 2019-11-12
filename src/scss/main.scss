@@ -781,6 +781,10 @@ main > .inner > section  {
     line-height: 44px;
     text-align: center;
     letter-spacing: 0.09em;
+
+    @include mob414 {
+        padding: 0 .2em;
+    }
 }
 .breadcrumbs__list {
     margin: 0 0 70px;
@@ -1099,7 +1103,7 @@ main > .inner > section  {
                     justify-content: space-between;
 
                     .card-item__img {
-                        flex: 1 1 auto;
+                        flex: 0 1 auto;
                         min-width: 80px;
                         max-width: 200px;
                         align-self: center;
