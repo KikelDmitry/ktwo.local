@@ -55,15 +55,15 @@ gulp.task('svgSprite', function () {
                 $('[stroke]').removeAttr('stroke');
                 $('[style]').removeAttr('style');
             },
-            parserOptions: { xmlMode: true }
+            parserOptions: {xmlMode: true}
         }))
         .pipe(svgSprite({
-            mode: {
-                symbol: {
-                    sprite: "../sprite.svg"  //sprite file name
-                }
-            },
-        }
+                mode: {
+                    symbol: {
+                        sprite: "../sprite.svg"  //sprite file name
+                    }
+                },
+            }
         ))
         .pipe(gulp.dest(destDir + 'img/svg/'));
 });
