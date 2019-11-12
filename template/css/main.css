@@ -364,15 +364,17 @@ main > section, main > .inner > section { margin-bottom: 100px; }
 
 @media (max-width: 414px) { .main-title { padding: 0 .2em; } }
 
-.breadcrumbs__list { margin: 0 0 70px; }
+.bread__list { margin: 0 0 70px; }
 
-@media (max-width: 414px) { .breadcrumbs__list { padding: 0 5px; margin: 0 0 30px; } }
+@media (max-width: 414px) { .bread__list { padding: 0 5px; margin: 0 0 30px; } }
 
-.breadcrumbs__list .breadcrumbs__item { font-size: 12px; line-height: 15px; letter-spacing: 0.09em; color: #A3A1A1; }
+.bread__list .bread__item { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; color: #A3A1A1; }
 
-.breadcrumbs__list .breadcrumbs__item.breadcrumbs__separ { margin: 0 12px; }
+.bread__list .bread__item::after { content: '>'; margin: 0 12px; }
 
-.breadcrumbs__list .breadcrumbs__item:hover { text-decoration: underline; }
+.bread__list .bread__item:last-child::after { display: none; }
+
+.bread__list .bread__item a { font-size: 12px; line-height: 15px; letter-spacing: .09em; }
 
 .chess__block .chess__row { margin: 0 0 20px; }
 
@@ -964,5 +966,3 @@ body.is-modal { overflow: visible; }
 .modal-layer { opacity: 0; visibility: hidden; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 9990; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); -webkit-transition: all .3s linear; transition: all .3s linear; }
 
 .modal-layer.is-active { opacity: 1; visibility: visible; }
-
-html { background: #000 !important; }

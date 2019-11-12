@@ -1,3 +1,7 @@
+#MY
+*.html
+/template/css/**/*.*
+
 # Logs
 logs
 *.log

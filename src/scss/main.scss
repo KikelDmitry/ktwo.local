@@ -786,28 +786,56 @@ main > .inner > section  {
         padding: 0 .2em;
     }
 }
-.breadcrumbs__list {
+.bread__list {
     margin: 0 0 70px;
-    
+
     @include mob414 {
         padding: 0 5px;
         margin: 0 0 30px;
     }
-
-    .breadcrumbs__item {
-        font-size: 12px;
-        line-height: 15px;
-        letter-spacing: 0.09em;
+    .bread__item {
+        display: flex;
+        align-items: center;
         color: #A3A1A1;
 
-        &.breadcrumbs__separ {
+        &::after {
+            content: '>';
             margin: 0 12px;
         }
-        &:hover {
-            text-decoration: underline;
+        &:last-child {
+            &::after {
+                display: none;
+            }
+        }
+        a {
+            font-size: 12px;
+            line-height: 15px;
+            letter-spacing: .09em;
         }
     }
 }
+// .breadcrumbs__list {
+//     margin: 0 0 70px;
+    
+//     @include mob414 {
+//         padding: 0 5px;
+//         margin: 0 0 30px;
+//     }
+
+//     .breadcrumbs__item {
+//         font-size: 12px;
+//         line-height: 15px;
+//         letter-spacing: 0.09em;
+//         color: #A3A1A1;
+
+//         &.breadcrumbs__separ {
+//             margin: 0 12px;
+//         }
+//         &:hover {
+//             text-decoration: underline;
+//         }
+//     }
+// }
 .chess__block {
     .chess__row {
         margin: 0 0 20px;
@@ -2507,10 +2535,5 @@ body.is-modal {
 // section:not(.seo__block) {
 //     display: none;
 // }
-html {
-    background: #000 !important;
-}
-// .prod-section {
-//     display: none;
-// }
+
 // @import "_debug.scss";
