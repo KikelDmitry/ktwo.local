@@ -35,6 +35,9 @@ block content
                     while n < 12
                         - n++
                         - var cardPrice = Math.floor(Math.random() * (1000 - 9999) + 9999);
+                        - var length = Math.floor(Math.random() * (10 - 400) + 400);
+                        - var weight = Math.floor(Math.random() * (10 - 400) + 400);
+                        - var height = Math.floor(Math.random() * (10 - 400) + 400);
                         include chunks/_card-item.pug
             include chunks/_filter-right.pug
 
