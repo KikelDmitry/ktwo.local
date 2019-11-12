@@ -1,23 +1,26 @@
-var gulp = require('gulp'),
+let gulp = require('gulp'),
     sass = require('gulp-sass'),
     svgSprite = require('gulp-svg-sprite'),
     autoprefixer = require('gulp-autoprefixer'),
     cheerio = require('gulp-cheerio'),
     svgmin = require('gulp-svgmin'),
     browserSync = require('browser-sync'),
-    pug = require('gulp-pug');
-
-var assetsDir = 'src/',
+    pug = require('gulp-pug'),
+    assetsDir = 'src/',
     destDir = 'template/';
 
 gulp.task('sass', function () {
     return gulp.src(assetsDir + 'scss/*.scss')
-        .pipe(sass({ outputStyle: 'compact' }).on('error', sass.logError))
+        .pipe(sass({
+            outputStyle: 'compact'
+        }).on('error', sass.logError))
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(browserSync.reload({ stream: true }))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
         .pipe(gulp.dest(destDir + 'css'))
 });
 
@@ -29,7 +32,7 @@ gulp.task('pug', function () {
         }))
         .pipe(gulp.dest(__dirname))
         .pipe(browserSync.stream())
-})
+});
 
 gulp.task('browser-sync', function () {
     browserSync({
