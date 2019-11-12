@@ -91,23 +91,23 @@ $(document).ready(function() {
     if(window.innerWidth <= 414) {
         $('.popular-tabs__body-item').slick({
             slidesToShow: 1,
-            arrows: false,
             variableWidth: true,
             centerMode: true,
             arrows: false
         });
-        if ($('.advan__cont').length) {
-            $('.advan__cont').slick({
+        let $advanCont = $('.advan__cont');
+        if ($advanCont.length) {
+            $advanCont.slick({
                 arrows: false,
                 autoplay: true
             })
         }
-    };
+    }
     if(window.innerWidth <= 480) {
         $('.cat-thumbs__inner').slick({
             arrows: false
         })
-    };
+    }
     const $chessSlider = $('.chess__slider-inner'),
         $chessNav = $('.chess__slider-nav');
     if($chessSlider.length) {
@@ -118,8 +118,8 @@ $(document).ready(function() {
                 nextArrow: '<button type="button" class="slider__round-btn slider__round-btn--next"><span class="vh">next</span></button>'
             })
         })
-    };
-})
+    }
+});
 
 
 //hovercard
@@ -132,7 +132,7 @@ $(document).ready(function() {
         if(window.innerWidth <= 1280) {
 
         }
-    })
+    });
     if (window.innerWidth <= 1280) {
         $('.popular-tabs__body-item .card-item').each(function() {
             $(this).find('.card-item__native').remove();
@@ -149,11 +149,11 @@ let $styleBtn = $('.cards-sort__btn'),
 $styleBtn.click(function() {
     if(!$(this).hasClass('is-active')) {
         $(this).addClass('is-active').siblings().removeClass('is-active');
-    };
-    let btnData = $(this).data('style')
+    }
+    let btnData = $(this).data('style'),
         oldClass = ['is-masonry', 'is-list'];
     $cardsContainer.removeClass(oldClass).addClass(btnData);
-})
+});
 
 //filter btn
 const filterBtn = $('.mob-filter'),
@@ -278,7 +278,7 @@ $('.modal-layer').on('click', function (e) {
         $('aside.left-bar, .left-filter').removeClass('is-active');
         mClose();
     }
-})
+});
 
 //modal close
 function mClose() {
@@ -287,7 +287,7 @@ function mClose() {
     $('html').removeClass('is-modal');
     $('body').removeClass('is-modal');
     $('.modal-layer').removeClass('is-active');
-};
+}
 
 //left-menu
 const $leftBar = $('.left-bar'),
@@ -312,7 +312,7 @@ const $leftBar = $('.left-bar'),
 
         }
     }
-})
+});
 
 
 //copying titles and create close-buttons
@@ -328,7 +328,7 @@ $(document).ready(function() {
         $subCont.each(function() {
             $(this).append('<button class="left-bar__close-btn js-left-bar-close" type="button" name="close-left-button"><span class="vh">close</span></button>');
         })
-})
+});
 
 //close menu
 $(document).ready(function() {
@@ -340,7 +340,8 @@ $(document).ready(function() {
     $(window).click(function() {
         closeMenu();
     });
-})
+});
+
 $leftBarList.click(function (e) {
     e.stopPropagation();
 });
@@ -351,7 +352,7 @@ burgerBtn.click(function() {
     const leftMenu = $('.left-bar');
     mLayer();
     leftMenu.addClass('is-active');
-})
+});
 
 //masked
 $(function($) {
@@ -370,5 +371,6 @@ function toTop() { //smooth scroll
     } else {
         return false
     }
-};
-$('.go-top-btn').click(toTop)
+}
+
+$('.go-top-btn').click(toTop);
