@@ -312,7 +312,7 @@ main > section, main > .inner > section { margin-bottom: 100px; }
 
 .promo__block .inner .promo__item { max-width: 32%; margin: 0 .5%; }
 
-.clients__feedback-slider { padding: 25px; margin-bottom: 92px; background-image: url(/template/img/clients/feedback-slider-back.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; }
+.clients__feedback-slider { padding: 25px; margin-bottom: 92px; background-image: url(../img/clients/feedback-slider-back.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; }
 
 .clients__feedback-slider .clients__feedback-slide { text-align: center; letter-spacing: 0.09em; }
 
