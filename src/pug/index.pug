@@ -77,31 +77,32 @@ block content
                     h3.popular-tabs__head-item.tab-item(data-container="tab3") Lorem
                 .popular-tabs__body.sk-tabs
                     .popular-tabs__body-item.tab-container#tab1
-                        include chunks/_card-item.pug
-                        include chunks/_card-item.pug
-                        include chunks/_card-item.pug
-                        include chunks/_card-item.pug
-                        include chunks/_card-item.pug
-                        include chunks/_card-item.pug
-                        include chunks/_card-item.pug
-                        include chunks/_card-item.pug
-                        include chunks/_card-item.pug
-                        include chunks/_card-item.pug
-                        include chunks/_card-item.pug
+                        - var n = 0;
+                        while n < 12
+                            - n++
+                            - var cardPrice = Math.floor(Math.random() * (1000 - 9999) + 9999);
+                            - var length = Math.floor(Math.random() * (10 - 400) + 400);
+                            - var weight = Math.floor(Math.random() * (10 - 400) + 400);
+                            - var height = Math.floor(Math.random() * (10 - 400) + 400);
+                            include chunks/_card-item.pug
                     .popular-tabs__body-item.tab-container#tab2
-                        include chunks/_card-item.pug
-                        include chunks/_card-item.pug
-                        include chunks/_card-item.pug
-                        include chunks/_card-item.pug
+                        - var n = 0;
+                        while n < 8
+                            - n++
+                            - var cardPrice = Math.floor(Math.random() * (1000 - 9999) + 9999);
+                            - var length = Math.floor(Math.random() * (10 - 400) + 400);
+                            - var weight = Math.floor(Math.random() * (10 - 400) + 400);
+                            - var height = Math.floor(Math.random() * (10 - 400) + 400);
+                            include chunks/_card-item.pug
                     .popular-tabs__body-item.tab-container#tab3
-                        include chunks/_card-item.pug
-                        include chunks/_card-item.pug
-                        include chunks/_card-item.pug
-                        include chunks/_card-item.pug
-                        include chunks/_card-item.pug
-                        include chunks/_card-item.pug
-                        include chunks/_card-item.pug
-                        include chunks/_card-item.pug
+                        - var n = 0;
+                        while n < 4
+                            - n++
+                            - var cardPrice = Math.floor(Math.random() * (1000 - 9999) + 9999);
+                            - var length = Math.floor(Math.random() * (10 - 400) + 400);
+                            - var weight = Math.floor(Math.random() * (10 - 400) + 400);
+                            - var height = Math.floor(Math.random() * (10 - 400) + 400);
+                            include chunks/_card-item.pug
     section.promo__block
         .inner.flex
             a.promo__item(href="#")

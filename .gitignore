@@ -1,6 +1,6 @@
 #MY
 *.html
-/template/css/**/*.*
+/template/css/main.css
 
 # Logs
 logs
