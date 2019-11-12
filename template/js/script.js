@@ -154,14 +154,17 @@ $styleBtn.click(function() {
 
 //filter btn
 const filterBtn = $('.mob-filter'),
-filterBlock = $('.filter-block');
+filterBlock = $('.filter-block'),
+filterBtnHtml = filterBlock.html();
 filterBtn.click(function() {
     if(!$(this).hasClass('is-active')) {
         $(this).addClass('is-active');
         filterBlock.addClass('is-active');
+        
     } else {
         $(this).removeClass('is-active');
         filterBlock.removeClass('is-active');
+        
     }
 })
 

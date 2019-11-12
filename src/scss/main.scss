@@ -1011,6 +1011,10 @@ main > .inner > section  {
         padding: .3em 1em;
         font-size: 18px;
         margin: 2em auto;
+
+        &.is-active {
+            transform: translateX(-100%);
+        }
     }
 }
 // .islist-only {
@@ -1174,7 +1178,7 @@ main > .inner > section  {
         position: absolute;
         top: 0;
         right: 0;
-        transform: translateX(100%);
+        transform: translateX(calc(100% + 10px));
         padding: 10px;
         margin: 0;
         background: #fff;
