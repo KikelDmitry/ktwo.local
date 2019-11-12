@@ -1211,7 +1211,7 @@ main > .inner > section  {
                 appearance: none;
 
                 &:checked + .filter-block__check {
-                    background-image: url(/template/img/svg/check.svg);
+                    background-image: url(../img/svg/check.svg);
                 }
             }
              .filter-block__check {
@@ -1807,7 +1807,7 @@ main > .inner > section  {
 
                 .call-check__input {
                     &:checked + .call-check__view {
-                        background-image: url(/template/img/svg/check.svg); 
+                        background-image: url(../img/svg/check.svg);
 
                     }
                 }
@@ -1839,7 +1839,7 @@ main > .inner > section  {
             span {
                 &::before {
                     content: '';
-                    background-image: url(/template/img/svg/upload.svg);
+                    background-image: url(../img/svg/upload.svg);
                     background-position: center;
                     background-repeat: no-repeat;
                     width: 40px;
@@ -2288,7 +2288,7 @@ main > .inner > section  {
                 min-height: inherit;
                 background-position: left center;
                 background-repeat: no-repeat;
-                background-image: url(/template/img/svg/message.svg);
+                background-image: url(../img/svg/message.svg);
                 padding-left: 185px;
 
                 @include mid640 {
@@ -2340,14 +2340,14 @@ main > .inner > section  {
                         width: 70px;
                         height: 50px;
                         background-color: #fff;
-                        background-image: url(/template/img/svg/telegram.svg);
+                        background-image: url(../img/svg/telegram.svg);
                         background-repeat: no-repeat;
                         background-position: center;
                         border-radius: 0 3px 3px 0;
                     }
                     .check__input {
                         &:checked + .check__view {
-                            background-image: url(/template/img/svg/check.svg);
+                            background-image: url(../img/svg/check.svg);
                         }
                     }
                     .check__view {

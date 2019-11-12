@@ -517,7 +517,7 @@ main > section, main > .inner > section { margin-bottom: 100px; }
 
 .filter-block .filter-block__section .filter-block__label .filter-block__input { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
 
-.filter-block .filter-block__section .filter-block__label .filter-block__input:checked + .filter-block__check { background-image: url(/template/img/svg/check.svg); }
+.filter-block .filter-block__section .filter-block__label .filter-block__input:checked + .filter-block__check { background-image: url(../img/svg/check.svg); }
 
 .filter-block .filter-block__section .filter-block__label .filter-block__check { -webkit-box-flex: 0; -ms-flex: 0 0 auto; flex: 0 0 auto; width: 14px; height: 14px; margin-right: 18px; background-color: #C4C4C4; background-repeat: no-repeat; background-position: center; background-size: 10px 10px; border-radius: 3px; }
 
@@ -728,7 +728,7 @@ main > section, main > .inner > section { margin-bottom: 100px; }
 
 .callback-block .call__row .call__label.call-check { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row nowrap; flex-flow: row nowrap; }
 
-.callback-block .call__row .call__label.call-check .call-check__input:checked + .call-check__view { background-image: url(/template/img/svg/check.svg); }
+.callback-block .call__row .call__label.call-check .call-check__input:checked + .call-check__view { background-image: url(../img/svg/check.svg); }
 
 .callback-block .call__row .call__label.call-check .call-check__view { width: 15px; height: 15px; margin-right: 11px; -webkit-box-flex: 0; -ms-flex: 0 0 auto; flex: 0 0 auto; border: 1px solid #000; background-position: center; background-repeat: no-repeat; border-radius: 3px; -webkit-box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25); box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25); }
 
@@ -736,7 +736,7 @@ main > section, main > .inner > section { margin-bottom: 100px; }
 
 .callback-block .call__row .drag-drop__cont { padding: 10px; text-align: center; background: #fff; border: 1px solid #000; border-radius: 3px; }
 
-.callback-block .call__row .drag-drop__cont span::before { content: ''; background-image: url(/template/img/svg/upload.svg); background-position: center; background-repeat: no-repeat; width: 40px; height: 50px; margin: 15px 20px 15px 0; -webkit-box-flex: 0; -ms-flex: 0 0 auto; flex: 0 0 auto; }
+.callback-block .call__row .drag-drop__cont span::before { content: ''; background-image: url(../img/svg/upload.svg); background-position: center; background-repeat: no-repeat; width: 40px; height: 50px; margin: 15px 20px 15px 0; -webkit-box-flex: 0; -ms-flex: 0 0 auto; flex: 0 0 auto; }
 
 .callback-block .call__row .call-btn { padding: 14px 57px; margin: 0 auto; font-size: 12px; line-height: 115%; border: 1px solid #000; border-radius: 3px; }
 
@@ -886,7 +886,7 @@ main > section, main > .inner > section { margin-bottom: 100px; }
 
 @media (max-width: 1024px) { .footer__block .footer__top .subs__block { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row wrap; flex-flow: row wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; padding: 10px; } }
 
-.footer__block .footer__top .subs__block .subs__title { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-flow: column; flex-flow: column; min-height: inherit; background-position: left center; background-repeat: no-repeat; background-image: url(/template/img/svg/message.svg); padding-left: 185px; }
+.footer__block .footer__top .subs__block .subs__title { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-flow: column; flex-flow: column; min-height: inherit; background-position: left center; background-repeat: no-repeat; background-image: url(../img/svg/message.svg); padding-left: 185px; }
 
 @media (max-width: 640px) { .footer__block .footer__top .subs__block .subs__title { padding-left: 0; } }
 
@@ -902,9 +902,9 @@ main > section, main > .inner > section { margin-bottom: 100px; }
 
 .footer__block .footer__top .subs__block form.subs__form .subs__form-row label .subs__input:focus { outline: none; -webkit-box-shadow: inset 0px 0px 4px #face77; box-shadow: inset 0px 0px 4px #face77; }
 
-.footer__block .footer__top .subs__block form.subs__form .subs__form-row .subs__submit { width: 70px; height: 50px; background-color: #fff; background-image: url(/template/img/svg/telegram.svg); background-repeat: no-repeat; background-position: center; border-radius: 0 3px 3px 0; }
+.footer__block .footer__top .subs__block form.subs__form .subs__form-row .subs__submit { width: 70px; height: 50px; background-color: #fff; background-image: url(../img/svg/telegram.svg); background-repeat: no-repeat; background-position: center; border-radius: 0 3px 3px 0; }
 
-.footer__block .footer__top .subs__block form.subs__form .subs__form-row .check__input:checked + .check__view { background-image: url(/template/img/svg/check.svg); }
+.footer__block .footer__top .subs__block form.subs__form .subs__form-row .check__input:checked + .check__view { background-image: url(../img/svg/check.svg); }
 
 .footer__block .footer__top .subs__block form.subs__form .subs__form-row .check__view { -webkit-box-flex: 0; -ms-flex: 0 0 auto; flex: 0 0 auto; width: 15px; height: 15px; margin-right: 15px; background-color: #fff; background-position: center; background-repeat: no-repeat; border-radius: 3px; -webkit-box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25); box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25); }
 
