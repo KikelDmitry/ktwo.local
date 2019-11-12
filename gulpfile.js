@@ -35,9 +35,10 @@ gulp.task('pug', function () {
 });
 
 gulp.task('browser-sync', function () {
-    browserSync({
-        proxy: 'ktwo.local',
-        notify: false
+    browserSync.init({
+        server: {
+            baseDir: './'
+        }
     });
 });
 
