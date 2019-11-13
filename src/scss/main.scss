@@ -308,6 +308,41 @@ main > .inner > section  {
     }
 }
 
+//card PAGE
+.card__section {
+    .card__slider {
+        .card-slider__inner {
+
+        }
+    }
+    .card__info {
+
+    }
+    .card__tabs {
+        .card-tabs__head {
+            .card-tabs__head-item {
+                
+            }
+        }
+        .card-tabs__body {
+            .card-tabs__body-item {
+    
+            }
+        }
+    }
+}
+.add-cards__row {
+    .add-cards__title {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 45px;
+    }
+    .add-cards__body {
+        margin: 40px 0;
+    }
+}
+
+
 //HEADER
 .header {
     min-height: 75px;

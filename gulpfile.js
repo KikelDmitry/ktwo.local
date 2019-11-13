@@ -25,7 +25,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('pug', function () {
-    return gulp.src(assetsDir + 'pug/!(_)**/!(_)*.pug')
+    return gulp.src(assetsDir + 'pug/**/!(_)*.pug')
         .pipe(pug({
             pretty: true, //deprecated
             basedir: __dirname

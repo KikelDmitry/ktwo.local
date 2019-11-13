@@ -117,7 +117,42 @@ $(document).ready(function() {
                 prevArrow: '<button type="button" class="slider__round-btn slider__round-btn--prev"><span class="vh">prev</span></button>',
                 nextArrow: '<button type="button" class="slider__round-btn slider__round-btn--next"><span class="vh">next</span></button>'
             })
-        })
+        });
+    }
+    const $addCarts = $('.add-cards__body');
+    if($addCarts.length) {
+        $addCarts.each(function() {
+            $(this).slick({
+                slidesToShow: 5,
+                arrows: false,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 4
+                        }
+                    },
+                    {
+                        breakpoint: 640,
+                        settings: {
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 440,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 375,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            })
+        });
     }
 });
 

@@ -1,6 +1,65 @@
 extends _base.pug
 block title
     title Карточка товара - #{siteName}
+block breadcrumbs
+    .inner
+        ul.bread__list.flex.aic
+            li.bread__item
+                a(href="#") Главная
+            li.bread__item
+                a(href="#") Каталог мебели
+            li.bread__item
+                a(href="#") Категория
+            li.bread__item
+                a(href="#") Товар
 block content
-    
+    .inner
+        section.card__section
+            .card__slider
+                .card-slider__inner
+            .card__info
+            .card__tabs
+                .card-tabs__head
+                    button.card-tabs__head-item.tab-item(type="button", data-container="tab1") Таб 1
+                    button.card-tabs__head-item.tab-item(type="button", data-container="tab2") Таб 2
+                    button.card-tabs__head-item.tab-item(type="button", data-container="tab3") Таб 3
+                    button.card-tabs__head-item.tab-item(type="button", data-container="tab4") Таб 4
+                .card-tabs__body.sk-tabs
+                    .card-tabs__body-item.tab-container#tab1 Tab content 1
+                    .card-tabs__body-item.tab-container#tab2 Tab content 2
+                    .card-tabs__body-item.tab-container#tab3 Tab content 3
+                    .card-tabs__body-item.tab-container#tab4 Tab content 4
+        section.add-cards__row
+            h3.add-cards__title Все товары в этой коллекции
+            .add-cards__body.flex
+                    - var n = 0;
+                    while n < 10
+                        - n++
+                        - var cardPrice = Math.floor(Math.random() * (1000 - 9999) + 9999);
+                        - var length = Math.floor(Math.random() * (10 - 400) + 400);
+                        - var weight = Math.floor(Math.random() * (10 - 400) + 400);
+                        - var height = Math.floor(Math.random() * (10 - 400) + 400);
+                        include chunks/_card-item-light.pug
+        section.add-cards__row
+            h3.add-cards__title Похожие товары
+            .add-cards__body.is-masonry.flex
+                    - var n = 0;
+                    while n < 10
+                        - n++
+                        - var cardPrice = Math.floor(Math.random() * (1000 - 9999) + 9999);
+                        - var length = Math.floor(Math.random() * (10 - 400) + 400);
+                        - var weight = Math.floor(Math.random() * (10 - 400) + 400);
+                        - var height = Math.floor(Math.random() * (10 - 400) + 400);
+                        include chunks/_card-item-light.pug
+        section.add-cards__row
+            h3.add-cards__title С этим товаром покупают
+            .add-cards__body.flex
+                    - var n = 0;
+                    while n < 10
+                        - n++
+                        - var cardPrice = Math.floor(Math.random() * (1000 - 9999) + 9999);
+                        - var length = Math.floor(Math.random() * (10 - 400) + 400);
+                        - var weight = Math.floor(Math.random() * (10 - 400) + 400);
+                        - var height = Math.floor(Math.random() * (10 - 400) + 400);
+                        include chunks/_card-item-light.pug
 block seo
