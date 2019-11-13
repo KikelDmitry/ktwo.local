@@ -2529,6 +2529,21 @@ body.is-modal {
     }
 }
 
+#mse2_sort a {
+    background: #eee;
+    padding: 5px 10px;
+    margin: 0px 10px;
+    &.active {
+        background: #FACE77;
+        color: #fff;
+        span {
+            &:after {
+                color: #ffffff;
+            }
+        }
+    }
+}
+
 
 //DEBUG
 
