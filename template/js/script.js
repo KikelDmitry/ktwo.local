@@ -250,13 +250,13 @@ if(skTabs.length) {
 //rangeslider
 
 let $rSlider = $('.js-range-slider'),
-    $rSliderMin = $('.js-range-min'),
-    $rSliderMax = $('.js-range-max');
+    $rSliderMin = $('.mse2_ms_price_0'),
+    $rSliderMax = $('.mse2_ms_price_1');
 
 $rSlider.ionRangeSlider({
     type: 'double',
-    min: 0,
-    max: 10000,
+    min: +$rSliderMin.val(),
+    max: +$rSliderMax.val(),
     hide_min_max: true,
     hide_from_to: true,
 
@@ -268,6 +268,12 @@ $rSlider.ionRangeSlider({
     onChange: function (data) {
         $rSliderMin.prop('value', data.from);
         $rSliderMax.prop('value', data.to);
+    },
+    onFinish: function (data) {
+        setTimeout(function () {
+            $rSliderMin.val(data.from).change();
+            $rSliderMax.val(data.to).change();
+        }, 200);
     }
 });
 

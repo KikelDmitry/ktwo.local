@@ -21,7 +21,12 @@ block content
         section.prod-section.flex
             .cards-block
                 header.cards-block__header.flex.jcsb.aic
-                    a.cards-sort__title(href="#") Сортировать по: Цене
+                    <div id="mse2_sort" class="span5 col-md-5">
+                        | Сортировать по:
+                        <a href="#" data-sort="ms_product|publishedon" data-dir="[[+mse2_sort:is=`ms_product|publishedon:desc`:then=`desc`]]" data-default="desc" class="sort">Новизне <span></span></a>
+                        <a href="#" data-sort="ms|price" data-dir="[[+mse2_sort:is=`ms|price:desc`:then=`desc`]]" data-default="desc" class="sort">Цене <span></span></a>
+                        <a href="#" data-sort="ms_product|pagetitle" data-dir="[[+mse2_sort:is=`ms_product|pagetitle:desc`:then=`desc`]]" data-default="desc" class="sort">Алфавиту <span></span></a>
+                    </div>
                     .cards-sort__icons.flex
                         button.cards-sort__btn.is-active(type="button", name="change-view", data-style="is-masonry")
                             include ../../template/img/svg/masonry.svg
