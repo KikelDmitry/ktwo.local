@@ -151,6 +151,13 @@ $('.add-to-fav-btn').click(function() {
     $(this).toggleClass('is-active');
 });
 
+//sort_cat
+const sortBtn = $('.cards-sort__title');
+sortBtn.click(function(e) {
+    e.preventDefault();
+    $(this).toggleClass('is-revert');
+})
+
 //change view
 let $styleBtn = $('.cards-sort__btn'),
     $cardsContainer = $('.cards-block__body');
