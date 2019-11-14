@@ -1,6 +1,8 @@
 #MY
 *.html
 /template/css/main.css
+/template/js/script.js
+/template/js/script.min.js
 
 # Logs
 logs
