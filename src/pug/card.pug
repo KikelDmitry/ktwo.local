@@ -18,7 +18,6 @@ block content
             .card__row
                 .card__slider
                     .card-slider__inner
-
                         .slider__nav
                             img(src="/template/img/card/card1.jpg", alt="pagetitle 1")
                             img(src="/template/img/card/card2.jpg", alt="pagetitle 2")
@@ -38,10 +37,14 @@ block content
                     .card-info__article Артикул: 123456789
                     .card-info__price 8590 Р
                     .card-info__desc.card-info__row Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                    .card-info__color.card-info__row
-                        .card-info___param
-                            .card-info___--title Цвет
-
+                    .card-info___param.card-info__row
+                        .card-info__param--item
+                            .card-info___param--title Цвет:
+                                label.card-color__label
+                                    input.card-color___input.vh(type="radio", name="color", value="gray")
+                                    .card-color__round
+                        .card-info__param--item
+                            .card-info___param--title Размеры:
                     .card-info__buy.card-info__row
                     .card-info__spec.card-info__row
 

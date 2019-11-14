@@ -6,13 +6,14 @@ let gulp = require('gulp'),
     svgmin = require('gulp-svgmin'),
     browserSync = require('browser-sync'),
     pug = require('gulp-pug'),
+    minify = require('gulp-minify'),
     assetsDir = 'src/',
     destDir = 'template/';
 
 gulp.task('sass', function () {
     return gulp.src(assetsDir + 'scss/*.scss')
         .pipe(sass({
-            outputStyle: 'compact'
+            outputStyle: 'compressed'
         }).on('error', sass.logError))
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 2 versions'],
@@ -22,6 +23,17 @@ gulp.task('sass', function () {
             stream: true
         }))
         .pipe(gulp.dest(destDir + 'css'))
+});
+
+gulp.task('minify', function() {
+    gulp.src(assetsDir + 'js/script.js')
+    .pipe(minify({
+        ext: {
+            min: '.min.js'
+        }
+    }
+    ))
+    .pipe(gulp.dest(destDir + 'js'))
 });
 
 gulp.task('pug', function () {
@@ -71,6 +83,6 @@ gulp.task('svgSprite', function () {
 gulp.task('watch', function () {
     gulp.watch(assetsDir + 'scss/*.scss', gulp.parallel('sass'));
     gulp.watch(assetsDir + 'pug/**/*.pug', gulp.parallel('pug'));
-    gulp.watch(destDir + 'js/**/*.js').on('change', browserSync.reload);
+    gulp.watch(assetsDir + 'js/**/*.js').on('change', browserSync.reload);
 });
-gulp.task('default', gulp.parallel('pug', 'sass', 'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('pug', 'sass', 'browser-sync', 'minify', 'watch'));
