@@ -334,8 +334,6 @@ main > .inner > section  {
                 
                 img {
                     max-width: 70px;
-                    margin-bottom: 29px;
-                    
                 }
             }
             .slider__for {
@@ -452,7 +450,7 @@ main > .inner > section  {
                 margin: 0 30px;
 
                 button {
-
+                    flex: 0 0 auto;
                 }
                 input {
                     display: flex;
@@ -2790,6 +2788,7 @@ main > .inner > section  {
 }
 .basket_minicart {
     position: relative;
+
     .number_icon {
         position: absolute;
         right: -10px;
@@ -2801,6 +2800,12 @@ main > .inner > section  {
         justify-content: center;
         align-items: center;
         border-radius: 50%;
+
+        @include tab768 {
+            top: 0;
+            right: 0;
+        }
+
         &.active {
             background: #FACE77;
         }

@@ -164,6 +164,7 @@ $(document).ready(function() {
         vertical: true,
         verticalSwiping: true,
         focusOnSelect: true,
+        centerMode: true,
     });
     $('.card-slider__inner > .slider__for').slick({
         asNavFor: '.slider__nav',
