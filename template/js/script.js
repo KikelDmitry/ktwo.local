@@ -352,8 +352,11 @@ const $leftBar = $('.left-bar'),
 
 $leftBarLink.click(function (e) {
     if (window.innerWidth >= 641) {
+        let currentNodeName = e.target.localName;
         if (!$leftBarList.hasClass('is-active') || !$(this).next('.left-bar__subcont').hasClass('is-active')) {
-            e.preventDefault();
+            if (currentNodeName !== 'input' && currentNodeName !== 'button') {
+                e.preventDefault();
+            }
         }
         $leftBarList.addClass('is-active');
         $(this).addClass('is-active');
