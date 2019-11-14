@@ -428,6 +428,23 @@ burgerBtn.click(function() {
     leftMenu.addClass('is-active');
 });
 
+
+//card
+$('.amount > button').on('click', function () {
+    let $input = $(this).siblings('.number'),
+        val = +$input.val();
+    if ($(this).hasClass('incr')) {
+        val++;
+    } else {
+        val--;
+    }
+    if (val < 1) {
+        val = 1;
+        $(this).attr('disabled');
+    }
+    $input.val(val);
+})
+
 //masked
 $(function($) {
     $('.phone-input').mask('+7 (999) 999-99-99'); 
@@ -446,5 +463,4 @@ function toTop() { //smooth scroll
         return false
     }
 }
-
 $('.go-top-btn').click(toTop);

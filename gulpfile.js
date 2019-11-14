@@ -34,6 +34,7 @@ gulp.task('minify', function() {
     }
     ))
     .pipe(gulp.dest(destDir + 'js'))
+    .pipe(browserSync.stream())
 });
 
 gulp.task('pug', function () {
@@ -83,6 +84,7 @@ gulp.task('svgSprite', function () {
 gulp.task('watch', function () {
     gulp.watch(assetsDir + 'scss/*.scss', gulp.parallel('sass'));
     gulp.watch(assetsDir + 'pug/**/*.pug', gulp.parallel('pug'));
+    gulp.watch(assetsDir + 'js/**/*.js', gulp.parallel('minify'));
     gulp.watch(assetsDir + 'js/**/*.js').on('change', browserSync.reload);
 });
 gulp.task('default', gulp.parallel('pug', 'sass', 'browser-sync', 'minify', 'watch'));

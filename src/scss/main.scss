@@ -44,6 +44,10 @@ main > section,
 main > .inner > section  {
     margin-bottom: 100px;
 }
+.amount .number[type="number"]::-webkit-inner-spin-button,
+.amount .number[type="number"]::-webkit-outer-spin-button {
+    appearance: none;
+}
 .section__title {
     margin: 0 0 50px;
     font-weight: 600;
@@ -312,6 +316,7 @@ main > .inner > section  {
 .card__section {
     .card__row {
         display: flex;
+        margin: 0 0 120px;
     }
     .card__slider {
         width: calc(50% - 10px);
@@ -348,6 +353,7 @@ main > .inner > section  {
         width: calc(50% - 10px);
         margin-left: 10px;
         flex: 1 1 auto;
+        padding-left: 80px;
 
         .card-info__title {
             font-weight: 500;
@@ -378,23 +384,189 @@ main > .inner > section  {
         }
         .card-info__param {
             display: flex;
+
+            .card-info__param--item {
+                flex: 1 1 auto;
+                &:nth-child(1) {
+                    max-width: 40%;
+
+                    .card-info__param--body {
+                        flex-flow: row wrap;
+                    }
+                }
+                &:nth-child(2) {
+                    max-width: 60%;
+                }
+                .card-info__param--title {
+                    margin: 0 0 29px;
+                }
+                .card-info__param--body {
+                    display: flex;
+    
+                    .card-color__label {
+                        .card-color___input {
+                            &:checked + .card-color__round {
+                                border-color: #4E4E4E;
+                            }
+                        }
+                        .card-color__round {
+                            background: #c4c4c4;
+                            width: 30px;
+                            height: 30px;
+                            margin: 0 16px 16px 0;
+                            border-radius: 50%;
+                            border: 1px solid transparent;
+
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    .card-info__size-col {
+                        text-align: center;
+                        margin-right: 48px;
+
+                        div {
+                            &:nth-child(1) {
+                                font-size: 14px;
+                                line-height: 21px;
+                                color: #4e4e4e;
+                                margin: 0 0 8px;
+                            }
+                            &:nth-child(2) {
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+            }
         }
         .card-info__buy {
+            display: flex;
+            align-items: center;
 
+            .amount {
+                display: flex;
+                margin: 0 30px;
+
+                button {
+
+                }
+                input {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    width: 50px;
+                    height: 36px;
+                    margin: 0 19px;
+                    border-radius: 5px;
+                    border: 1px solid #000;
+                    color: #4e4e4e;
+                    font-size: 18px;
+                    line-height: 195%;
+                }
+            }
+            .to-cart,
+            .one-click-buy {
+                max-width: 136px;
+                height: 36px;
+                flex: 1 1 auto;
+            }
+            .to-cart {
+                margin-right: 22px;
+            }
         }
         .card-info__spec {
+            display: flex;
+            align-items: center;
 
+            .card-info__spec--block {
+                flex: 1 1 auto;
+                max-width: 50%;
+
+                .card-spec__table {
+                    width: 100%;
+
+                    th,
+                    td {
+                        border-bottom: 1px dotted #ccc;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 21px;
+                    }
+                    th {
+                        text-align: left;
+
+                        &::after {
+                            content: ':';
+                        } 
+                    }
+                    td {
+                        text-align: right;
+                    }
+                }
+            }
+            // .card-info__spec--like {
+            //     flex: 1 1 auto;
+            //     max-width: 30%;
+            // }
+            // .card-info__spec--like-btn {
+            //     display: flex;
+            //     align-items: center;
+            //     margin-top: auto;
+            //     text-align: left;
+            //     font-size: 14px;
+            //     line-height: 21px;
+
+            //     &::before {
+            //         content: '';
+            //         width: 15px;
+            //         height: 15px;
+            //         flex: 0 0 auto;
+            //         margin-right: 15px;
+            //         background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' xmlns='http://www.w3.org/2000/svg' fill='none'%3E%3Cpath d='M7.5 14.165c-.214 0-.419-.077-.58-.218-.606-.53-1.19-1.028-1.706-1.467l-.003-.002c-1.511-1.288-2.816-2.4-3.724-3.495-1.015-1.225-1.488-2.386-1.488-3.655 0-1.233.423-2.37 1.19-3.202.776-.842 1.842-1.306 3-1.306.866 0 1.659.274 2.357.814.352.272.672.606.953.995.281-.389.601-.722.953-.995.698-.54 1.491-.814 2.357-.814 1.158 0 2.224.464 3 1.306.767.832 1.19 1.969 1.19 3.202 0 1.269-.473 2.43-1.488 3.654-.908 1.096-2.213 2.208-3.724 3.495-.516.44-1.101.939-1.709 1.47-.16.14-.366.218-.58.218zm-3.31-12.467c-.91 0-1.746.363-2.354 1.023-.617.67-.957 1.595-.957 2.606 0 1.067.397 2.021 1.286 3.094.859 1.037 2.138 2.126 3.617 3.387l.003.002c.517.441 1.104.941 1.714 1.475.614-.535 1.202-1.036 1.72-1.477 1.48-1.261 2.758-2.35 3.617-3.387.889-1.073 1.285-2.027 1.285-3.094 0-1.011-.34-1.937-.957-2.606-.608-.66-1.444-1.023-2.354-1.023-.667 0-1.279.212-1.819.63-.482.373-.817.844-1.014 1.173-.101.169-.279.271-.476.271-.197 0-.375-.101-.476-.271-.197-.33-.532-.801-1.014-1.173-.54-.418-1.153-.63-1.819-.63z' fill='%23000'/%3E%3C/svg%3E");
+            //     }
+            // }
         }
     }
     .card__tabs {
         .card-tabs__head {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+            margin: 0 0 60px;
+            border-bottom: 1px solid #000;
+
             .card-tabs__head-item {
-                
+                margin: 0 32px;
+                font-size: 16px;
+                line-height: 24px;
             }
         }
         .card-tabs__body {
             .card-tabs__body-item {
-    
+                h3 {
+                    margin: 0 0 16px;
+                    font-weight: 500;
+                    font-size: 30px;
+                    line-height: 45px;
+                }
+                p {
+                    font-size: 14px;
+                    line-height: 30px;
+                }
+                ul,
+                ol {
+                    list-style-type: circle;
+                    list-style-position: inside;
+
+                    li {
+                        margin: 0 0 16px;
+                    }
+                }
             }
         }
     }

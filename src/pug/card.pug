@@ -37,26 +37,84 @@ block content
                     .card-info__article Артикул: 123456789
                     .card-info__price 8590 Р
                     .card-info__desc.card-info__row Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                    .card-info___param.card-info__row
+                    .card-info__param.card-info__row
                         .card-info__param--item
-                            .card-info___param--title Цвет:
+                            .card-info__param--title Цвет:
+                            .card-info__param--body
                                 label.card-color__label
                                     input.card-color___input.vh(type="radio", name="color", value="gray")
                                     .card-color__round
+                                label.card-color__label
+                                    input.card-color___input.vh(type="radio", name="color", value="blue")
+                                    .card-color__round
+                                label.card-color__label
+                                    input.card-color___input.vh(type="radio", name="color", value="red")
+                                    .card-color__round
                         .card-info__param--item
-                            .card-info___param--title Размеры:
+                            .card-info__param--title Размеры:
+                            .card-info__param--body
+                                .card-info__size-col 
+                                    div Ширина:
+                                    div 200
+                                .card-info__size-col 
+                                    div Длина:
+                                    div 300
+                                .card-info__size-col 
+                                    div Высота:
+                                    div 150
+                                .card-info__size-col
+                                .card-info__size-col
                     .card-info__buy.card-info__row
+                        div Кол-во:
+                        .amount
+                            button.decr(type="button")
+                                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.27909 7.29004L13.8834 0.677819C14.0389 0.522133 14.0389 0.272449 13.8834 0.116764C13.7279 -0.0389213 13.4785 -0.0389214 13.323 0.116764L7.00037 6.44699L0.677738 0.116763C0.52224 -0.0389219 0.272856 -0.0389219 0.117357 0.116763C0.0410747 0.193137 -1.39772e-08 0.295948 -1.86941e-08 0.395822C-2.3411e-08 0.495696 0.0381412 0.598507 0.117357 0.674881L6.72164 7.2871C6.87421 7.44279 7.12653 7.44279 7.27909 7.29004Z" fill="#303030"/>
+                                </svg>
+
+                            input.number(type="number", value="1")
+                            button.incr(type="button")
+                                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.72091 0.114258L0.116624 6.72648C-0.0388746 6.88216 -0.0388746 7.13185 0.116624 7.28753C0.272122 7.44322 0.521507 7.44322 0.677005 7.28753L6.99963 0.957308L13.3223 7.28753C13.4778 7.44322 13.7271 7.44322 13.8826 7.28753C13.9589 7.21116 14 7.10835 14 7.00847C14 6.9086 13.9619 6.80579 13.8826 6.72942L7.27836 0.117195C7.12579 -0.0384907 6.87347 -0.0384897 6.72091 0.114258Z" fill="#303030"/>
+                                </svg>
+                        button.to-cart.face-btn(type="button") В корзину 
+                        button.one-click-buy.face-btn(type="button") Купить в клик 
                     .card-info__spec.card-info__row
+                        .card-info__spec--block
+                            table.card-spec__table
+                                tr
+                                    th Категория
+                                    td Шкафы
+                                tr
+                                    th Lorem
+                                    td Lorem
+                                tr
+                                    th Lorem
+                                    td Lorem
+                        //- .card-info__spec--like
+                        //-     button.card-info__spec--like-btn(type="button") Мне нравится
 
 
             .card__tabs
                 .card-tabs__head
-                    button.card-tabs__head-item.tab-item(type="button", data-container="tab1") Таб 1
-                    button.card-tabs__head-item.tab-item(type="button", data-container="tab2") Таб 2
-                    button.card-tabs__head-item.tab-item(type="button", data-container="tab3") Таб 3
-                    button.card-tabs__head-item.tab-item(type="button", data-container="tab4") Таб 4
+                    button.card-tabs__head-item.tab-item(type="button", data-container="tab1") Lorem 1
+                    button.card-tabs__head-item.tab-item(type="button", data-container="tab2") Lorem 2
+                    button.card-tabs__head-item.tab-item(type="button", data-container="tab3") Lorem 3
+                    button.card-tabs__head-item.tab-item(type="button", data-container="tab4") Lorem 4
                 .card-tabs__body.sk-tabs
-                    .card-tabs__body-item.tab-container#tab1 Tab content 1
+                    .card-tabs__body-item.tab-container#tab1 
+                        h3 Описание
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        h3 Lorem ipsum
+                        ul
+                            li lorem ipsum
+                            li lorem ipsum
+                            li lorem ipsum
+                            li lorem ipsum
+                            li lorem ipsum
+                            li lorem ipsum
+                            li lorem ipsum
                     .card-tabs__body-item.tab-container#tab2 Tab content 2
                     .card-tabs__body-item.tab-container#tab3 Tab content 3
                     .card-tabs__body-item.tab-container#tab4 Tab content 4
