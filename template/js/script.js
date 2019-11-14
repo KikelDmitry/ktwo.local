@@ -1,6 +1,6 @@
 //sliders
 
-$(document).ready(function() {
+$(document).ready(function () {
     $('.top-slider__inner').slick({
         prevArrow: '<button type="button" class="top-slider__btn top-slider__btn--prev"><span class="vh">prev</span></button>',
         nextArrow: '<button type="button" class="top-slider__btn top-slider__btn--next"><span class="vh">next</span></button>',
@@ -15,7 +15,7 @@ $(document).ready(function() {
         ]
     });
 
-        
+
     $('.hotel-slider').slick({
         prevArrow: '<button type="button" class="slider__round-btn slider__round-btn--prev"><span class="vh">prev</span></button>',
         nextArrow: '<button type="button" class="slider__round-btn slider__round-btn--next"><span class="vh">next</span></button>',
@@ -71,7 +71,7 @@ $(document).ready(function() {
             arrows: false
         })
     }
-    if(window.innerWidth <= 768) {
+    if (window.innerWidth <= 768) {
         $('.articles__cont').slick({
             slidesToShow: 2,
             arrows: false,
@@ -88,7 +88,7 @@ $(document).ready(function() {
             ]
         })
     }
-    if(window.innerWidth <= 414) {
+    if (window.innerWidth <= 414) {
         $('.popular-tabs__body-item').slick({
             slidesToShow: 1,
             variableWidth: true,
@@ -103,15 +103,15 @@ $(document).ready(function() {
             })
         }
     }
-    if(window.innerWidth <= 480) {
+    if (window.innerWidth <= 480) {
         $('.cat-thumbs__inner').slick({
             arrows: false
         })
     }
     const $chessSlider = $('.chess__slider-inner'),
         $chessNav = $('.chess__slider-nav');
-    if($chessSlider.length) {
-        $chessSlider.each(function() {
+    if ($chessSlider.length) {
+        $chessSlider.each(function () {
             $(this).slick({
                 appendArrows: $(this).next($chessNav),
                 prevArrow: '<button type="button" class="slider__round-btn slider__round-btn--prev"><span class="vh">prev</span></button>',
@@ -120,8 +120,8 @@ $(document).ready(function() {
         });
     }
     const $addCarts = $('.add-cards__body');
-    if($addCarts.length) {
-        $addCarts.each(function() {
+    if ($addCarts.length) {
+        $addCarts.each(function () {
             $(this).slick({
                 slidesToShow: 5,
                 arrows: false,
@@ -158,37 +158,38 @@ $(document).ready(function() {
 
 
 //hovercard
-$(document).ready(function() {
+$(document).ready(function () {
     //Функция инициализации ховеров
     function init_hovers() {
         let card = $('.card-item');
-        card.each(function() {
+        card.each(function () {
             const $target = $(this).find('.card-item__native'),
                 html = $target.html();
             $target.parent().find('.card-item__append').html(html);
-            if(window.innerWidth <= 1280) {
+            if (window.innerWidth <= 1280) {
 
             }
         });
         if (window.innerWidth <= 1280) {
-            $('.popular-tabs__body-item .card-item').each(function() {
+            $('.popular-tabs__body-item .card-item').each(function () {
                 $(this).find('.card-item__native').remove();
             });
         }
     }
+
     //Обновляем ховеры при измении фильтров
-    $(document).on('mse2_load', function() {
+    $(document).on('mse2_load', function () {
         init_hovers();
     });
     init_hovers();
 });
-$('.add-to-fav-btn').click(function() {
+$('.add-to-fav-btn').click(function () {
     $(this).toggleClass('is-active');
 });
 
 //sort_cat
 const sortBtn = $('.cards-sort__title');
-sortBtn.click(function(e) {
+sortBtn.click(function (e) {
     e.preventDefault();
     $(this).toggleClass('is-revert');
 })
@@ -196,8 +197,8 @@ sortBtn.click(function(e) {
 //change view
 let $styleBtn = $('.cards-sort__btn'),
     $cardsContainer = $('.cards-block__body');
-$styleBtn.click(function() {
-    if(!$(this).hasClass('is-active')) {
+$styleBtn.click(function () {
+    if (!$(this).hasClass('is-active')) {
         $(this).addClass('is-active').siblings().removeClass('is-active');
     }
     let btnData = $(this).data('style'),
@@ -207,10 +208,10 @@ $styleBtn.click(function() {
 
 //filter btn
 const filterBtn = $('.mob-filter'),
-filterBlock = $('.filter-block');
+    filterBlock = $('.filter-block');
 
-filterBtn.click(function() {
-    if(!$(this).hasClass('is-active')) {
+filterBtn.click(function () {
+    if (!$(this).hasClass('is-active')) {
         $(this).addClass('is-active');
         filterBlock.addClass('is-active');
         filterBtn.html('Закрыть');
@@ -223,7 +224,7 @@ filterBtn.click(function() {
 
 //sktabs
 const skTabs = $('.sk-tabs');
-if(skTabs.length) {
+if (skTabs.length) {
     (function (window, document, $, undefined) {
         if (!$) {
             return undefined;
@@ -234,27 +235,27 @@ if(skTabs.length) {
                     containerActiveClass = 'active',
                     tabContainerClass = 'tab-container',
                     activeTab = 0;
-                
+
                 if (options.active) {
                     activeTab = options.active;
                 }
-                
+
                 if (options.tabContainerClass) {
                     tabContainerClass = options.tabContainerClass;
                 }
-                
+
                 if (options.tabActiveClass) {
                     tabActiveClass = options.tabActiveClass;
                 }
-                
+
                 if (options.containerActiveClass) {
                     containerActiveClass = options.containerActiveClass;
                 }
-                
+
                 $('.' + tabContainerClass).hide();
-                
+
                 let classess = '.' + this[0].classList[0];
-                
+
                 $(document).on('click', classess, function () {
                     if ($(this).hasClass(tabActiveClass)) {
                         return false;
@@ -264,16 +265,16 @@ if(skTabs.length) {
                     let container = '#' + $(this).data('container');
                     $('.' + tabContainerClass).hide();
                     $(container).fadeIn().addClass(containerActiveClass);
-                    
+
                     return false;
                 });
-                
+
                 $($(classess)[activeTab]).click();
-                
+
             }
         });
     }(window, document, window.jQuery));
-    
+
     $('.tab-item').SKtab({
         active: 0, //Какой таб будет выбран по умолчанию
         tabActiveClass: 'active-tab', //Класс который назначается выбранному табу
@@ -299,7 +300,7 @@ $rSlider.ionRangeSlider({
         $rSliderMin.prop('value', data.from);
         $rSliderMax.prop('value', data.to);
     },
-    
+
     onChange: function (data) {
         $rSliderMin.prop('value', data.from);
         $rSliderMax.prop('value', data.to);
@@ -349,18 +350,18 @@ const $leftBar = $('.left-bar'),
     $leftBarList = $('.left-bar__list'),
     $leftBarLink = $('.left-bar__list > .left-bar__item > .left-bar__link');
 
-    $leftBarLink.click(function(e) {
-    if(window.innerWidth >= 641) {
+$leftBarLink.click(function (e) {
+    if (window.innerWidth >= 641) {
         if (!$leftBarList.hasClass('is-active') || !$(this).next('.left-bar__subcont').hasClass('is-active')) {
             e.preventDefault();
         }
-        $leftBarList.addClass('is-active'); 
+        $leftBarList.addClass('is-active');
         $(this).addClass('is-active');
-        $(this).parent().siblings().children($leftBarLink).removeClass('is-active');   
+        $(this).parent().siblings().children($leftBarLink).removeClass('is-active');
         $(this).next('.left-bar__subcont').addClass('is-active');
         $(this).parent().siblings().children('.left-bar__subcont').removeClass('is-active');
     } else {
-        if(!$(this).hasClass('pointer')) {
+        if (!$(this).hasClass('pointer')) {
             e.preventDefault();
             $leftBar.addClass('is-mob');
             $(this).next('.left-bar__subcont').addClass('is-mob')
@@ -371,28 +372,30 @@ const $leftBar = $('.left-bar'),
 
 
 //copying titles and create close-buttons
-$(document).ready(function() {
+$(document).ready(function () {
     let $titles = $('span.left-bar__title');
-    $titles.each(function() {
+    $titles.each(function () {
         let $cloned = $(this).clone();
         $cloned = $(this).before($cloned);
         $cloned.addClass('left-bar__title--hover');
     });
     let $subCont = $('.left-bar__subcont');
-        
-        $subCont.each(function() {
-            $(this).append('<button class="left-bar__close-btn js-left-bar-close" type="button" name="close-left-button"><span class="vh">close</span></button>');
-        })
+
+    $subCont.each(function () {
+        $(this).append('<button class="left-bar__close-btn js-left-bar-close" type="button" name="close-left-button"><span class="vh">close</span></button>');
+    })
 });
 
 //close menu
-$(document).ready(function() {
+$(document).ready(function () {
     $('.js-left-bar-close').click(closeMenu);
+
     function closeMenu() {
         $('.left-bar__list, .left-bar__subcont, .left-bar__link').removeClass('is-active is-mob');
         $leftBar.removeClass('is-mob');
     }
-    $(window).click(function() {
+
+    $(window).click(function () {
         closeMenu();
     });
 });
@@ -403,15 +406,15 @@ $leftBarList.click(function (e) {
 
 //mobmenu
 const burgerBtn = $('.top-burger');
-burgerBtn.click(function() {
+burgerBtn.click(function () {
     const leftMenu = $('.left-bar');
     mLayer();
     leftMenu.addClass('is-active');
 });
 
 //masked
-$(function($) {
-    $('.phone-input').mask('+7 (999) 999-99-99'); 
+$(function ($) {
+    $('.phone-input').mask('+7 (999) 999-99-99');
 });
 
 //dropzone
