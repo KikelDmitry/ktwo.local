@@ -15,9 +15,37 @@ block breadcrumbs
 block content
     .inner
         section.card__section
-            .card__slider
-                .card-slider__inner
-            .card__info
+            .card__row
+                .card__slider
+                    .card-slider__inner
+
+                        .slider__nav
+                            img(src="/template/img/card/card1.jpg", alt="pagetitle 1")
+                            img(src="/template/img/card/card2.jpg", alt="pagetitle 2")
+                            img(src="/template/img/card/card3.jpg", alt="pagetitle 3")
+                            img(src="/template/img/card/card4.jpg", alt="pagetitle 4")
+                            img(src="/template/img/card/card5.jpg", alt="pagetitle 5")
+
+                        .slider__for
+                            img(src="/template/img/card/card1.jpg", alt="pagetitle 1")
+                            img(src="/template/img/card/card2.jpg", alt="pagetitle 2")
+                            img(src="/template/img/card/card3.jpg", alt="pagetitle 3")
+                            img(src="/template/img/card/card4.jpg", alt="pagetitle 4")
+                            img(src="/template/img/card/card5.jpg", alt="pagetitle 5")
+
+                form.card__info(action="/")
+                    h1.card-info__title Textile Grafit
+                    .card-info__article Артикул: 123456789
+                    .card-info__price 8590 Р
+                    .card-info__desc.card-info__row Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                    .card-info__color.card-info__row
+                        .card-info___param
+                            .card-info___--title Цвет
+
+                    .card-info__buy.card-info__row
+                    .card-info__spec.card-info__row
+
+
             .card__tabs
                 .card-tabs__head
                     button.card-tabs__head-item.tab-item(type="button", data-container="tab1") Таб 1
@@ -36,9 +64,6 @@ block content
                     while n < 10
                         - n++
                         - var cardPrice = Math.floor(Math.random() * (1000 - 9999) + 9999);
-                        - var length = Math.floor(Math.random() * (10 - 400) + 400);
-                        - var weight = Math.floor(Math.random() * (10 - 400) + 400);
-                        - var height = Math.floor(Math.random() * (10 - 400) + 400);
                         include chunks/_card-item-light.pug
         section.add-cards__row
             h3.add-cards__title Похожие товары
@@ -47,9 +72,6 @@ block content
                     while n < 10
                         - n++
                         - var cardPrice = Math.floor(Math.random() * (1000 - 9999) + 9999);
-                        - var length = Math.floor(Math.random() * (10 - 400) + 400);
-                        - var weight = Math.floor(Math.random() * (10 - 400) + 400);
-                        - var height = Math.floor(Math.random() * (10 - 400) + 400);
                         include chunks/_card-item-light.pug
         section.add-cards__row
             h3.add-cards__title С этим товаром покупают
@@ -58,8 +80,5 @@ block content
                     while n < 10
                         - n++
                         - var cardPrice = Math.floor(Math.random() * (1000 - 9999) + 9999);
-                        - var length = Math.floor(Math.random() * (10 - 400) + 400);
-                        - var weight = Math.floor(Math.random() * (10 - 400) + 400);
-                        - var height = Math.floor(Math.random() * (10 - 400) + 400);
                         include chunks/_card-item-light.pug
 block seo

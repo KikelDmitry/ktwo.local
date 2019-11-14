@@ -310,13 +310,81 @@ main > .inner > section  {
 
 //card PAGE
 .card__section {
+    .card__row {
+        display: flex;
+    }
     .card__slider {
+        width: calc(50% - 10px);
+        margin-right: 10px;
+        
         .card-slider__inner {
-
+            display: flex;
+            justify-content: flex-start;
+            
+            img {
+                border-radius: 6px;
+            }
+            .slider__nav {
+                max-width: 102px;
+                
+                img {
+                    max-width: 70px;
+                    margin-bottom: 29px;
+                    
+                }
+            }
+            .slider__for {
+                width: calc(100% - 102px);
+                border-radius: 6px;
+                overflow: hidden;
+                
+                img {
+                    max-height: 100%;
+                }
+            }
         }
     }
     .card__info {
+        width: calc(50% - 10px);
+        margin-left: 10px;
+        flex: 1 1 auto;
 
+        .card-info__title {
+            font-weight: 500;
+            font-size: 30px;
+            line-height: 45px;
+        }
+        .card-info__article {
+            margin: 0 0 16px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+        .card-info__price {
+            margin: 0 0 16px;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 30px;
+        }
+        .card-info__row {
+            padding: 16px 0;
+            border-bottom: 1px solid #000;
+
+            &:last-child {
+                border: none;
+            }
+        }
+        .card-info__desc {
+            
+        }
+        .card-info__color {
+
+        }
+        .card-info__buy {
+
+        }
+        .card-info__spec {
+
+        }
     }
     .card__tabs {
         .card-tabs__head {
@@ -333,12 +401,17 @@ main > .inner > section  {
 }
 .add-cards__row {
     .add-cards__title {
+        padding: 0 .2em;
         font-weight: 600;
         font-size: 30px;
         line-height: 45px;
     }
     .add-cards__body {
         margin: 40px 0;
+
+        .card-item {
+            max-width: 100%;
+        }
     }
 }
 

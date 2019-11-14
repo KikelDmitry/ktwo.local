@@ -43,6 +43,7 @@ $(document).ready(function() {
 
     $('.clients__com-slider').slick({
         slidesToShow: 4,
+        swipeToSlide: true,
         prevArrow: '<button type="button" class="slider__round-btn slider__round-btn--prev"><span class="vh">prev</span></button>',
         nextArrow: '<button type="button" class="slider__round-btn slider__round-btn--next"><span class="vh">next</span></button>',
         responsive: [
@@ -125,6 +126,7 @@ $(document).ready(function() {
             $(this).slick({
                 slidesToShow: 5,
                 arrows: false,
+                swipeToSlide: true,
                 responsive: [
                     {
                         breakpoint: 768,
@@ -154,6 +156,23 @@ $(document).ready(function() {
             })
         });
     }
+    
+    $('.card-slider__inner > .slider__nav').slick({
+        asNavFor: '.slider__for',
+        slidesToShow: 4,
+        arrows: false,
+        vertical: true,
+        verticalSwiping: true,
+        focusOnSelect: true,
+    });
+    $('.card-slider__inner > .slider__for').slick({
+        asNavFor: '.slider__nav',
+        slidesToShow: 1,
+        arrows: false,
+        vertical: true,
+        verticalSwiping: true,
+    });
+
 });
 
 
