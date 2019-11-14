@@ -2543,6 +2543,24 @@ main > .inner > section  {
         }
     }
 }
+.basket_minicart {
+    position: relative;
+    .number_icon {
+        position: absolute;
+        right: -10px;
+        top: -10px;
+        width: 20px;
+        height: 20px;
+        background: #eeeeee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        &.active {
+            background: #FACE77;
+        }
+    }
+}
 
 //modal layer
 
