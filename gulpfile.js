@@ -87,4 +87,4 @@ gulp.task('watch', function () {
     gulp.watch(assetsDir + 'js/**/*.js', gulp.parallel('minify'));
     gulp.watch(assetsDir + 'js/**/*.js').on('change', browserSync.reload);
 });
-gulp.task('default', gulp.parallel('pug', 'sass', 'browser-sync', 'minify', 'watch'));
+gulp.task('default', gulp.parallel('pug', 'sass', 'minify', 'browser-sync', 'watch'));

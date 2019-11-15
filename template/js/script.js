@@ -161,17 +161,12 @@ $(document).ready(function() {
         asNavFor: '.slider__for',
         slidesToShow: 4,
         arrows: false,
-        vertical: true,
-        verticalSwiping: true,
         focusOnSelect: true,
-        centerMode: true,
     });
     $('.card-slider__inner > .slider__for').slick({
         asNavFor: '.slider__nav',
         slidesToShow: 1,
         arrows: false,
-        vertical: true,
-        verticalSwiping: true,
     });
 
 });
