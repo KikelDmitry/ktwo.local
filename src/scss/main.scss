@@ -109,7 +109,7 @@ main > .inner > section  {
         margin: 0 8px;
         background: #fff;
         border-radius: 50%;
-        
+
         &.slick-active {
             background: $face;
         }
@@ -191,7 +191,7 @@ main > .inner > section  {
         text-align: justify;
         box-shadow: 0px 1px 4px rgba(30, 39, 82, 0.25);
         transition: all .4s;
-        
+
         @include desk1280 {
             opacity: 1;
             visibility: visible;
@@ -274,7 +274,7 @@ main > .inner > section  {
                     background: $face;
                     font-size: 14px;
                     line-height: 21px;
-                    
+
                     @include desk1280 {
                         flex-grow: 1;
                         margin-right: 5px;
@@ -320,7 +320,7 @@ main > .inner > section  {
 
         @include tab768 {
             flex-flow: column;
-        }        
+        }
         @include mob414 {
             padding: 0 8px;
         }
@@ -333,15 +333,15 @@ main > .inner > section  {
             width: 100%;
             order: 2;
         }
-        
-        .card-slider__inner {  
+
+        .card-slider__inner {
             .slick-track {
 
-            }          
+            }
             img {
                 border-radius: 6px;
             }
-            .slider__nav {   
+            .slider__nav {
                 .slick-track {
                     display: flex;
                     align-items: center;
@@ -361,11 +361,11 @@ main > .inner > section  {
 
                     }
 
-                }                
+                }
             }
             .slider__for {
                 margin: 0 0 20px;
-                border-radius: 6px; 
+                border-radius: 6px;
 
                 .slick-track {
                     display: flex;
@@ -380,10 +380,8 @@ main > .inner > section  {
                             margin: auto;
                             max-height: inherit;
                         }
-
                     }
-
-                }          
+                }
             }
         }
     }
@@ -392,7 +390,7 @@ main > .inner > section  {
         margin-left: 10px;
         flex: 1 1 auto;
         padding-left: 80px;
-        
+
         @include tab768 {
             width: 100%;
             margin-left: 0;
@@ -423,7 +421,7 @@ main > .inner > section  {
             }
         }
         .card-info__desc {
-            
+
         }
         .card-info__param {
             display: flex;
@@ -441,7 +439,7 @@ main > .inner > section  {
                     @include mob540 {
                         max-width: 100%;
                     }
-                    
+
                     .card-info__param--body {
                         flex-flow: row wrap;
                     }
@@ -458,7 +456,7 @@ main > .inner > section  {
                 }
                 .card-info__param--body {
                     display: flex;
-    
+
                     .card-color__label {
                         .card-color___input {
                             &:checked + .card-color__round {
@@ -577,7 +575,7 @@ main > .inner > section  {
 
                         &::after {
                             content: ':';
-                        } 
+                        }
                     }
                     td {
                         text-align: right;
@@ -717,7 +715,7 @@ main > .inner > section  {
         }
         .top-burger {
             display: none;
-    
+
             @include tab768 {
                 width: 44px;
                 height: 44px;
@@ -736,7 +734,7 @@ main > .inner > section  {
         @include tab768 {
             padding: 0 5px;
             flex: 0 1 auto
-        }   
+        }
     }
     .header__menu {
         padding: 0 10px;
@@ -752,7 +750,7 @@ main > .inner > section  {
             font-size: 12px;
             line-height: 18px;
             letter-spacing: .04em;
-            
+
             @include layout {
                 margin: 0 5px;
             }
@@ -838,11 +836,11 @@ main > .inner > section  {
         text-align: center;
         position: relative;
         margin-left: 65px;
-        
+
         @include tab768 {
             margin-left: 0;
         }
-        
+
         .top-slider__item {
             height: 685px;
             max-height: calc(100vh - 75px);
@@ -877,7 +875,7 @@ main > .inner > section  {
             z-index: 1;
             background: center no-repeat;
 
-            
+
             &--prev {
                 background-image: url("data:image/svg+xml,%3Csvg width='36' height='62' viewBox='0 0 36 62' xmlns='http://www.w3.org/2000/svg' fill='none'%3E%3Cpath d='M4.539 30.998l29.937-28c.736-.689.736-1.793 0-2.482-.736-.689-1.917-.689-2.653 0l-31.27 29.248c-.736.689-.736 1.793 0 2.482l31.27 29.235c.361.338.847.52 1.32.52.472 0 .959-.169 1.32-.52.736-.689.736-1.793 0-2.482l-29.923-28z' opacity='.4' fill='%23000'/%3E%3C/svg%3E");
                 left: 123px;
@@ -909,7 +907,7 @@ main > .inner > section  {
             display: flex;
             flex-flow: row wrap;
         }
-            
+
         .hotel-slider__item {
             display: block;
             max-width: inherit;
@@ -992,7 +990,7 @@ main > .inner > section  {
                 letter-spacing: 0.09em;
                 color: #6d6d6d;
                 cursor: pointer;
-                
+
                 &::after {
                     content: '/';
                     color: #6d6d6d;
@@ -1114,7 +1112,7 @@ main > .inner > section  {
         position: relative;
         max-width: 392px;
         margin: 0 10px;
-        
+
         @include tab768 {
             margin: 0 0 14px;
         }
@@ -1214,7 +1212,7 @@ main > .inner > section  {
 .chess__block {
     .chess__row {
         margin: 0 0 20px;
-        
+
         &:nth-child(odd) {
             .chess__link {
                 margin-left: 10px;
@@ -1225,7 +1223,7 @@ main > .inner > section  {
         }
         &:nth-child(even) {
             flex-direction: row-reverse;
-            
+
             .chess__link {
                 margin-right: 10px;
             }
@@ -1243,9 +1241,9 @@ main > .inner > section  {
 
             .chess__slider-inner {
                 height: 100%;
-                
+
                 & * {
-                  height: 100%;  
+                  height: 100%;
                 }
                 .chess__slider-item {
                     object-fit: cover;
@@ -1258,7 +1256,7 @@ main > .inner > section  {
                 position: absolute;
                 bottom: 20px;
                 right: 20px;
-                
+
                 .slider__round-btn {
                     margin-left: 15px;
                     position: static;
@@ -1359,7 +1357,7 @@ main > .inner > section  {
         }
     }
 }
-.cat-icons {  
+.cat-icons {
     .cat-icons__cont {
         flex-flow: row wrap;
 
@@ -1401,7 +1399,7 @@ main > .inner > section  {
 
                     img {
                         margin: auto;
-                    } 
+                    }
             }
             .cat-icons__title {
                 font-size: 16px;
@@ -1413,7 +1411,7 @@ main > .inner > section  {
 }
 .prod-section {
     position: relative;
-    
+
     @include tab768 {
         overflow: hidden;
     }
@@ -1488,7 +1486,7 @@ main > .inner > section  {
     .cards-block__body {
         &.is-masonry {
             flex-flow: row wrap;
-    
+
             .card-item {
                 max-width: 25%;
 
@@ -1497,7 +1495,7 @@ main > .inner > section  {
                         display: none;
                     }
                 }
-    
+
                 @include desk1280 {
                     max-width: 33.3%;
                 }
@@ -1807,7 +1805,7 @@ main > .inner > section  {
             max-width: 350px;
 
         }
-        
+
         .left-bar__item {
             height: 48px;
             background: #fff;
@@ -1816,7 +1814,7 @@ main > .inner > section  {
             &:hover {
                 background: #DBE7FF;
             }
-            
+
             @include mid640 {
                 position: relative;
             }
@@ -1829,7 +1827,7 @@ main > .inner > section  {
                 width: 100%;
                 height: 100%;
                 transition: inherit;
-                
+
                 &.pointer {
                     cursor: pointer;
 
@@ -1861,7 +1859,7 @@ main > .inner > section  {
                     letter-spacing: 0.09em;
                     white-space: nowrap;
                     transition: inherit;
-                    
+
                     @include mid640 {
                         opacity: 1;
                         visibility: visible;
@@ -1958,7 +1956,7 @@ main > .inner > section  {
                         width: auto;
                         max-width: 100%;
                     }
-                    
+
                     .left-bar__item {
                         width: 110px;
                         height: 140px; //t
@@ -1967,8 +1965,8 @@ main > .inner > section  {
 
                         .left-bar__link {
                             flex-flow: column;
-                            align-items: flex-start;  
-                            
+                            align-items: flex-start;
+
                             img {
                                 margin: 0 0 20px;
                             }
@@ -2107,7 +2105,7 @@ main > .inner > section  {
             margin-bottom: 30px;
 
             @include mob512 {
-                
+
             }
         }
         &.contacts__callback {
@@ -2120,7 +2118,7 @@ main > .inner > section  {
             margin-right: 30px;
             text-align: left;
 
-            @include tab1024 { 
+            @include tab1024 {
                 max-width: 100%;
                 margin: 0 0 10px 0;
             }
@@ -2134,11 +2132,11 @@ main > .inner > section  {
             flex: 1 1 100%;
             padding: 0;
 
-            @include tab1024 { 
+            @include tab1024 {
                 max-width: 100%;
                 min-height: 30vh;
             }
-            
+
             iframe {
                 display: block;
                 height: 100%;
@@ -2265,7 +2263,7 @@ main > .inner > section  {
                     width: 15px;
                     height: 15px;
                     margin-right: 11px;
-                    flex: 0 0 auto; 
+                    flex: 0 0 auto;
                     border: 1px solid #000;
                     background-position: center;
                     background-repeat: no-repeat;
@@ -2341,7 +2339,7 @@ main > .inner > section  {
                 margin-right: 0;
                 margin-bottom: 20px;
             }
-            
+
             > div {
                 h3 {
                     margin: 0 0 20px;
@@ -2383,7 +2381,7 @@ main > .inner > section  {
         height: 100%;
         object-fit: cover;
         box-shadow: 0px 1px 4px rgba(30, 39, 82, 0.25);
-    }      
+    }
 }
 .contel__sec {
     @include mid640 {
@@ -2395,7 +2393,7 @@ main > .inner > section  {
     .contel__img {
         max-width: 648px;
         margin-right: 72px;
-        
+
         @include mid640 {
             max-width: 100%;
             margin-right: 0;
@@ -2412,7 +2410,7 @@ main > .inner > section  {
             padding: 0;
             margin: 20px 0 0;
         }
-    
+
         h3 {
             width: 116%;
             padding: 28px;
@@ -2426,7 +2424,7 @@ main > .inner > section  {
             letter-spacing: 0.09em;
             box-shadow: 0px 1px 4px rgba(30, 39, 82, 0.25);
             transform: translateX(-140px);
-    
+
             @include mid640 {
                 width: 100%;
                 margin: 0 0 32px;
@@ -2444,7 +2442,7 @@ main > .inner > section  {
         height: 100%;
         object-fit: cover;
         box-shadow: 0px 1px 4px rgba(30, 39, 82, 0.25);
-    }      
+    }
 }
 .advan {
     .advan__title {
@@ -2468,7 +2466,7 @@ main > .inner > section  {
             margin: 0 0 50px;
             padding: 0 10px;
             text-align: center;
-            
+
             @include mob414 {
                 max-width: none;
                 margin: auto;
@@ -2535,7 +2533,7 @@ main > .inner > section  {
             max-width: 100%;
             margin: 0 0 -50px;
         }
-        
+
         &:nth-child(1) {
             margin-right: 11px;
 
@@ -2550,7 +2548,7 @@ main > .inner > section  {
                 margin-left: 0;
             }
         }
-        
+
         .twins__img {
             height: 75%;
 
@@ -2615,8 +2613,8 @@ main > .inner > section  {
             max-width: 100%;
             margin: 0;
         }
-        
-        .callback__title { 
+
+        .callback__title {
             max-width: 100%;
             min-height: 100px;
             padding: 31px;
@@ -2649,7 +2647,7 @@ main > .inner > section  {
     .callback-img {
         flex: 1 1 auto;
         max-width: calc(50% - 10px);
-        
+
         @include mid640 {
             display: none;
         }
@@ -2681,7 +2679,7 @@ main > .inner > section  {
 //FOOTER
 .footer__block {
     letter-spacing: .09em;
-    
+
     .go-top-btn {
         display: none;
 
@@ -2700,7 +2698,7 @@ main > .inner > section  {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-    
+
                 &::after {
                     content: '';
                     width: 11px;
@@ -2723,7 +2721,7 @@ main > .inner > section  {
             min-height: inherit;
             padding: 0 10px;
         }
-        
+
         .subs__block {
             min-height: inherit;
 
@@ -2837,12 +2835,12 @@ main > .inner > section  {
                 margin: 0 0 30px;
                 flex-flow: row wrap;
             }
-    
+
             &__title {
                 margin: 0 0 28px;
                 font-weight: 600;
                 font-size: 16px;
-                
+
                 @include tab768 {
                     flex: 1 0 100%;
                     max-width: 100%;
@@ -2871,7 +2869,7 @@ main > .inner > section  {
                         background-size: 100%;
                     }
                     &[href^="mailto:"] {
-                        &::before { 
+                        &::before {
                             background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' xmlns='http://www.w3.org/2000/svg' fill='%23000'%3E%3Cpath d='M13.75 1.75h-13.5c-.138 0-.25.112-.25.25v10c0 .138.112.25.25.25h13.5c.138 0 .25-.112.25-.25v-10c0-.138-.112-.25-.25-.25zm-9.317 6.17l-3.5 3.75c-.06.068-.153.097-.241.078-.088-.02-.159-.086-.185-.173-.026-.087-.003-.181.061-.246l3.5-3.75c.06-.068.153-.097.241-.078.088.02.159.086.185.173.026.087.003.181-.061.246zm8.988 3.762c-.101.094-.259.089-.353-.012l-3.5-3.75c-.063-.065-.087-.159-.061-.246.026-.087.097-.153.185-.173.088-.02.181.01.241.078l3.5 3.75c.094.101.089.259-.012.353zm-.01-8.991l-5.767 4.845c-.18.152-.408.235-.643.235-.235 0-.463-.083-.643-.235l-5.767-4.845c-.068-.057-.101-.147-.085-.235s.077-.161.161-.191c.084-.031.178-.014.246.043l5.768 4.845c.186.156.457.156.644 0l5.768-4.845c.106-.089.263-.075.352.031.089.106.075.263-.031.352z'/%3E%3C/svg%3E");
                         }
                     }
@@ -2889,7 +2887,7 @@ main > .inner > section  {
     }
     .footer__bot {
         text-align: center;
-    
+
         .title-copy {
             padding: 0 0 14px;
             border-bottom: 1px solid #000;
@@ -3002,7 +3000,7 @@ main > .inner > section  {
             justify-content: space-between;
             align-items: center;
             margin: 48px 0 0;
-            
+
             .modalko-forget {
                 margin-right: 10px;
                 font-size: 14px;
