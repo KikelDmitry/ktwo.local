@@ -334,28 +334,54 @@ main > .inner > section  {
             order: 2;
         }
         
-        .card-slider__inner {
-            display: flex;
-            justify-content: flex-start;
-            
+        .card-slider__inner {  
+            .slick-track {
+
+            }          
             img {
                 border-radius: 6px;
             }
-            .slider__nav {
-                max-width: 102px;
-                
-                img {
-                    max-width: 70px;
-                }
+            .slider__nav {   
+                .slick-track {
+                    display: flex;
+                    align-items: center;
+                    max-height: 100px;
+
+                    .slider__item {
+                        padding: 0 6px;
+                        max-height: inherit;
+                        max-width: auto;
+                        
+                        img {
+                            margin: auto;
+                            max-height: inherit;
+                        }
+
+                    }
+
+                }                
             }
             .slider__for {
-                width: calc(100% - 102px);
-                border-radius: 6px;
-                overflow: hidden;
-                
-                img {
-                    max-height: 100%;
-                }
+                margin: 0 0 20px;
+                border-radius: 6px; 
+
+                .slick-track {
+                    display: flex;
+                    align-items: center;
+                    max-height: 330px;
+
+                    .slider__item {
+                        max-height: inherit;
+                        max-width: auto;
+                        
+                        img {
+                            margin: auto;
+                            max-height: inherit;
+                        }
+
+                    }
+
+                }          
             }
         }
     }
@@ -624,7 +650,6 @@ main > .inner > section  {
                 .card-tabs__spec {
                     max-width: 640px;
                     width: 100%;
-                    margin: auto;
 
                     th,
                     td {
