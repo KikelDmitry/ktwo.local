@@ -94,12 +94,10 @@ block content
 
             .card__tabs
                 .card-tabs__head
-                    button.card-tabs__head-item.tab-item(type="button", data-container="tab1") Lorem 1
-                    button.card-tabs__head-item.tab-item(type="button", data-container="tab2") Lorem 2
-                    button.card-tabs__head-item.tab-item(type="button", data-container="tab3") Lorem 3
-                    button.card-tabs__head-item.tab-item(type="button", data-container="tab4") Lorem 4
+                    button.card-tabs__head-item.tab-item(type="button", data-container="description") Описание
+                    button.card-tabs__head-item.tab-item(type="button", data-container="spec") Характеристики
                 .card-tabs__body.sk-tabs
-                    .card-tabs__body-item.tab-container#tab1 
+                    .card-tabs__body-item.tab-container#description
                         h3 Описание
                         p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                         p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
@@ -112,9 +110,15 @@ block content
                             li lorem ipsum
                             li lorem ipsum
                             li lorem ipsum
-                    .card-tabs__body-item.tab-container#tab2 Tab content 2
-                    .card-tabs__body-item.tab-container#tab3 Tab content 3
-                    .card-tabs__body-item.tab-container#tab4 Tab content 4
+                    .card-tabs__body-item.tab-container#spec Tab content 2
+        section.add-cards__row
+            h3.add-cards__title С этим товаром покупают
+            .add-cards__body.flex
+                    - var n = 0;
+                    while n < 10
+                        - n++
+                        - var cardPrice = Math.floor(Math.random() * (1000 - 9999) + 9999);
+                        include chunks/_card-item-light.pug
         section.add-cards__row
             h3.add-cards__title Все товары в этой коллекции
             .add-cards__body.flex
@@ -126,14 +130,6 @@ block content
         section.add-cards__row
             h3.add-cards__title Похожие товары
             .add-cards__body.is-masonry.flex
-                    - var n = 0;
-                    while n < 10
-                        - n++
-                        - var cardPrice = Math.floor(Math.random() * (1000 - 9999) + 9999);
-                        include chunks/_card-item-light.pug
-        section.add-cards__row
-            h3.add-cards__title С этим товаром покупают
-            .add-cards__body.flex
                     - var n = 0;
                     while n < 10
                         - n++
