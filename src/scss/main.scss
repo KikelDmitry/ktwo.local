@@ -317,10 +317,19 @@ main > .inner > section  {
     .card__row {
         display: flex;
         margin: 0 0 120px;
+
+        @include tab768 {
+            flex-flow: column;
+        }        
     }
     .card__slider {
         width: calc(50% - 10px);
         margin-right: 10px;
+
+        @include tab768 {
+            width: 100%;
+            order: 2;
+        }
         
         .card-slider__inner {
             display: flex;
@@ -352,7 +361,12 @@ main > .inner > section  {
         margin-left: 10px;
         flex: 1 1 auto;
         padding-left: 80px;
-
+        
+        @include tab768 {
+            width: 100%;
+            margin-left: 0;
+            padding-left: 0;
+        }
         .card-info__title {
             font-weight: 500;
             font-size: 30px;
@@ -383,17 +397,30 @@ main > .inner > section  {
         .card-info__param {
             display: flex;
 
+            @include mob540 {
+                flex-flow: column;
+            }
+
             .card-info__param--item {
                 flex: 1 1 auto;
+
                 &:nth-child(1) {
                     max-width: 40%;
 
+                    @include mob540 {
+                        max-width: 100%;
+                    }
+                    
                     .card-info__param--body {
                         flex-flow: row wrap;
                     }
                 }
                 &:nth-child(2) {
                     max-width: 60%;
+
+                    @include mob540 {
+                        max-width: 100%;
+                    }
                 }
                 .card-info__param--title {
                     margin: 0 0 29px;
@@ -445,9 +472,23 @@ main > .inner > section  {
             display: flex;
             align-items: center;
 
+            @include tab1024 {
+                div:first-child {
+                    display: none;
+                }
+            }
+            @include tab768 {
+                justify-content: center;
+            }
+
+
             .amount {
                 display: flex;
                 margin: 0 30px;
+
+                @include tab1024 {
+                    margin: 0 15px 0 0;
+                }
 
                 button {
                     flex: 0 0 auto;
@@ -472,6 +513,7 @@ main > .inner > section  {
                 max-width: 136px;
                 height: 36px;
                 flex: 1 1 auto;
+                padding: .2em;
             }
             .to-cart {
                 margin-right: 22px;
@@ -484,6 +526,10 @@ main > .inner > section  {
             .card-info__spec--block {
                 flex: 1 1 auto;
                 max-width: 50%;
+
+                @include mid640 {
+                    max-width: 100%;
+                }
 
                 .card-spec__table {
                     width: 100%;
@@ -542,6 +588,10 @@ main > .inner > section  {
                 margin: 0 32px;
                 font-size: 16px;
                 line-height: 24px;
+                
+                @include mob540 {
+                    margin: 0 16px;
+                }
             }
         }
         .card-tabs__body {
