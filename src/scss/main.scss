@@ -321,6 +321,9 @@ main > .inner > section  {
         @include tab768 {
             flex-flow: column;
         }        
+        @include mob414 {
+            padding: 0 8px;
+        }
     }
     .card__slider {
         width: calc(50% - 10px);
@@ -527,7 +530,7 @@ main > .inner > section  {
                 flex: 1 1 auto;
                 max-width: 50%;
 
-                @include mid640 {
+                @include tab768 {
                     max-width: 100%;
                 }
 
@@ -577,6 +580,9 @@ main > .inner > section  {
         }
     }
     .card__tabs {
+        @include mob414 {
+            padding: 0 8px;
+        }
         .card-tabs__head {
             display: flex;
             justify-content: center;
@@ -2862,6 +2868,143 @@ main > .inner > section  {
     }
 }
 
+//modal windows
+
+//fancy resets
+.modal-login,
+.modal-reg,
+.modal-forget {
+    background: transparent !important;
+    padding: 0 !important;
+    max-width: 880px !important;
+
+    .fancybox-button {
+        svg {
+            path {
+                fill: #fff;
+            }
+        }
+    }
+}
+.modalko {
+    display: flex;
+    position: relative;
+    max-width: 880px;
+    padding: 0 44px;
+
+    @include tab768 {
+        flex-flow: column;
+    }
+
+    .modalko__back {
+        position: absolute;
+        top: 34px;
+        right: 0;
+        left: 0;
+        bottom: 34px;
+        z-index: -1;
+        background: #222;
+        border-radius: 5px;
+    }
+    .modalko__form {
+        justify-content: center;
+        align-items: center;
+        padding: 57px;
+        background: #fff;
+        box-shadow: 0px 1px 4px rgba(30, 39, 82, 0.25);
+        border-radius: 5px;
+
+        .modalko__title {
+            margin: 0 0 50px;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 29px;
+        }
+        input {
+            display: block;
+            width: 100%;
+            padding: 10px 0;
+            margin: 0 0 10px;
+            border: none;
+            border-bottom: 1px solid #c4c4c4;
+
+            &::placeholder {
+                color: #4e4e4e;
+            }
+            &:focus {
+                outline: none;
+                border-color: #000;
+
+                &::placeholder {
+                    color: #000;
+                }
+            }
+        }
+        .modalko__form-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 48px 0 0;
+            
+            .modalko-forget {
+                margin-right: 10px;
+                font-size: 14px;
+                line-height: 17px;
+            }
+
+            .modalko__form-submit {
+                max-width: 158px;
+                flex: 1 1 auto;
+                padding: 10px 28px;
+                color: #fff;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 17px;
+                text-shadow: 0px 1px 4px rgba(30, 39, 82, 0.25);
+                box-shadow: 0px 1px 4px rgba(30, 39, 82, 0.25);
+            }
+        }
+    }
+    .modalko__quest-block {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+        padding-left: 0;
+        color: #fff;
+        font-weight: bold;
+
+        @include tab768 {
+            padding-right: 0;
+        }
+        .modalko__quest-title {
+            margin: 0 0 40px;
+            font-size: 24px;
+            line-height: 29px;
+            text-align: center;
+        }
+        .modalko__quest-btn {
+            font-size: 14px;
+            line-height: 17px;
+            padding: 11px 38px;
+            border: 2px solid;
+            border-radius: 5px;
+        }
+    }
+}
+.modal-reg {
+    .modalko {
+        .modalko__quest-block {
+            padding: 50px;
+            padding-right: 0;
+
+            @include tab768 {
+                padding-left: 0;
+            }
+        }
+    }
+}
 //modal layer
 
 html.is-modal {

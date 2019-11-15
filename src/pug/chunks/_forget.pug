@@ -1,0 +1,11 @@
+.modal-forget#modal-forget
+    .modalko
+        .modalko__back
+        .modalko__quest-block
+            .modalko__quest-title Не зарегистрированы?
+            a.modalko__quest-btn(href="javascript:;", data-fancybox, data-src="#modal-reg") Регистрация
+        form.modalko__form(action="/")
+            .modalko__title Восстановление пароля
+            input(type="email", required, placeholder="Email", name="email")
+            .modalko__form-row
+                button.modalko__form-submit.face-btn(type="submit") Восстановить

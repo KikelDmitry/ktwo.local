@@ -1,0 +1,13 @@
+.modal-reg#modal-reg
+    .modalko
+        .modalko__back
+        form.modalko__form(action="/")
+            .modalko__title Регистрация нового аккаунта
+            input(type="text", required, placeholder="Ваше имя", name="name")
+            input(type="email", required, placeholder="Email", name="email")
+            input(type="password", required, placeholder="Пароль", name="pass")
+            .modalko__form-row
+                button.modalko__form-submit.face-btn(type="submit") Войти
+        .modalko__quest-block
+            .modalko__quest-title Уже есть аккаунт?
+            a.modalko__quest-btn(href="javascript:;", data-fancybox, data-src="#modal-login") Войти

@@ -344,7 +344,12 @@ function mLayer() {
         $('body').removeClass('is-modal');
         modalLayer.removeClass('is-active');
     }
-}
+};
+//fancy
+const switchBtn = $('.modalko__quest-btn, .modalko-forget');
+switchBtn.click(function() {
+    $.fancybox.close();
+})
 
 
 //modal elements
