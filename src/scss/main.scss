@@ -585,18 +585,24 @@ main > .inner > section  {
         }
         .card-tabs__head {
             display: flex;
-            justify-content: center;
-            padding: 20px 0;
-            margin: 0 0 60px;
+            justify-content: flex-start;
+            margin: 0 0 16px;
             border-bottom: 1px solid #000;
-
             .card-tabs__head-item {
                 margin: 0 32px;
                 font-size: 16px;
                 line-height: 24px;
-                
+                padding: 8px 0;
+                border-bottom: 2px solid transparent;
                 @include mob540 {
                     margin: 0 16px;
+                }
+                &:first-child {
+                    margin-left: 0;
+                }
+                &.active-tab {
+                    border-bottom: 2px solid $face;
+                    font-weight: bold;
                 }
             }
         }
@@ -624,7 +630,6 @@ main > .inner > section  {
                 .card-tabs__spec {
                     max-width: 640px;
                     width: 100%;
-                    margin: auto;
 
                     th,
                     td {
