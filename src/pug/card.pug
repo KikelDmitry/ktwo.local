@@ -50,6 +50,7 @@ block content
                                 label.card-color__label
                                     input.card-color___input.vh(type="radio", name="color", value="red")
                                     .card-color__round
+
                         .card-info__param--item
                             .card-info__param--title Размеры:
                             .card-info__param--body
@@ -110,7 +111,25 @@ block content
                             li lorem ipsum
                             li lorem ipsum
                             li lorem ipsum
-                    .card-tabs__body-item.tab-container#spec Tab content 2
+                    .card-tabs__body-item.tab-container#spec
+                        h3 Технические характеристики
+                        table.card-tabs__spec
+                            // двоеточия после заголовка подставляются в css!
+                            tr
+                                th Каркас
+                                td массив, мебельный щит
+                            tr
+                                th Механизм
+                                td пантограф
+                            tr
+                                th Наполнение
+                                td пружинная змейка, ППУ
+                            tr
+                                th Материал ножек
+                                td металл
+                            tr
+                                th Наполнение подушек
+                                td холлофайбер
         section.add-cards__row
             h3.add-cards__title С этим товаром покупают
             .add-cards__body.flex

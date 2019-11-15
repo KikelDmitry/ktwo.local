@@ -621,6 +621,28 @@ main > .inner > section  {
                         margin: 0 0 16px;
                     }
                 }
+                .card-tabs__spec {
+                    max-width: 640px;
+                    width: 100%;
+                    margin: auto;
+
+                    th,
+                    td {
+                        font-size: 1.1em;
+                        width: 50%;
+                        padding: 1.3em 0 .4em;
+                        border-bottom: 1px dotted #ddd;
+                    }
+                    th {
+                        padding-right: 1em;
+                        text-align: left;
+                        font-weight: normal;
+                    }
+                    td {
+                        font-weight: bold;
+                        text-align: right;
+                    }
+                }
             }
         }
     }
