@@ -156,21 +156,35 @@ $(document).ready(function() {
             })
         });
     }
-    
-    $('.card-slider__inner > .slider__nav').slick({
+    $('.card__section .card-slider__inner > .slider__nav').slick({
         asNavFor: '.slider__for',
         slidesToShow: 4,
         arrows: false,
         focusOnSelect: true,
     });
-    $('.card-slider__inner > .slider__for').slick({
+    $('.card__section .card-slider__inner > .slider__for').slick({
         asNavFor: '.slider__nav',
         slidesToShow: 1,
         arrows: false,
     });
-
 });
 
+//quick view
+const quickBtn = $('.js-quick-view');
+function fancySlider() {
+    $('.quick-view .card-slider__inner > .slider__nav').slick({
+        asNavFor: '.slider__for',
+        slidesToShow: 4,
+        arrows: false,
+        focusOnSelect: true
+    });
+    $('.quick-view .card-slider__inner > .slider__for').slick({
+        asNavFor: '.slider__nav',
+        slidesToShow: 1,
+        arrows: false
+    });
+}
+quickBtn.click(fancySlider);
 
 //hovercard
 $(document).ready(function() {
@@ -200,7 +214,6 @@ $(document).ready(function() {
 $('.add-to-fav-btn').click(function() {
     $(this).toggleClass('is-active');
 });
-
 //sort_cat
 const sortBtn = $('.cards-sort__title');
 sortBtn.click(function(e) {

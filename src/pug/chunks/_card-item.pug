@@ -2,7 +2,7 @@ article.card-item
     .card-item__native
         .card-item__img
             a(href="#")
-                img(src="/template/img/armchair.png", alt="pagetitle")
+                img(src="/template/img/armchair.png" alt="pagetitle")
         div.card-item__name
             .card-item__category 
                 a(href="#") Кресло
@@ -13,18 +13,18 @@ article.card-item
             .card-item__price-word Цена
             .card-item__price #{cardPrice} р
             form.ms2_form.card-item__btns.flex.jcsb.islist-only(method="post")
-                input(type="hidden", name="id", value="1")
-                input(type="hidden", name="count", value="1")
-                input(type="hidden", name="options", value="[]")
-                button.card-item__btn-buy.face-btn(type="button", name="buy-button") В корзину
-                button.card-item__btn-cart.face-btn(type="button", name="buy-button")
-                    img(src="/template/img/svg/eye.svg", alt="cart icon")
+                input(type="hidden" name="id" value="1")
+                input(type="hidden" name="count" value="1")
+                input(type="hidden" name="options" value="[]")
+                button.card-item__btn-buy.face-btn(type="button" name="buy-button") В корзину
+                button.card-item__btn-cart.face-btn.js-quick-view(type="button" name="buy-button" data-src="#quick-view", data-fancybox)
+                    img(src="/template/img/svg/eye.svg" alt="eye icon")
 
     .card-item__hover
         .card-item__top-icons.flex
-            button.card-item__like.face-btn(type="button", name="add-to-favorite")
-                img(src="/template/img/svg/heart.svg", alt="heart icon")
-            
+            button.card-item__like.face-btn(type="button" name="add-to-favorite")
+                img(src="/template/img/svg/heart.svg" alt="heart icon")
+
 
         .card-item__append
 
@@ -34,16 +34,16 @@ article.card-item
                 .card-item__size-length
                     .card-item__size-f Длина
                     .card-item__size-s #{length} см
-                .card-item__size-width
+                .card-item__size-widths
                     .card-item__size-f Ширина
                     .card-item__size-s #{weight} см
                 .card-item__size-height
                     .card-item__size-f Высота
                     .card-item__size-s #{height} см
             form.ms2_form.card-item__btns.flex.jcsb(method="post")
-                input(type="hidden", name="id", value="1")
-                input(type="hidden", name="count", value="1")
-                input(type="hidden", name="options", value="[]")
-                button.card-item__btn-buy.face-btn(type="button", name="buy-button") В корзину
-                button.card-item__compare.face-btn(type="button", name="add-to-compare")
-                    img(src="/template/img/svg/eye.svg", alt="heart icon")
+                input(type="hidden" name="id" value="1")
+                input(type="hidden" name="count" value="1")
+                input(type="hidden" name="options" value="[]")
+                button.card-item__btn-buy.face-btn(type="button" name="buy-button") В корзину
+                button.card-item__compare.face-btn.js-quick-view(type="button" name="add-to-compare" data-src="#quick-view", data-fancybox)
+                    img(src="/template/img/svg/eye.svg" alt="heart icon")
