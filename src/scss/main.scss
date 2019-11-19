@@ -425,6 +425,9 @@ main > .inner > section {
 
         img {
             border-radius: 6px;
+            &:focus {
+                outline: none;
+            }
         }
 
         .slider__nav {
