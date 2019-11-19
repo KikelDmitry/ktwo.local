@@ -155,15 +155,15 @@ $(document).ready(function() {
                 ]
             })
         });
-    }
+    };
     $('.card__section .card-slider__inner > .slider__nav').slick({
-        asNavFor: '.slider__for',
+        asNavFor: '.card__section .card-slider__inner > .slider__for',
         slidesToShow: 4,
         arrows: false,
         focusOnSelect: true,
     });
     $('.card__section .card-slider__inner > .slider__for').slick({
-        asNavFor: '.slider__nav',
+        asNavFor: '.card__section .card-slider__inner > .slider__nav',
         slidesToShow: 1,
         arrows: false,
     });
