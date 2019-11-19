@@ -425,6 +425,7 @@ main > .inner > section {
 
         img {
             border-radius: 6px;
+
             &:focus {
                 outline: none;
             }
@@ -472,6 +473,10 @@ main > .inner > section {
             }
         }
     }
+}
+
+.breadcrumb-item.active {
+    margin-top: -10px;
 }
 
 .card__info {
@@ -729,9 +734,11 @@ main > .inner > section {
                 line-height: 24px;
                 transition: .25s;
                 border-bottom: 2px solid transparent;
+
                 &.active-tab {
                     border-bottom: 2px solid $face;
                 }
+
                 @include mob540 {
                     margin: 0 16px;
                 }
