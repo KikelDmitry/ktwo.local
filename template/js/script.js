@@ -157,13 +157,13 @@ $(document).ready(function() {
         });
     }
     $('.card__section .card-slider__inner > .slider__nav').slick({
-        asNavFor: '.card__section .card-slider__inner > .slider__for',
+        asNavFor: '.slider__for',
         slidesToShow: 4,
         arrows: false,
         focusOnSelect: true,
     });
     $('.card__section .card-slider__inner > .slider__for').slick({
-        asNavFor: '.card__section .card-slider__inner > .slider__nav',
+        asNavFor: '.slider__nav',
         slidesToShow: 1,
         arrows: false,
     });
@@ -457,7 +457,7 @@ $('.amount > button').on('click', function () {
         $(this).attr('disabled');
     }
     $input.val(val);
-});
+})
 
 //masked
 $(function($) {

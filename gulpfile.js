@@ -25,7 +25,7 @@ gulp.task('sass', function () {
         .pipe(gulp.dest(destDir + 'css'))
 });
 
-gulp.task('minify', function() {
+gulp.task('minify', function(done) {
     gulp.src(assetsDir + 'js/script.js')
     .pipe(minify({
         ext: {
@@ -34,7 +34,8 @@ gulp.task('minify', function() {
     }
     ))
     .pipe(gulp.dest(destDir + 'js'))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.stream());
+    done();
 });
 
 gulp.task('pug', function () {
