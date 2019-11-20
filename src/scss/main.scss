@@ -697,12 +697,16 @@ main > .inner > section {
 }
 
 .quick-view {
+    min-width: 1140px;
+
+    @media (max-width: 1140px) {
+        min-width: auto;
+    }
 
     .card__row {
         max-width: 1216px;
         margin-bottom: 0;
     }
-
     .card__info {
 
         .card-info__buy {
