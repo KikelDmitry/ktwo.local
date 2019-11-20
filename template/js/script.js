@@ -373,8 +373,7 @@ $leftBarLink.click(function (e) {
         if (!$(this).hasClass('pointer')) {
             e.preventDefault();
             $leftBar.addClass('is-mob');
-            $(this).next('.left-bar__subcont').addClass('is-mob')
-
+            $(this).next('.left-bar__subcont').addClass('is-mob');
         }
     }
 });
@@ -421,8 +420,7 @@ burgerBtn.click(function () {
     leftMenu.addClass('is-active');
 });
 
-
-//card
+//Card
 $('.amount > button').on('click', function () {
     let $input = $(this).siblings('.number'),
         val = +$input.val();
@@ -442,8 +440,6 @@ $('.amount > button').on('click', function () {
 $(function ($) {
     $('.phone-input').mask('+7 (999) 999-99-99');
 });
-
-
 
 //Smooth scroll top
 function toTop() {
