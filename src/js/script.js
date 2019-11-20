@@ -1,4 +1,162 @@
 $(document).ready(function () {
+    //Jquery reloader
+    ;(function (window, document, $, undefined) {
+        if (!$) {
+            return undefined;
+        }
+        let loaderUrl = '/preloader.svg';
+        $.fn.extend({
+            loader: function (enable) {
+                if (enable) {
+                    $(this).css('position', 'relative');
+                    $(this).append(
+                        '<div id="form_loader" style="position: absolute;z-index: 999;display: flex;flex-direction: column;justify-content: center;text-align: center;width: 100%;height: 100%;background: rgba(0,0,0,.15);left: 0;top: 0;">' +
+                        '<img src="' + loaderUrl + '" alt="">' +
+                        '</div>'
+                    );
+                } else {
+                    $('#form_loader').remove();
+                    $(this).css('position', 'auto');
+                }
+            },
+            reloadObj: function () {
+                let className = '';
+                this[0].classList.forEach((item) => {
+                    className += '.' + item;
+                });
+                $(className).loader(true);
+                $.ajax({
+                    url: window.location.href,
+                    dataType: 'html',
+                    success: function (resp) {
+                        $(document).find(className).html($(resp).find(className).html());
+                        $(className).loader(false);
+                    }
+                });
+            }
+        });
+    }(window, document, window.jQuery));
+
+    //Simple ajax form
+    $(".form_ajax_go").submit(function () {
+        let th = $(this);
+        $.ajax({
+            type: "POST",
+            url: "mail.php",
+            data: th.serialize(),
+            beforeSend: function () {
+                th.append(
+                    '<div id="form_loader" style="position: absolute;z-index: 999;display: flex;flex-direction: column;justify-content: center;text-align: center;width: 100%;height: 100%;background: rgba(0,0,0,.15);left: 0;top: 0;">' +
+                    '<img src="/preloader.svg" alt="">' +
+                    '</div>'
+                );
+            },
+            success: function () {
+                th.trigger("reset");
+                $.fancybox.open(
+                    '<div class="message" style="text-align:center">' +
+                    '<h2>Спасибо!</h2>' +
+                    '<p>Мы свяжемся с вами в ближайшее время для уточнения деталей.</p>' +
+                    '</div>'
+                );
+                $('#form_loader').remove();
+                setTimeout(function () {
+                    $.fancybox.close();
+                    $.fancybox.close();
+                }, 3000);
+            }
+        });
+        return false;
+    });
+
+    //Color input change
+    $('.card-color___input').change(function () {
+        let image = $(this).data('pick'),
+            $target = $('.slider__for .slick-active');
+        if (!image) {
+            return;
+        }
+        $('.card__slider').loader(true);
+        $target.attr('src', image);
+        setTimeout(function () {
+            $('.card__slider').loader(false);
+        }, 1000);
+    });
+
+    //Quick view
+    $('.quick-view-btn').click(function () {
+        let url = $(this).data('url'),
+            $modal = $('#quick-view');
+        $modal.loader(true);
+        $.fancybox.open({
+            src: '#quick-view',
+            type: 'inline',
+            opts: {
+                touch: false,
+                afterShow: function () {
+                    $.ajax({
+                        url: url,
+                        data: {
+                            custom_action: true
+                        },
+                        method: 'GET',
+                        dataType: 'html',
+                        success: function (response) {
+                            $modal.loader(false);
+                            $modal.html(response);
+                            reinit();
+                        }
+                    })
+                }
+            }
+        });
+        return false;
+    });
+
+    //Reinit function for after show quick view
+    function reinit() {
+        $('.quick-view .card-slider__inner > .slider__nav').slick({
+            asNavFor: '.slider__for',
+            slidesToShow: 4,
+            arrows: false,
+            focusOnSelect: true
+        });
+        $('.quick-view .card-slider__inner > .slider__for').slick({
+            asNavFor: '.slider__nav',
+            slidesToShow: 1,
+            arrows: false
+        });
+
+        //Card
+        $('#quick-view .amount > button').on('click', function () {
+            let $input = $(this).siblings('.number'),
+                val = +$input.val();
+            if ($(this).hasClass('incr')) {
+                val++;
+            } else {
+                val--;
+            }
+            if (val < 1) {
+                val = 1;
+                $(this).attr('disabled');
+            }
+            $input.val(val);
+        });
+        $('.card-color___input').change(function () {
+            let image = $(this).data('pick'),
+                $target = $('.slider__for .slick-active');
+            if (!image) {
+                return;
+            }
+            $('.card__slider').loader(true);
+            $target.attr('src', image);
+            setTimeout(function () {
+                $('.card__slider').loader(false);
+            }, 1000);
+        });
+    }
+
+
     $('.top-slider__inner').slick({
         prevArrow: '<button type="button" class="top-slider__btn top-slider__btn--prev"><span class="vh">prev</span></button>',
         nextArrow: '<button type="button" class="top-slider__btn top-slider__btn--next"><span class="vh">next</span></button>',
