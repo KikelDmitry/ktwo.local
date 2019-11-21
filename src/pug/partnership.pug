@@ -56,7 +56,7 @@ block content
         section.partner-form.flex
             .callback-block.w50
                 h3.callback__title Напишите нам
-                form.callback-form.dropzone
+                form.callback-form
                     .call__row.flex
                         label.call__label
                             span.call__title Ваше имя
@@ -73,8 +73,12 @@ block content
                             textarea.call__input.text-area(placeholder="Комментарий", name="message")
                     .call__row
                         label.call__label
-                            .drop-zone.drag-drop__cont
-                                span.flex.jcc.aic Перетащите сюда или загрузите файлы
+                            .dropzone#dZUpload.drop-zone.drag-drop__cont
+                                span.flex.jcc.aic.dz-default.dz-message Перетащите сюда или загрузите файлы
+                        //- label.call__label
+                        //-     .drop-zone.drag-drop__cont
+                        //-         span.flex.jcc.aic Перетащите сюда или загрузите файлы
+                        //-         input(type="file" name="file")
                     .call__row
                         label.call__label.call-check.flex.aic
                             input.call-check__input.vh(type="checkbox")
