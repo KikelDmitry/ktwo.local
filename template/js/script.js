@@ -311,7 +311,8 @@ $(document).ready(function () {
                 ]
             })
         });
-    };
+    }
+    ;
     $('.card__section .card-slider__inner > .slider__nav').slick({
         asNavFor: '.card__section .card-slider__inner > .slider__for',
         slidesToShow: 4,
@@ -445,6 +446,7 @@ if (skTabs.length) {
 }
 
 //Range slider
+
 let $rSlider = $('.js-range-slider'),
     $rSliderMin = $('.mse2_ms_price_0'),
     $rSliderMax = $('.mse2_ms_price_1');
@@ -553,14 +555,14 @@ $(document).ready(function () {
 
 //Close menu
 $(document).ready(function () {
-//close menu
-$(document).ready(function () {
     $('.js-left-bar-close').click(closeMenu);
+
     function closeMenu() {
         $('.left-bar__list, .left-bar__subcont, .left-bar__link').removeClass('is-active is-mob');
         $leftBar.removeClass('is-mob');
     }
-    $(window).click(function() {
+
+    $(window).click(function () {
         closeMenu();
     });
 });
@@ -569,16 +571,15 @@ $leftBarList.click(function (e) {
     e.stopPropagation();
 });
 
-//mobmenu
+//Mobile menu
 const burgerBtn = $('.top-burger');
-burgerBtn.click(function() {
+burgerBtn.click(function () {
     const leftMenu = $('.left-bar');
     mLayer();
     leftMenu.addClass('is-active');
 });
 
-
-//card
+//Card
 $('.amount > button').on('click', function () {
     let $input = $(this).siblings('.number'),
         val = +$input.val();
@@ -592,15 +593,28 @@ $('.amount > button').on('click', function () {
         $(this).attr('disabled');
     }
     $input.val(val);
-})
-
-//masked
-$(function($) {
-    $('.phone-input').mask('+7 (999) 999-99-99'); 
 });
 
-//dropzone
-
+//Masked input's
+$(function ($) {
+    $('.phone-input').mask('+7 (999) 999-99-99');
+});
+//Dropzone
+Dropzone.autoDiscover = false;
+$(document).ready(function () {
+    $('#dZUpload').dropzone({
+        url: "/handler/",
+        dictDefaultMessage: 'Перетащите сюда или загрузите файлы',
+        success: function (file, response) {
+            var imgName = response;
+            file.previewElement.classList.add("dz-success");
+            console.log("Successfully uploaded :" + imgName);
+        },
+        error: function (file, response) {
+            file.previewElement.classList.add("dz-error");
+        }
+    })
+});
 
 //scroll top
 function toTop() { //smooth scroll
@@ -612,4 +626,5 @@ function toTop() { //smooth scroll
         return false
     }
 }
+
 $('.go-top-btn').click(toTop);
