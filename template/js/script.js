@@ -311,7 +311,7 @@ $(document).ready(function () {
                 ]
             })
         });
-    }
+    };
     $('.card__section .card-slider__inner > .slider__nav').slick({
         asNavFor: '.card__section .card-slider__inner > .slider__for',
         slidesToShow: 4,
@@ -445,7 +445,6 @@ if (skTabs.length) {
 }
 
 //Range slider
-
 let $rSlider = $('.js-range-slider'),
     $rSliderMin = $('.mse2_ms_price_0'),
     $rSliderMax = $('.mse2_ms_price_1');
@@ -486,7 +485,7 @@ function mLayer() {
         $('body').removeClass('is-modal');
         modalLayer.removeClass('is-active');
     }
-}
+};
 
 //Fancybox
 const switchBtn = $('.modalko__quest-btn, .modalko-forget');
@@ -554,14 +553,14 @@ $(document).ready(function () {
 
 //Close menu
 $(document).ready(function () {
+//close menu
+$(document).ready(function () {
     $('.js-left-bar-close').click(closeMenu);
-
     function closeMenu() {
         $('.left-bar__list, .left-bar__subcont, .left-bar__link').removeClass('is-active is-mob');
         $leftBar.removeClass('is-mob');
     }
-
-    $(window).click(function () {
+    $(window).click(function() {
         closeMenu();
     });
 });
@@ -570,15 +569,16 @@ $leftBarList.click(function (e) {
     e.stopPropagation();
 });
 
-//Mobile menu
+//mobmenu
 const burgerBtn = $('.top-burger');
-burgerBtn.click(function () {
+burgerBtn.click(function() {
     const leftMenu = $('.left-bar');
     mLayer();
     leftMenu.addClass('is-active');
 });
 
-//Card
+
+//card
 $('.amount > button').on('click', function () {
     let $input = $(this).siblings('.number'),
         val = +$input.val();
@@ -592,15 +592,18 @@ $('.amount > button').on('click', function () {
         $(this).attr('disabled');
     }
     $input.val(val);
+})
+
+//masked
+$(function($) {
+    $('.phone-input').mask('+7 (999) 999-99-99'); 
 });
 
-//Masked input's
-$(function ($) {
-    $('.phone-input').mask('+7 (999) 999-99-99');
-});
+//dropzone
 
-//Smooth scroll top
-function toTop() {
+
+//scroll top
+function toTop() { //smooth scroll
     const scrollStep = document.body.scrollHeight / 100;
     if (window.pageYOffset > 0) {
         window.scrollBy(0, -(scrollStep));
@@ -609,5 +612,4 @@ function toTop() {
         return false
     }
 }
-
 $('.go-top-btn').click(toTop);

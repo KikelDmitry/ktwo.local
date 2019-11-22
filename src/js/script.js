@@ -311,7 +311,7 @@ $(document).ready(function () {
                 ]
             })
         });
-    }
+    };
     $('.card__section .card-slider__inner > .slider__nav').slick({
         asNavFor: '.card__section .card-slider__inner > .slider__for',
         slidesToShow: 4,
@@ -486,7 +486,7 @@ function mLayer() {
         $('body').removeClass('is-modal');
         modalLayer.removeClass('is-active');
     }
-}
+};
 
 //Fancybox
 const switchBtn = $('.modalko__quest-btn, .modalko-forget');
@@ -560,7 +560,6 @@ $(document).ready(function () {
         $('.left-bar__list, .left-bar__subcont, .left-bar__link').removeClass('is-active is-mob');
         $leftBar.removeClass('is-mob');
     }
-
     $(window).click(function () {
         closeMenu();
     });
@@ -601,6 +600,25 @@ $(function ($) {
 
 //Smooth scroll top
 function toTop() {
+
+//Dropzone
+Dropzone.autoDiscover = false;
+$(document).ready(function () {
+    $('#dZUpload').dropzone({
+        url: "/handler/",
+        dictDefaultMessage: 'Перетащите сюда или загрузите файлы',
+        success: function (file, response) {
+            var imgName = response;
+            file.previewElement.classList.add("dz-success");
+            console.log("Successfully uploaded :" + imgName);
+        },
+        error: function (file, response) {
+            file.previewElement.classList.add("dz-error");
+        }
+    });
+});
+//scroll top
+function toTop() { //smooth scroll
     const scrollStep = document.body.scrollHeight / 100;
     if (window.pageYOffset > 0) {
         window.scrollBy(0, -(scrollStep));
